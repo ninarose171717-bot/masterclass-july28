@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Go Deeper · Nina Rose</title>
+  <meta property="og:title" content="Go Deeper Before the Masterclass · Nina Rose">
+  <meta property="og:description" content="A private Telegram community for women to gather, soften, be witnessed, and stay connected. Join for $17 — for masterclass participants only.">
+  <meta property="og:image" content="https://masterclass-july28.vercel.app/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://masterclass-july28.vercel.app/go-deeper.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Go Deeper Before the Masterclass · Nina Rose">
+  <meta name="twitter:description" content="A private Telegram community for women to gather, soften, be witnessed, and stay connected. Join for $17.">
+  <meta name="twitter:image" content="https://masterclass-july28.vercel.app/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,500&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --c1:    #F3EDE5;
+      --c2:    #EDE5DB;
+      --blush: #E0CCBC;
+      --accent: #BC9478;
+      --text:   #18120D;
+      --mid:    #6A4F42;
+      --muted:  #9E8070;
+      --border: #DDD0C6;
+      --serif:  'Cormorant Garamond', Georgia, serif;
+      --sans:   'Jost', system-ui, sans-serif;
+      --ease:   cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      background: var(--c1);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: url('./photos that can be used/drapes.png') center/cover no-repeat;
+      opacity: 0.55;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 99;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 56px;
+      background: rgba(243, 237, 229, 0.88);
+      backdrop-filter: blur(18px);
+    }
+    .nav-left { display: flex; flex-direction: column; gap: 3px; }
+    .nav-brand {
+      font-family: var(--sans); font-size: 0.57rem; font-weight: 300;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--mid);
+      text-decoration: none; position: absolute; left: 50%;
+      transform: translateX(-50%); white-space: nowrap;
+    }
+    .nav-link {
+      font-family: var(--sans); font-size: 0.57rem; font-weight: 300;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--mid);
+      text-decoration: none; transition: color 0.3s;
+    }
+    .nav-link:hover { color: var(--accent); }
+
+    /* ── Animations ── */
+    @keyframes rise   { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:none; } }
+    @keyframes appear { from { opacity:0; } to { opacity:1; } }
+    .rise   { animation: rise   0.7s var(--ease) both; }
+    .appear { animation: appear 1s var(--ease) both; }
+    .d1 { animation-delay: 0.1s; }
+    .d2 { animation-delay: 0.25s; }
+    .d3 { animation-delay: 0.4s; }
+    .d4 { animation-delay: 0.55s; }
+    .d5 { animation-delay: 0.7s; }
+
+    /* Scroll reveal */
+    .rv {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+    }
+    .rv.visible { opacity: 1; transform: none; }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 110px 24px 72px;
+      text-align: center;
+    }
+
+    .dome {
+      background: var(--c2);
+      border-radius: 50% 50% 0 0 / 22% 22% 0 0;
+      max-width: 680px;
+      width: 100%;
+      padding: 64px 64px 60px;
+    }
+
+    .ornament {
+      display: block;
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin-bottom: 28px;
+      letter-spacing: 0.3em;
+    }
+
+    .eyebrow {
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.53rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.1;
+      color: var(--mid);
+      margin-bottom: 28px;
+    }
+
+    .hero-intro {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 1.7vw, 1.2rem);
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.8;
+      max-width: 460px;
+      margin: 0 auto 40px;
+    }
+
+    /* ── Buttons ── */
+    .btn-primary {
+      display: inline-block;
+      padding: 18px 48px;
+      background: var(--mid);
+      color: var(--c1);
+      font-family: var(--sans);
+      font-size: 0.58rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--mid);
+      border-radius: 1px;
+      transition: background 0.35s, color 0.35s, border-color 0.35s;
+      cursor: pointer;
+    }
+    .btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+
+    .cta-wrap { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+
+    .price-caption {
+      font-family: var(--sans);
+      font-size: 0.5rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .price-caption em { color: var(--accent); font-style: normal; }
+
+    /* ── Sections ── */
+    .section {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .rule {
+      width: 40px;
+      height: 1px;
+      background: var(--border);
+      margin: 0 auto 56px;
+    }
+
+    .body-serif {
+      font-family: var(--serif);
+      font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+    .body-serif:last-child { margin-bottom: 0; }
+
+    /* ── Inside list ── */
+    .inside-list {
+      list-style: none;
+      text-align: left;
+      max-width: 460px;
+      margin: 0 auto;
+    }
+    .inside-list li {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 1.6vw, 1.15rem);
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.7;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 16px;
+      align-items: baseline;
+    }
+    .inside-list li:first-child { border-top: 1px solid var(--border); }
+    .inside-list .h { color: var(--accent); font-size: 0.8rem; flex-shrink: 0; }
+
+    /* ── If list ── */
+    .if-list {
+      list-style: none;
+      text-align: left;
+      max-width: 460px;
+      margin: 0 auto;
+    }
+    .if-list li {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(1rem, 1.6vw, 1.15rem);
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.8;
+      padding: 14px 0;
+    }
+
+    /* ── Invitation block ── */
+    .invitation {
+      position: relative;
+      z-index: 1;
+      background: var(--c2);
+      padding: 96px 24px;
+      text-align: center;
+    }
+
+    .price-display {
+      margin: 44px auto 16px;
+    }
+    .price-big {
+      font-family: var(--serif);
+      font-size: clamp(3.2rem, 7vw, 5rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--mid);
+      line-height: 1;
+      display: block;
+    }
+    .price-unit {
+      font-family: var(--sans);
+      font-size: 0.5rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .price-cross {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+      color: var(--muted);
+      text-decoration: line-through;
+    }
+    .price-cross-note {
+      font-family: var(--sans);
+      font-size: 0.48rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 4px;
+      margin-bottom: 44px;
+      display: block;
+    }
+
+    /* ── Little note ── */
+    .little-note {
+      position: relative;
+      z-index: 1;
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 80px 24px 100px;
+      text-align: center;
+    }
+
+    .note-text {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.95;
+    }
+
+    .signature {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: var(--accent);
+      margin-top: 36px;
+      display: block;
+    }
+    .sig-name {
+      display: block;
+      font-family: var(--sans);
+      font-style: normal;
+      font-size: 0.5rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .page-meta {
+      position: relative;
+      z-index: 1;
+      font-family: var(--sans);
+      font-size: 0.5rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: center;
+      padding-bottom: 56px;
+    }
+    .page-meta span { color: var(--border); margin: 0 8px; }
+
+    @media (max-width: 600px) {
+      nav { padding: 14px 20px; }
+      .nav-brand { display: none; }
+      .nav-left { gap: 2px; }
+      .dome { padding: 48px 28px 44px; border-radius: 50% 50% 0 0 / 14% 14% 0 0; }
+      .hero { padding: 100px 20px 60px; }
+      .section { padding: 60px 20px; }
+      .invitation { padding: 72px 20px; }
+      .little-note { padding: 60px 20px 80px; }
+      .btn-primary { width: 100%; max-width: 320px; text-align: center; padding: 18px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-left">
+      <a class="nav-link" href="https://instagram.com/iam.ninarose" target="_blank">@iam.ninarose</a>
+      <a class="nav-link" href="mailto:hello@iamninarose.com">hello@iamninarose.com</a>
+    </div>
+    <a class="nav-brand" href="index.html">Free Masterclass &nbsp;·&nbsp; 28 July</a>
+    <a class="nav-link" href="thank-you.html">Back to page</a>
+  </nav>
+
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="dome appear">
+      <span class="ornament rise d1">♡</span>
+      <span class="eyebrow rise d1">For masterclass participants only</span>
+      <h1 class="rise d2">Go Deeper<br>Before the Masterclass</h1>
+      <p class="hero-intro rise d3">
+        You&rsquo;re registered &mdash; and if you&rsquo;d love to be held more
+        closely before we begin, I&rsquo;d love to invite you into our private
+        Telegram community.
+      </p>
+      <div class="cta-wrap rise d4">
+        <a class="btn-primary" href="#">Join the Private Telegram Community &mdash; $17</a>
+        <p class="price-caption"><em>$17 now</em> &nbsp;·&nbsp; $47 after the masterclass</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── WHAT THE SPACE IS ── -->
+  <section class="section">
+    <div class="rule rv"></div>
+    <p class="body-serif rv">
+      This is a cozy space for women to gather, soften,<br>
+      be witnessed, and stay connected beyond social media.
+    </p>
+    <p class="body-serif rv" style="margin-top: 24px;">
+      A place to bring what feels alive, return to ourselves,
+      connect with other women, and receive little practices,
+      voice notes, reflections, and check-ins from me.
+    </p>
+  </section>
+
+
+  <!-- ── INSIDE ── -->
+  <section class="section" style="padding-top: 0;">
+    <span class="eyebrow rv" style="margin-bottom: 40px;">Inside the community, you&rsquo;ll receive</span>
+    <ul class="inside-list">
+      <li class="rv"><span class="h">♡</span>Soft practices to return to you</li>
+      <li class="rv"><span class="h">♡</span>Voice notes and reflections from me</li>
+      <li class="rv"><span class="h">♡</span>Check-ins and prompts to help you stay with yourself</li>
+      <li class="rv"><span class="h">♡</span>A private space to ask questions and share what&rsquo;s alive</li>
+      <li class="rv"><span class="h">♡</span>Connection with other women walking this path</li>
+      <li class="rv"><span class="h">♡</span>Invitations to live moments, gatherings, and deeper experiences when they&rsquo;re happening</li>
+    </ul>
+  </section>
+
+
+  <!-- ── NOT A PLACE TO PERFORM ── -->
+  <section class="section">
+    <div class="rule rv"></div>
+    <p class="body-serif rv" style="font-style: italic;">This is not another place to perform.</p>
+    <p class="body-serif rv" style="font-style: italic; margin-top: 4px;">It&rsquo;s a space to exhale.</p>
+    <p class="body-serif rv" style="font-style: italic; margin-top: 4px;">To remember the pleasure of being exactly who you are.</p>
+  </section>
+
+
+  <!-- ── THIS IS FOR YOU IF ── -->
+  <section class="section" style="padding-top: 0;">
+    <span class="eyebrow rv" style="margin-bottom: 40px;">This is for you if&hellip;</span>
+    <ul class="if-list">
+      <li class="rv">You&rsquo;re craving a softer place to land.</li>
+      <li class="rv">You want to feel connected before the masterclass begins (and afterwards too).</li>
+      <li class="rv">You&rsquo;d love to be held in a space where you can bring your real, tender, alive self.</li>
+      <li class="rv">You want support with staying with yourself instead of leaving yourself behind.</li>
+      <li class="rv">You love the idea of making love with life &mdash; not alone, but together.</li>
+    </ul>
+  </section>
+
+
+  <!-- ── YOUR INVITATION ── -->
+  <section class="invitation">
+    <span class="eyebrow rv">Your invitation</span>
+
+    <p class="body-serif rv" style="max-width: 460px; margin: 0 auto;">
+      For masterclass participants only, you can join now for $17.
+      After the masterclass, the price will become $47.
+    </p>
+    <p class="body-serif rv" style="font-style: italic; max-width: 460px; margin: 16px auto 0;">
+      If you already feel the yes in your body, I&rsquo;d love to welcome you in.
+    </p>
+
+    <div class="price-display rv">
+      <span class="price-big">$17</span>
+      <span class="price-unit">one-time &nbsp;·&nbsp; masterclass participants only</span>
+      <span class="price-cross">$47 after the masterclass</span>
+      <span class="price-cross-note">regular community price</span>
+    </div>
+
+    <div class="cta-wrap rv">
+      <a class="btn-primary" href="#">Yes, I want to join for $17</a>
+      <p class="price-caption">You&rsquo;ll receive the private Telegram link right away</p>
+    </div>
+  </section>
+
+
+  <!-- ── LITTLE NOTE ── -->
+  <section class="little-note">
+    <span class="eyebrow rv">A little note</span>
+    <p class="note-text rv">
+      This community is small by design.<br>
+      I want to know you&rsquo;re there.<br>
+      I want to hold this space with care, presence, and warmth.<br><br>
+      So if something in you is saying yes &mdash;<br>
+      trust that.
+    </p>
+    <span class="signature rv">
+      Warm hug ♡
+      <span class="sig-name">Nina Rose</span>
+    </span>
+  </section>
+
+  <p class="page-meta">Go Deeper <span>·</span> Private Telegram Community <span>·</span> Nina Rose</p>
+
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.rv').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
