@@ -105,7 +105,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 110px 24px 0;
+      padding: 110px 24px 72px;
       text-align: center;
     }
 
@@ -193,7 +193,7 @@
       z-index: 1;
       max-width: 640px;
       margin: 0 auto;
-      padding: 64px 24px;
+      padding: 96px 24px;
       text-align: center;
     }
 
@@ -217,8 +217,8 @@
     /* ── Inside list ── */
     .inside-list {
       list-style: none;
-      text-align: left;
-      max-width: 460px;
+      text-align: center;
+      max-width: 520px;
       margin: 0 auto;
     }
     .inside-list li {
@@ -226,21 +226,16 @@
       font-size: clamp(1rem, 1.6vw, 1.15rem);
       font-weight: 300;
       color: var(--mid);
-      line-height: 1.7;
-      padding: 15px 0;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      gap: 16px;
-      align-items: baseline;
+      line-height: 1.75;
+      padding: 18px 0;
     }
-    .inside-list li:first-child { border-top: 1px solid var(--border); }
-    .inside-list .h { color: var(--accent); font-size: 0.8rem; flex-shrink: 0; }
+    .inside-list .h { color: var(--accent); font-size: 0.8rem; margin-right: 10px; }
 
     /* ── If list ── */
     .if-list {
       list-style: none;
-      text-align: left;
-      max-width: 460px;
+      text-align: center;
+      max-width: 520px;
       margin: 0 auto;
     }
     .if-list li {
@@ -250,7 +245,7 @@
       font-weight: 300;
       color: var(--mid);
       line-height: 1.8;
-      padding: 14px 0;
+      padding: 16px 0;
     }
 
     /* ── Invitation block ── */
@@ -368,8 +363,8 @@
       .nav-brand { display: none; }
       .nav-left { gap: 2px; }
       .dome { padding: 48px 28px 44px; border-radius: 50% 50% 0 0 / 14% 14% 0 0; }
-      .hero { padding: 100px 20px 0; }
-      .section { padding: 48px 20px; }
+      .hero { padding: 100px 20px 56px; }
+      .section { padding: 72px 20px; }
       .invitation { padding: 64px 20px; }
       .little-note { padding: 56px 20px 80px; }
       .btn-primary { width: 100%; max-width: 320px; text-align: center; padding: 18px 32px; }
@@ -401,7 +396,7 @@
       </p>
       <div class="cta-wrap rise d4">
         <a class="btn-primary" href="#">Join the Private Telegram Community &nbsp; $17</a>
-        <p class="price-caption"><em>$17 now</em> &nbsp;·&nbsp; $47 after the masterclass</p>
+        <p class="price-caption"><em>$17 one-time payment</em> &nbsp;·&nbsp; $47 after the masterclass</p>
       </div>
     </div>
   </section>
