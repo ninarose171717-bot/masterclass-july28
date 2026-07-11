@@ -7,7 +7,8 @@ BEGIN:VEVENT
 DTSTART:20260728T070000Z
 DTEND:20260728T083000Z
 SUMMARY:Free Masterclass · Nina Rose
-DESCRIPTION:A free masterclass for the woman who looks like she's holding it all together\, but privately knows she has been disappearing from the life she built.\n\nYour Zoom link is in your confirmation email.
+DESCRIPTION:A free masterclass for the woman who looks like she's holding it all together\, but privately knows she has been disappearing from the life she built.\n\nJoin Zoom: https://us06web.zoom.us/j/86269314439?pwd=wQtThYnOWYR3Xu5HqI8TPS8HkSizCW.1
+LOCATION:https://us06web.zoom.us/j/86269314439?pwd=wQtThYnOWYR3Xu5HqI8TPS8HkSizCW.1
 STATUS:CONFIRMED
 SEQUENCE:0
 BEGIN:VALARM
