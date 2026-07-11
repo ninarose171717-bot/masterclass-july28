@@ -70,11 +70,12 @@
     .d5 { animation-delay: 0.78s; }
 
     /* ── Scroll reveals ── */
-    .rv  { opacity: 0; transform: translateY(24px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); }
-    .ri  { opacity: 0; transition: opacity 1.1s var(--ease); }
+    .rv  { opacity: 0; transform: translateY(16px); transition: opacity 0.5s var(--ease), transform 0.5s var(--ease); }
+    .ri  { opacity: 0; transition: opacity 0.6s var(--ease); }
     .rv.in, .ri.in { opacity: 1; transform: none; }
-    .s1 { transition-delay: 0.10s; }
-    .s2 { transition-delay: 0.22s; }
+    .s1 { transition-delay: 0.06s; }
+    .s2 { transition-delay: 0.12s; }
+    #ml-bridge { position: fixed; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
     .s3 { transition-delay: 0.36s; }
     .s4 { transition-delay: 0.52s; }
     .s5 { transition-delay: 0.68s; }
@@ -1134,7 +1135,19 @@
           <span class="cd-sep">·</span>
           <div class="cd-item"><span class="cd-num" id="cd-min">--</span><span class="cd-label">Min</span></div>
         </div>
-        <div class="ml-embedded" data-form="lPboFK"></div>
+        <form class="nina-form">
+          <div class="form-field">
+            <input type="text" name="fname" class="form-input" placeholder="Your first name" required>
+          </div>
+          <div class="form-field">
+            <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
+          </div>
+          <label class="form-toggle-wrap">
+            <input type="checkbox" name="newsletter" class="form-toggle-check">
+            <span class="form-toggle-text">I&rsquo;d also love to receive your notes on life, staying with ourselves, and everything in between. ♡</span>
+          </label>
+          <button type="submit" class="btn-submit">Save my seat</button>
+        </form>
         <span class="form-note">Free Masterclass &nbsp;·&nbsp; Online &nbsp;·&nbsp; 90 min</span>
       </div>
     </div>
@@ -1398,13 +1411,29 @@
 
       <div class="invite-form-wrap rv s4">
         <p class="hero-date" style="text-align:center; margin: 0 auto 28px; max-width:360px;">28/7 &nbsp;·&nbsp; 2 PM Bangkok &nbsp;·&nbsp; 9 AM Europe</p>
-        <div class="ml-embedded" data-form="lPboFK"></div>
+        <form class="nina-form">
+          <div class="form-field">
+            <input type="text" name="fname" class="form-input" placeholder="Your first name" required>
+          </div>
+          <div class="form-field">
+            <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
+          </div>
+          <label class="form-toggle-wrap">
+            <input type="checkbox" name="newsletter" class="form-toggle-check">
+            <span class="form-toggle-text">I&rsquo;d also love to receive your notes on life, staying with ourselves, and everything in between. ♡</span>
+          </label>
+          <button type="submit" class="btn-submit">Save my seat</button>
+        </form>
         <span class="form-note">Free Masterclass &nbsp;·&nbsp; Online &nbsp;·&nbsp; 90 min</span>
       </div>
     </div>
 
   </div>
 
+  <!-- Hidden MailerLite bridge -->
+  <div id="ml-bridge">
+    <div class="ml-embedded" data-form="lPboFK"></div>
+  </div>
 
   <!-- ══════════════════════════
        FOOTER
@@ -1458,6 +1487,42 @@
         e.preventDefault();
         const t = document.getElementById(id);
         if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // MailerLite bridge — submits hidden ML form when Nina's custom form is submitted
+    function getMLForm() {
+      return document.querySelector('#ml-bridge form');
+    }
+
+    function fillAndSubmitML(fname, email) {
+      return new Promise(resolve => {
+        function attempt(tries) {
+          const mlForm = getMLForm();
+          if (!mlForm || tries <= 0) { resolve(); return; }
+          const emailEl = mlForm.querySelector('input[type="email"]');
+          const nameEl  = mlForm.querySelector('input[type="text"]');
+          if (!emailEl) { setTimeout(() => attempt(tries - 1), 300); return; }
+          if (nameEl)  { nameEl.value = fname;  nameEl.dispatchEvent(new Event('input', {bubbles:true})); }
+          emailEl.value = email; emailEl.dispatchEvent(new Event('input', {bubbles:true}));
+          const btn = mlForm.querySelector('button[type="submit"]') || mlForm.querySelector('button');
+          if (btn) btn.click();
+          resolve();
+        }
+        attempt(15);
+      });
+    }
+
+    document.querySelectorAll('.nina-form').forEach(form => {
+      form.addEventListener('submit', async e => {
+        e.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+        const fname = (form.querySelector('[name="fname"]').value || '').trim();
+        const email = (form.querySelector('[name="email"]').value || '').trim();
+        const btn = form.querySelector('button[type="submit"]');
+        if (btn) { btn.disabled = true; btn.textContent = 'Saving…'; }
+        await fillAndSubmitML(fname, email);
+        setTimeout(() => { window.location.href = './thank-you.html'; }, 800);
       });
     });
   </script>
