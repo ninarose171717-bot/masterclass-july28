@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nina Rose//Free Masterclass//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:20260728T070000Z
+DTEND:20260728T083000Z
+SUMMARY:Free Masterclass · Nina Rose
+DESCRIPTION:A free masterclass for the woman who looks like she's holding it all together\, but privately knows she has been disappearing from the life she built.\n\nYour Zoom link is in your confirmation email.
+STATUS:CONFIRMED
+SEQUENCE:0
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Free Masterclass · Nina Rose starts in 30 minutes
+END:VALARM
+END:VEVENT
+END:VCALENDAR

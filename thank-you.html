@@ -199,6 +199,24 @@
       margin-bottom: 32px;
     }
 
+    /* ── Calendar ── */
+    .cal-wrap { margin: 0 auto; text-align: center; }
+    .cal-label {
+      font-family: var(--sans); font-size: 0.55rem; font-weight: 400;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .cal-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .cal-btn {
+      display: inline-block; padding: 12px 32px;
+      border: 1px solid var(--border); background: transparent;
+      font-family: var(--sans); font-size: 0.58rem; font-weight: 400;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--mid); text-decoration: none; border-radius: 1px;
+      transition: background 0.3s, color 0.3s, border-color 0.3s;
+    }
+    .cal-btn:hover { background: var(--mid); color: var(--c1); border-color: var(--mid); }
+
     .copy-btn {
       display: inline-flex;
       align-items: center;
@@ -262,7 +280,15 @@
       <p>It&rsquo;s today.<br>See you soon ♡</p>
     </div>
 
-    <p class="ty-line rise d4" style="font-style: italic; color: var(--muted); font-size: clamp(1rem, 1.6vw, 1.2rem); margin-bottom: 0;">
+    <div class="cal-wrap rise d5">
+      <p class="cal-label">Add to your calendar</p>
+      <div class="cal-btns">
+        <a class="cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Free+Masterclass+%C2%B7+Nina+Rose&dates=20260728T070000Z%2F20260728T083000Z&details=Your+Zoom+link+is+in+your+confirmation+email." target="_blank">Google Calendar</a>
+        <a class="cal-btn" href="./masterclass.ics" download>Apple · Outlook</a>
+      </div>
+    </div>
+
+    <p class="ty-line rise d5" style="font-style: italic; color: var(--muted); font-size: clamp(1rem, 1.6vw, 1.2rem); margin-bottom: 0;">
       Something in you said yes.<br>I&rsquo;m glad you listened.
     </p>
 
