@@ -1449,6 +1449,9 @@
   <div id="ml-bridge">
     <div class="ml-embedded" data-form="lPboFK"></div>
   </div>
+  <div id="ml-bridge-lovenotes" style="position:fixed;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;">
+    <div class="ml-embedded" data-form="zyLWQW"></div>
+  </div>
 
   <!-- ══════════════════════════
        FOOTER
@@ -1505,15 +1508,11 @@
       });
     });
 
-    // MailerLite bridge — submits hidden ML form when Nina's custom form is submitted
-    function getMLForm() {
-      return document.querySelector('#ml-bridge form');
-    }
-
-    function fillAndSubmitML(fname, email) {
+    // MailerLite bridge — submits hidden ML forms when Nina's custom form is submitted
+    function fillAndSubmitMLForm(bridgeId, fname, email) {
       return new Promise(resolve => {
         function attempt(tries) {
-          const mlForm = getMLForm();
+          const mlForm = document.querySelector('#' + bridgeId + ' form');
           if (!mlForm || tries <= 0) { resolve(); return; }
           const emailEl = mlForm.querySelector('input[type="email"]');
           const nameEl  = mlForm.querySelector('input[type="text"]');
@@ -1534,9 +1533,15 @@
         if (!form.checkValidity()) { form.reportValidity(); return; }
         const fname = (form.querySelector('[name="fname"]').value || '').trim();
         const email = (form.querySelector('[name="email"]').value || '').trim();
+        const wantsLoveNotes = form.querySelector('[name="newsletter"]')?.checked;
         const btn = form.querySelector('button[type="submit"]');
         if (btn) { btn.disabled = true; btn.textContent = 'Saving…'; }
-        await fillAndSubmitML(fname, email);
+        // Always add to Masterclass group
+        await fillAndSubmitMLForm('ml-bridge', fname, email);
+        // Also add to Love Notes / newsletter group if toggled
+        if (wantsLoveNotes) {
+          await fillAndSubmitMLForm('ml-bridge-lovenotes', fname, email);
+        }
         setTimeout(() => { window.location.href = './thank-you.html'; }, 800);
       });
     });
