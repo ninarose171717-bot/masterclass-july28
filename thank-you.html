@@ -85,7 +85,18 @@
       justify-content: center;
       padding: 120px 24px 100px;
       text-align: center;
+      position: relative;
     }
+    .page::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: url('./photos that can be used/drapes.png') center/cover no-repeat;
+      opacity: 0.55;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .page > * { position: relative; z-index: 1; }
 
     /* ── Arch dome container ── */
     .dome {
@@ -243,7 +254,7 @@
       <span class="heart rise d1">♡</span>
       <h1 class="rise d2">You&rsquo;re in.</h1>
       <p class="ty-line rise d3">I can&rsquo;t wait to see you on July 28.</p>
-      <p class="ty-line rise d4">Check your inbox &mdash; your confirmation email<br>and Zoom link are on their way.</p>
+      <p class="ty-line rise d4">Check your inbox. Your confirmation email<br>and Zoom link are on their way.</p>
     </div>
 
     <!-- Day-of banner — shows automatically on July 28 -->
@@ -251,16 +262,18 @@
       <p>It&rsquo;s today.<br>See you soon ♡</p>
     </div>
 
-    <p class="ty-line rise d4" style="margin-bottom: 0; font-size: 0.58rem; font-family: var(--sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);">
-      28 July &nbsp;·&nbsp; 2 PM Bangkok &nbsp;·&nbsp; 9 AM Europe
+    <p class="ty-line rise d4" style="font-style: italic; color: var(--muted); font-size: clamp(1rem, 1.6vw, 1.2rem); margin-bottom: 0;">
+      Something in you said yes.<br>I&rsquo;m glad you listened.
     </p>
 
     <div class="rule rise d5"></div>
 
     <div class="share rise d5">
       <p class="share-text">
-        If someone&rsquo;s name came to heart just now,<br>
-        send this to them.
+        If you know a woman who&rsquo;s been holding it all together on the outside<br>
+        while quietly disappearing on the inside,<br>
+        she might need this too.<br><br>
+        Send her the link.
       </p>
       <button class="copy-btn" id="copy-btn" onclick="copyLink()">
         Copy the link
