@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're In · Nina Rose</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,500&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --c1:    #F3EDE5;
+      --c2:    #EDE5DB;
+      --accent: #BC9478;
+      --blush:  #E0CCBC;
+      --text:   #18120D;
+      --mid:    #6A4F42;
+      --muted:  #9E8070;
+      --border: #DDD0C6;
+      --serif:  'Cormorant Garamond', Georgia, serif;
+      --sans:   'Jost', system-ui, sans-serif;
+      --ease:   cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      background: var(--c1);
+      color: var(--text);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 24px 80px;
+    }
+
+    @keyframes rise { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
+    @keyframes appear { from { opacity:0; } to { opacity:1; } }
+    .rise   { animation: rise   1s var(--ease) both; }
+    .appear { animation: appear 1.4s var(--ease) both; }
+    .d1 { animation-delay: 0.15s; }
+    .d2 { animation-delay: 0.35s; }
+    .d3 { animation-delay: 0.55s; }
+    .d4 { animation-delay: 0.75s; }
+    .d5 { animation-delay: 0.95s; }
+    .d6 { animation-delay: 1.15s; }
+
+    .wrap {
+      max-width: 540px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .heart {
+      font-size: 1.4rem;
+      display: block;
+      margin-bottom: 40px;
+      animation: appear 1.2s var(--ease) both;
+      color: var(--accent);
+    }
+
+    .ty-headline {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.08;
+      color: var(--text);
+      margin-bottom: 28px;
+    }
+
+    .ty-see-you {
+      font-family: var(--serif);
+      font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+
+    .ty-inbox {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 56px;
+    }
+
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: var(--blush);
+      margin: 0 auto 56px;
+    }
+
+    .ty-zoom {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 56px;
+    }
+    .ty-zoom strong {
+      font-weight: 400;
+      color: var(--mid);
+    }
+
+    /* Day-of message — hidden by default, shown via JS on July 28 */
+    .today-banner {
+      display: none;
+      background: var(--blush);
+      border-radius: 50% 50% 0 0 / 14% 14% 0 0;
+      padding: 40px 40px 36px;
+      margin-bottom: 56px;
+    }
+    .today-banner.visible { display: block; }
+    .today-banner p {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .ty-share {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      font-weight: 300;
+      color: var(--mid);
+      font-style: italic;
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+
+    .copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 36px;
+      border: 1px solid var(--text);
+      background: transparent;
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text);
+      cursor: pointer;
+      border-radius: 1px;
+      transition: background 0.35s, color 0.35s;
+      margin-bottom: 12px;
+    }
+    .copy-btn:hover { background: var(--text); color: var(--c1); }
+    .copy-btn.copied { background: var(--accent); border-color: var(--accent); color: var(--c1); }
+
+    .ty-meta {
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 56px;
+    }
+    .ty-meta span { color: var(--border); margin: 0 6px; }
+
+    @media (max-width: 480px) {
+      body { padding: 48px 24px 64px; }
+      .ty-headline { font-size: 2.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+
+    <span class="heart appear">♡</span>
+
+    <h1 class="ty-headline rise d1">You&rsquo;re in.</h1>
+
+    <p class="ty-see-you rise d2">I can&rsquo;t wait to see you on July 28.</p>
+    <p class="ty-inbox rise d3">Check your inbox.</p>
+
+    <div class="divider rise d3"></div>
+
+    <p class="ty-zoom rise d4">
+      <strong>Your confirmation email and Zoom link<br>are waiting for you.</strong>
+    </p>
+
+    <!-- Day-of banner — shows automatically on July 28 -->
+    <div class="today-banner" id="today-banner">
+      <p>It&rsquo;s today.<br>See you soon ♡</p>
+    </div>
+
+    <div class="divider rise d5"></div>
+
+    <p class="ty-share rise d5">
+      If someone&rsquo;s name came to heart just now,<br>
+      send this to them.
+    </p>
+
+    <button class="copy-btn rise d6" id="copy-btn" onclick="copyLink()">
+      Copy the link
+    </button>
+
+    <p class="ty-meta rise d6">
+      Free Masterclass <span>·</span> 90 min <span>·</span> Nina Rose
+    </p>
+
+  </div>
+
+
+  <script>
+    // Show day-of banner on July 28, 2026
+    (function() {
+      const now = new Date();
+      const isToday = now.getUTCFullYear() === 2026 && now.getUTCMonth() === 6 && now.getUTCDate() === 28;
+      if (isToday) {
+        const banner = document.getElementById('today-banner');
+        if (banner) banner.classList.add('visible');
+      }
+    })();
+
+    // Copy link
+    function copyLink() {
+      const url = window.location.origin + '/index.html';
+      navigator.clipboard.writeText(url).then(() => {
+        const btn = document.getElementById('copy-btn');
+        btn.textContent = 'Copied ✓';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = 'Copy the link';
+          btn.classList.remove('copied');
+        }, 2500);
+      }).catch(() => {
+        prompt('Copy this link:', url);
+      });
+    }
+  </script>
+
+</body>
+</html>
