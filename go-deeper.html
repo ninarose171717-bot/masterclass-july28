@@ -102,12 +102,10 @@
     .hero {
       position: relative;
       z-index: 1;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 110px 24px 72px;
+      padding: 110px 24px 0;
       text-align: center;
     }
 
@@ -167,11 +165,12 @@
       font-family: var(--sans);
       font-size: 0.58rem;
       font-weight: 400;
-      letter-spacing: 0.22em;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
       text-decoration: none;
       border: 1px solid var(--mid);
       border-radius: 1px;
+      text-align: center;
       transition: background 0.35s, color 0.35s, border-color 0.35s;
       cursor: pointer;
     }
@@ -194,7 +193,7 @@
       z-index: 1;
       max-width: 640px;
       margin: 0 auto;
-      padding: 80px 24px;
+      padding: 64px 24px;
       text-align: center;
     }
 
@@ -202,7 +201,7 @@
       width: 40px;
       height: 1px;
       background: var(--border);
-      margin: 0 auto 56px;
+      margin: 0 auto 48px;
     }
 
     .body-serif {
@@ -247,7 +246,7 @@
     .if-list li {
       font-family: var(--serif);
       font-style: italic;
-      font-size: clamp(1rem, 1.6vw, 1.15rem);
+      font-size: clamp(1.1rem, 1.9vw, 1.3rem);
       font-weight: 300;
       color: var(--mid);
       line-height: 1.8;
@@ -259,8 +258,18 @@
       position: relative;
       z-index: 1;
       background: var(--c2);
-      padding: 96px 24px;
+      padding: 88px 24px;
       text-align: center;
+    }
+
+    .section-heading {
+      font-family: var(--serif);
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--mid);
+      margin-bottom: 32px;
+      display: block;
     }
 
     .price-display {
@@ -309,36 +318,36 @@
       z-index: 1;
       max-width: 520px;
       margin: 0 auto;
-      padding: 80px 24px 100px;
+      padding: 72px 24px 96px;
       text-align: center;
+    }
+
+    .note-heading {
+      font-family: var(--serif);
+      font-size: clamp(1.3rem, 2.2vw, 1.65rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 44px;
+      display: block;
     }
 
     .note-text {
       font-family: var(--serif);
       font-style: italic;
-      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      font-size: clamp(1.1rem, 1.9vw, 1.35rem);
       font-weight: 300;
       color: var(--mid);
-      line-height: 1.95;
+      line-height: 2;
     }
 
     .signature {
       font-family: var(--serif);
       font-style: italic;
-      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-size: clamp(1.15rem, 2vw, 1.4rem);
       color: var(--accent);
-      margin-top: 36px;
+      margin-top: 40px;
       display: block;
-    }
-    .sig-name {
-      display: block;
-      font-family: var(--sans);
-      font-style: normal;
-      font-size: 0.5rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-top: 10px;
     }
 
     .page-meta {
@@ -359,10 +368,10 @@
       .nav-brand { display: none; }
       .nav-left { gap: 2px; }
       .dome { padding: 48px 28px 44px; border-radius: 50% 50% 0 0 / 14% 14% 0 0; }
-      .hero { padding: 100px 20px 60px; }
-      .section { padding: 60px 20px; }
-      .invitation { padding: 72px 20px; }
-      .little-note { padding: 60px 20px 80px; }
+      .hero { padding: 100px 20px 0; }
+      .section { padding: 48px 20px; }
+      .invitation { padding: 64px 20px; }
+      .little-note { padding: 56px 20px 80px; }
       .btn-primary { width: 100%; max-width: 320px; text-align: center; padding: 18px 32px; }
     }
   </style>
@@ -386,12 +395,12 @@
       <span class="eyebrow rise d1">For masterclass participants only</span>
       <h1 class="rise d2">Go Deeper<br>Before the Masterclass</h1>
       <p class="hero-intro rise d3">
-        You&rsquo;re registered &mdash; and if you&rsquo;d love to be held more
+        You&rsquo;re registered, and if you&rsquo;d love to be held more
         closely before we begin, I&rsquo;d love to invite you into our private
         Telegram community.
       </p>
       <div class="cta-wrap rise d4">
-        <a class="btn-primary" href="#">Join the Private Telegram Community &mdash; $17</a>
+        <a class="btn-primary" href="#">Join the Private Telegram Community &nbsp; $17</a>
         <p class="price-caption"><em>$17 now</em> &nbsp;·&nbsp; $47 after the masterclass</p>
       </div>
     </div>
@@ -444,20 +453,20 @@
       <li class="rv">You want to feel connected before the masterclass begins (and afterwards too).</li>
       <li class="rv">You&rsquo;d love to be held in a space where you can bring your real, tender, alive self.</li>
       <li class="rv">You want support with staying with yourself instead of leaving yourself behind.</li>
-      <li class="rv">You love the idea of making love with life &mdash; not alone, but together.</li>
+      <li class="rv">You love the idea of making love with life, not alone, but together.</li>
     </ul>
   </section>
 
 
   <!-- ── YOUR INVITATION ── -->
   <section class="invitation">
-    <span class="eyebrow rv">Your invitation</span>
+    <span class="section-heading rv">Your invitation</span>
 
-    <p class="body-serif rv" style="max-width: 460px; margin: 0 auto;">
+    <p class="body-serif rv" style="max-width: 480px; margin: 0 auto;">
       For masterclass participants only, you can join now for $17.
       After the masterclass, the price will become $47.
     </p>
-    <p class="body-serif rv" style="font-style: italic; max-width: 460px; margin: 16px auto 0;">
+    <p class="body-serif rv" style="font-style: italic; max-width: 540px; margin: 16px auto 0;">
       If you already feel the yes in your body, I&rsquo;d love to welcome you in.
     </p>
 
@@ -470,25 +479,21 @@
 
     <div class="cta-wrap rv">
       <a class="btn-primary" href="#">Yes, I want to join for $17</a>
-      <p class="price-caption">You&rsquo;ll receive the private Telegram link right away</p>
+      <p class="price-caption">You&rsquo;ll receive the private Telegram link after the payment</p>
     </div>
   </section>
 
 
   <!-- ── LITTLE NOTE ── -->
   <section class="little-note">
-    <span class="eyebrow rv">A little note</span>
+    <span class="note-heading rv">A little note</span>
     <p class="note-text rv">
       This community is small by design.<br>
-      I want to know you&rsquo;re there.<br>
-      I want to hold this space with care, presence, and warmth.<br><br>
-      So if something in you is saying yes &mdash;<br>
-      trust that.
+      I want to hold this space with care, presence, and warmth.<br>
+      So if something in you is saying yes,<br>
+      I hope to see you there.
     </p>
-    <span class="signature rv">
-      Warm hug ♡
-      <span class="sig-name">Nina Rose</span>
-    </span>
+    <span class="signature rv">Warm hug, Nina</span>
   </section>
 
   <p class="page-meta">Go Deeper <span>·</span> Private Telegram Community <span>·</span> Nina Rose</p>
