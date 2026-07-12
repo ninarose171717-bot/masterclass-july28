@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Making Love with Life · Nina Rose</title>
+  <meta property="og:title" content="Making Love with Life · Nina Rose">
+  <meta property="og:description" content="A private Telegram space for women to gather, soften, be seen, and stay connected — with themselves and each other.">
+  <meta property="og:image" content="https://masterclass-july28.vercel.app/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://masterclass-july28.vercel.app/community.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Making Love with Life · Nina Rose">
+  <meta name="twitter:description" content="A private Telegram space for women to gather, soften, be seen, and stay connected — with themselves and each other.">
+  <meta name="twitter:image" content="https://masterclass-july28.vercel.app/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,500&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '896966');
+  </script>
+
+  <style>
+    :root {
+      --c1:    #F3EDE5;
+      --c2:    #EDE5DB;
+      --blush: #E0CCBC;
+      --accent: #BC9478;
+      --text:   #18120D;
+      --mid:    #6A4F42;
+      --muted:  #9E8070;
+      --border: #DDD0C6;
+      --serif:  'Cormorant Garamond', Georgia, serif;
+      --sans:   'Jost', system-ui, sans-serif;
+      --ease:   cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      background: var(--c1);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: url('./photos that can be used/drapes.png') center/cover no-repeat;
+      opacity: 0.55;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 99;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 56px;
+      background: rgba(243, 237, 229, 0.88);
+      backdrop-filter: blur(18px);
+    }
+    .nav-left { display: flex; flex-direction: column; gap: 3px; }
+    .nav-brand {
+      font-family: var(--sans); font-size: 0.57rem; font-weight: 300;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--mid);
+      text-decoration: none; position: absolute; left: 50%;
+      transform: translateX(-50%); white-space: nowrap;
+    }
+    .nav-link {
+      font-family: var(--sans); font-size: 0.57rem; font-weight: 300;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--mid);
+      text-decoration: none; transition: color 0.3s;
+    }
+    .nav-link:hover { color: var(--accent); }
+
+    /* ── Animations ── */
+    @keyframes rise   { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:none; } }
+    @keyframes appear { from { opacity:0; } to { opacity:1; } }
+    .rise   { animation: rise   0.7s var(--ease) both; }
+    .appear { animation: appear 1s var(--ease) both; }
+    .d1 { animation-delay: 0.1s; }
+    .d2 { animation-delay: 0.25s; }
+    .d3 { animation-delay: 0.4s; }
+    .d4 { animation-delay: 0.55s; }
+    .d5 { animation-delay: 0.7s; }
+
+    /* Scroll reveal */
+    .rv {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+    }
+    .rv.visible { opacity: 1; transform: none; }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 110px 24px 24px;
+      text-align: center;
+    }
+
+    .dome {
+      background: var(--c2);
+      border-radius: 50% 50% 0 0 / 22% 22% 0 0;
+      max-width: 680px;
+      width: 100%;
+      padding: 64px 64px 60px;
+    }
+
+    .ornament {
+      display: block;
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin-bottom: 28px;
+      letter-spacing: 0.3em;
+    }
+
+    .eyebrow {
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.1;
+      color: var(--mid);
+      margin-bottom: 28px;
+    }
+
+    .hero-intro {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 1.7vw, 1.2rem);
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.8;
+      max-width: 460px;
+      margin: 0 auto;
+    }
+
+    /* ── Buttons ── */
+    .btn-primary {
+      display: inline-block;
+      padding: 18px 48px;
+      background: var(--mid);
+      color: var(--c1);
+      font-family: var(--sans);
+      font-size: 0.58rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--mid);
+      border-radius: 1px;
+      text-align: center;
+      transition: background 0.35s, color 0.35s, border-color 0.35s;
+      cursor: pointer;
+      width: 100%;
+      max-width: 360px;
+    }
+    .btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+
+    .btn-soft {
+      display: inline-block;
+      padding: 16px 40px;
+      background: transparent;
+      color: var(--mid);
+      font-family: var(--sans);
+      font-size: 0.55rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      border-radius: 1px;
+      text-align: center;
+      transition: background 0.35s, color 0.35s, border-color 0.35s;
+      cursor: pointer;
+      width: 100%;
+      max-width: 360px;
+    }
+    .btn-soft:hover { background: var(--mid); color: var(--c1); border-color: var(--mid); }
+    .btn-soft:disabled { opacity: 0.6; cursor: default; }
+
+    .price-caption {
+      font-family: var(--sans);
+      font-size: 0.5rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── Sections ── */
+    .section {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 96px 24px;
+      text-align: center;
+    }
+
+    .section-heart {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: var(--accent);
+      font-size: 1rem;
+      letter-spacing: 0.3em;
+    }
+
+    .body-serif {
+      font-family: var(--serif);
+      font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+    .body-serif:last-child { margin-bottom: 0; }
+
+    /* ── Inside list ── */
+    .inside-list {
+      list-style: none;
+      text-align: center;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .inside-list li {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 1.6vw, 1.15rem);
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.75;
+      padding: 18px 0;
+    }
+    .inside-list .h { color: var(--accent); font-size: 0.8rem; margin-right: 10px; }
+
+    /* ── If list ── */
+    .if-list {
+      list-style: none;
+      text-align: center;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .if-list li {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(1.1rem, 1.9vw, 1.3rem);
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.8;
+      padding: 16px 0;
+    }
+
+    /* ── Invitation block ── */
+    .invitation {
+      position: relative;
+      z-index: 1;
+      background: var(--c2);
+      padding: 88px 24px;
+      text-align: center;
+    }
+
+    .price-display {
+      margin: 44px auto 40px;
+    }
+    .price-big {
+      font-family: var(--serif);
+      font-size: clamp(3.2rem, 7vw, 5rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--mid);
+      line-height: 1;
+      display: block;
+    }
+    .price-unit {
+      font-family: var(--sans);
+      font-size: 0.5rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+    /* ── CTA options ── */
+    .cta-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    .cta-divider {
+      font-family: var(--sans);
+      font-size: 0.48rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 24px 0 20px;
+    }
+
+    .ln-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .ln-input {
+      width: 100%;
+      padding: 13px 20px;
+      border: 1px solid var(--border);
+      background: transparent;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      color: var(--text);
+      outline: none;
+      border-radius: 1px;
+      text-align: center;
+      transition: border-color 0.3s;
+    }
+    .ln-input:focus { border-color: var(--mid); }
+    .ln-input::placeholder { color: var(--muted); }
+
+    .masterclass-link {
+      display: block;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+      color: var(--muted);
+      text-decoration: none;
+      padding-top: 28px;
+      transition: color 0.3s;
+    }
+    .masterclass-link:hover { color: var(--mid); }
+
+    /* ── Little note ── */
+    .little-note {
+      position: relative;
+      z-index: 1;
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 72px 24px 96px;
+      text-align: center;
+    }
+
+    .note-text {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(1.1rem, 1.9vw, 1.35rem);
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 2;
+    }
+
+    .signature {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(1.15rem, 2vw, 1.4rem);
+      color: var(--accent);
+      margin-top: 40px;
+      display: block;
+    }
+
+    .page-meta {
+      position: relative;
+      z-index: 1;
+      font-family: var(--sans);
+      font-size: 0.5rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: center;
+      padding-bottom: 56px;
+    }
+    .page-meta span { color: var(--border); margin: 0 8px; }
+
+    @media (max-width: 600px) {
+      nav { padding: 14px 20px; }
+      .nav-brand { display: none; }
+      .nav-left { gap: 2px; }
+      .dome { padding: 48px 28px 44px; border-radius: 50% 50% 0 0 / 14% 14% 0 0; }
+      .hero { padding: 100px 20px 56px; }
+      .section { padding: 72px 20px; }
+      .invitation { padding: 64px 20px; }
+      .little-note { padding: 56px 20px 80px; }
+      .btn-primary, .btn-soft { max-width: 100%; padding: 18px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-left">
+      <a class="nav-link" href="https://instagram.com/iam.ninarose" target="_blank">@iam.ninarose</a>
+      <a class="nav-link" href="mailto:hello@iamninarose.com">hello@iamninarose.com</a>
+    </div>
+    <a class="nav-brand" href="https://instagram.com/iam.ninarose" target="_blank">Nina Rose</a>
+    <a class="nav-link" href="https://instagram.com/iam.ninarose" target="_blank">Instagram</a>
+  </nav>
+
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="dome appear">
+      <span class="ornament rise d1">♡</span>
+      <h1 class="rise d2">Making Love<br>with Life</h1>
+      <p class="hero-intro rise d3">
+        A private Telegram space for women to gather, soften,
+        be seen, and stay connected &mdash; with themselves and each other.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ── WHAT THE SPACE IS ── -->
+  <section class="section" style="padding-top: 56px;">
+    <p class="body-serif rv">
+      This is a cozy space for women to gather, soften,<br>
+      be seen, and stay connected beyond social media.
+    </p>
+    <p class="body-serif rv" style="margin-top: 24px;">
+      A place to bring what feels alive, begin feeling ourselves as we are, and connect with other women.
+    </p>
+  </section>
+
+  <div class="section-heart rv">♡</div>
+
+  <!-- ── INSIDE ── -->
+  <section class="section">
+    <span class="eyebrow rv" style="margin-bottom: 40px;">Inside the community, you&rsquo;ll receive</span>
+    <ul class="inside-list">
+      <li class="rv"><span class="h">♡</span>Soft, sweet practices for staying with you</li>
+      <li class="rv"><span class="h">♡</span>Voice notes and reflections from me</li>
+      <li class="rv"><span class="h">♡</span>Check-ins and prompts to support you in including yourself in your life</li>
+      <li class="rv"><span class="h">♡</span>A private space to ask questions and share what&rsquo;s alive</li>
+      <li class="rv"><span class="h">♡</span>Connection with other women walking this path</li>
+      <li class="rv"><span class="h">♡</span>Invitations to live moments, gatherings, and deeper experiences when they&rsquo;re happening</li>
+    </ul>
+  </section>
+
+  <div class="section-heart rv">♡</div>
+
+  <!-- ── NOT A PLACE TO PERFORM ── -->
+  <section class="section">
+    <p class="body-serif rv" style="font-style: italic;">This is not another place to perform.</p>
+    <p class="body-serif rv" style="font-style: italic; margin-top: 4px;">It&rsquo;s a place to exhale &hellip; and be celebrated in that.</p>
+    <p class="body-serif rv" style="font-style: italic; margin-top: 4px;">It&rsquo;s a place to remember the pleasure of being exactly who you are.</p>
+  </section>
+
+  <div class="section-heart rv">♡</div>
+
+  <!-- ── THIS IS FOR YOU IF ── -->
+  <section class="section">
+    <span class="eyebrow rv" style="margin-bottom: 40px;">This is for you if &hellip;</span>
+    <ul class="if-list">
+      <li class="rv">You want to feel held and connected beyond the noise of social media.</li>
+      <li class="rv">You&rsquo;d love to be in a space where you can bring your real, tender, alive self.</li>
+      <li class="rv">You want support with staying with yourself instead of leaving yourself behind.</li>
+      <li class="rv">You love the idea of making love with life, not alone, but together.</li>
+    </ul>
+  </section>
+
+
+  <!-- ── YOUR INVITATION ── -->
+  <section class="invitation">
+    <span class="eyebrow rv" style="margin-bottom: 32px;">Your invitation</span>
+
+    <p class="body-serif rv" style="max-width: 500px; margin: 0 auto;">
+      Your $47 invitation is a one-time payment. Because this is a digital
+      community space with immediate access, this payment is non-refundable.
+    </p>
+    <p class="body-serif rv" style="max-width: 520px; margin: 16px auto 0;">
+      I&rsquo;m also so glad to share that you&rsquo;ll be part of the
+      founding circle of women, which means you&rsquo;ll be helping shape
+      the energy of this space as it unfolds.
+    </p>
+    <p class="body-serif rv" style="font-style: italic; max-width: 480px; margin: 16px auto 0;">
+      If you&rsquo;re joining through the free masterclass on July&nbsp;28, your price is $17.
+    </p>
+
+    <div class="price-display rv">
+      <span class="price-big">$47</span>
+      <span class="price-unit">one-time</span>
+    </div>
+
+    <div class="cta-stack rv">
+
+      <!-- Option 1: Join for $47 -->
+      <a class="btn-primary" href="https://checkout.revolut.com/pay/c746b000-4ab0-4a0d-965e-588fa2c9e338" target="_blank">Yes, I&rsquo;d like to join for $47</a>
+      <p class="price-caption" style="margin-top: 8px;">You&rsquo;ll receive the private Telegram link after the payment &nbsp;♡</p>
+
+      <!-- Option 2: Voice notes / Love Notes -->
+      <p class="cta-divider">or</p>
+      <p style="font-family: var(--serif); font-style: italic; font-size: clamp(1rem, 1.7vw, 1.2rem); font-weight: 300; color: var(--mid); line-height: 1.7; margin-bottom: 16px;">I&rsquo;d love to receive your voice notes</p>
+      <form class="ln-form" id="ln-form">
+        <input class="ln-input" type="text" name="fname" placeholder="your name" required>
+        <input class="ln-input" type="email" name="email" placeholder="your email" required>
+        <button class="btn-soft" type="submit">Yes, send them to me &nbsp;♡</button>
+      </form>
+
+      <!-- Option 3: $17 via masterclass -->
+      <a class="masterclass-link" href="index.html">Or come for $17 with the free masterclass &rarr;</a>
+
+    </div>
+  </section>
+
+
+  <!-- ── LITTLE NOTE ── -->
+  <section class="little-note">
+    <span class="eyebrow rv" style="margin-bottom: 44px; font-size: 0.65rem;">A little note</span>
+    <p class="note-text rv">
+      This community is intentioned to be small by design,<br>
+      because I want to know it&rsquo;s you in there.<br>
+      I want to hold this space with care, presence, and warmth.<br><br>
+      If something in you is saying yes,<br>
+      oooh, that&rsquo;s just exciting.<br>
+      I hope to see you inside.
+    </p>
+    <span class="signature rv">Warm hug, Nina <span style="font-style: normal;">♡</span></span>
+  </section>
+
+  <p class="page-meta">Making Love with Life <span>·</span> Private Telegram Community <span>·</span> Nina Rose</p>
+
+
+  <!-- Hidden Love Notes MailerLite bridge -->
+  <div id="ml-bridge-lovenotes" style="position:fixed;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;">
+    <div class="ml-embedded" data-form="zyLWQW"></div>
+  </div>
+
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.rv').forEach(el => observer.observe(el));
+
+    function fillAndSubmitMLForm(bridgeId, fname, email) {
+      return new Promise(resolve => {
+        function attempt(tries) {
+          const mlForm = document.querySelector('#' + bridgeId + ' form');
+          if (!mlForm || tries <= 0) { resolve(); return; }
+          const emailEl = mlForm.querySelector('input[type="email"]');
+          const nameEl  = mlForm.querySelector('input[type="text"]');
+          if (!emailEl) { setTimeout(() => attempt(tries - 1), 300); return; }
+          if (nameEl)  { nameEl.value = fname; nameEl.dispatchEvent(new Event('input', {bubbles:true})); }
+          emailEl.value = email; emailEl.dispatchEvent(new Event('input', {bubbles:true}));
+          const btn = mlForm.querySelector('button[type="submit"]') || mlForm.querySelector('button');
+          if (btn) btn.click();
+          resolve();
+        }
+        attempt(15);
+      });
+    }
+
+    document.getElementById('ln-form').addEventListener('submit', async e => {
+      e.preventDefault();
+      const fname = e.target.querySelector('[name="fname"]').value.trim();
+      const email = e.target.querySelector('[name="email"]').value.trim();
+      const btn = e.target.querySelector('button[type="submit"]');
+      if (btn) { btn.disabled = true; btn.textContent = 'Saving…'; }
+      await fillAndSubmitMLForm('ml-bridge-lovenotes', fname, email);
+      if (btn) {
+        btn.textContent = 'You’re in ♡';
+        btn.style.background = 'var(--accent)';
+        btn.style.borderColor = 'var(--accent)';
+        btn.style.color = 'var(--c1)';
+      }
+    });
+  </script>
+
+</body>
+</html>
