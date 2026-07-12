@@ -95,13 +95,13 @@
     .d4 { animation-delay: 0.55s; }
     .d5 { animation-delay: 0.7s; }
 
-    /* Scroll reveal */
-    .rv {
+    /* Scroll reveal — hidden only when JS is active */
+    .js-ready .rv {
       opacity: 0;
       transform: translateY(22px);
       transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
     }
-    .rv.visible { opacity: 1; transform: none; }
+    .js-ready .rv.visible { opacity: 1; transform: none; }
 
     /* ── Hero ── */
     .hero {
@@ -611,6 +611,8 @@
 
 
   <script>
+    document.documentElement.classList.add('js-ready');
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
