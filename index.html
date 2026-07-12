@@ -923,8 +923,8 @@
       position: relative;
       z-index: 1;
       background: var(--c1);
-      border-top: 1px solid rgba(255,255,255,0.8);
-      border-bottom: 1px solid rgba(255,255,255,0.8);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
       padding: 96px 24px;
       text-align: center;
     }
@@ -977,7 +977,8 @@
     }
     .testimonial-message-frame:nth-child(2) { transform: rotate(1.5deg); }
     .testimonial-message-frame:hover { transform: rotate(0deg) scale(1.02); }
-    .testimonial-message-frame img { width: 100%; display: block; }
+    .testimonial-message-frame img { width: 100%; display: block; object-fit: cover; object-position: top center; }
+    .testimonial-message-frame:nth-child(1) img { height: 220px; }
     @media (max-width: 600px) {
       .testimonial-messages { gap: 20px; }
       .testimonial-message-frame { max-width: 300px; }
@@ -1477,29 +1478,29 @@
     <span class="eyebrow rv">What they said after our last masterclass</span>
 
     <div class="testimonial rv">
-      <p class="testimonial-text">&ldquo;You never pretend hard things won&rsquo;t happen. You show that you always have yourself to come back to. I left feeling braver.&rdquo;</p>
-      <span class="testimonial-attr">&mdash; B, Thailand</span>
+      <p class="testimonial-text">&ldquo;You never pretend hard things won&rsquo;t happen. You show that you always have yourself to come back to. I&rsquo;m feeling braver.&rdquo;</p>
+      <span class="testimonial-attr">~ B, Thailand</span>
     </div>
 
     <span class="t-heart rv">♡</span>
 
     <div class="testimonial rv">
       <p class="testimonial-text">&ldquo;Being with Nina is like standing in the sun. It burns everything that isn&rsquo;t yours away and leaves the purest version of you.&rdquo;</p>
-      <span class="testimonial-attr">&mdash; M, Croatia</span>
+      <span class="testimonial-attr">~ M, Croatia</span>
     </div>
 
     <span class="t-heart rv">♡</span>
 
     <div class="testimonial rv">
       <p class="testimonial-text">&ldquo;I put away the stuff that isn&rsquo;t mine and refilled myself with light and energy. I&rsquo;m calm, and I&rsquo;m okay.&rdquo;</p>
-      <span class="testimonial-attr">&mdash; M, Croatia</span>
+      <span class="testimonial-attr">~ M, Croatia</span>
     </div>
 
     <span class="t-heart rv">♡</span>
 
     <div class="testimonial rv">
       <p class="testimonial-text">&ldquo;So simple and easy to absorb. The tools gave me more clarity and focus I can actually use in daily life.&rdquo;</p>
-      <span class="testimonial-attr">&mdash; K, Myanmar</span>
+      <span class="testimonial-attr">~ K, Myanmar</span>
     </div>
 
     <div class="testimonial-messages rv">
