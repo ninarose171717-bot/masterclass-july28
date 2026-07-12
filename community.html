@@ -183,27 +183,6 @@
     }
     .btn-primary:hover { background: var(--accent); border-color: var(--accent); }
 
-    .btn-soft {
-      display: inline-block;
-      padding: 16px 40px;
-      background: transparent;
-      color: var(--mid);
-      font-family: var(--sans);
-      font-size: 0.55rem;
-      font-weight: 400;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      border-radius: 1px;
-      text-align: center;
-      transition: background 0.35s, color 0.35s, border-color 0.35s;
-      cursor: pointer;
-      width: 100%;
-      max-width: 360px;
-    }
-    .btn-soft:hover { background: var(--mid); color: var(--c1); border-color: var(--mid); }
-    .btn-soft:disabled { opacity: 0.6; cursor: default; }
 
     .price-caption {
       font-family: var(--sans);
@@ -318,40 +297,6 @@
       margin: 0 auto;
     }
 
-    .cta-divider {
-      font-family: var(--sans);
-      font-size: 0.48rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--muted);
-      padding: 24px 0 20px;
-    }
-
-    .ln-form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      width: 100%;
-    }
-
-    .ln-input {
-      width: 100%;
-      padding: 13px 20px;
-      border: 1px solid var(--border);
-      background: transparent;
-      font-family: var(--sans);
-      font-size: 0.7rem;
-      font-weight: 300;
-      letter-spacing: 0.08em;
-      color: var(--text);
-      outline: none;
-      border-radius: 1px;
-      text-align: center;
-      transition: border-color 0.3s;
-    }
-    .ln-input:focus { border-color: var(--mid); }
-    .ln-input::placeholder { color: var(--muted); }
 
     .masterclass-link {
       display: block;
@@ -486,8 +431,8 @@
       <span class="ornament rise d1">♡</span>
       <h1 class="rise d2">Making Love<br>with Life</h1>
       <p class="hero-intro rise d3">
-        If you&rsquo;ve been longing for a softer place &mdash;<br>
-        one that&rsquo;s just for you &mdash; I think you just found it.
+        If you&rsquo;ve been longing for a softer place,<br>
+        one that&rsquo;s just for you, I think you just found it.
       </p>
     </div>
   </section>
@@ -559,8 +504,8 @@
         <h3 class="about-name">Nina Rose</h3>
         <div class="about-body">
           <p class="em">I created this space for the woman who is yearning to soften. To turn toward herself. To meet herself in the parts that have been quietly keeping her protected.</p>
-          <p>For women who want to gather and share &mdash; without overthinking, without the fear of being judged. Who might find their closest friends here. Or discover what they don&rsquo;t want, and feel free to say so. Who are starting to really notice themselves &mdash; in themselves, and in each other.</p>
-          <p>I created this community because I was missing a place like this. A cozy little corner for just us &mdash; raw and rare and beautiful. Where I could show up openly and vulnerably, and where others could too, as much as their trust allows.</p>
+          <p>For women who want to gather and share &mdash; without overthinking, without the fear of being judged. Who might find their closest friends here. Or discover what they don&rsquo;t want, and feel free to say so. Who are starting to really notice themselves, in themselves, and in each other.</p>
+          <p>I created this community because I was missing a place like this. A cozy little corner for just us, raw and rare and beautiful. Where we could all show up openly and vulnerably, as much as the trust allows.</p>
         </div>
       </div>
     </div>
@@ -590,21 +535,10 @@
 
     <div class="cta-stack rv">
 
-      <!-- Option 1: Join for $47 -->
       <a class="btn-primary" href="https://checkout.revolut.com/pay/c746b000-4ab0-4a0d-965e-588fa2c9e338" target="_blank">Yes, I&rsquo;d like to join for $47</a>
       <p class="price-caption" style="margin-top: 8px;">You&rsquo;ll receive the private Telegram link after the payment &nbsp;♡</p>
 
-      <!-- Option 2: Voice notes / Love Notes -->
-      <p class="cta-divider">or</p>
-      <p style="font-family: var(--serif); font-style: italic; font-size: clamp(1rem, 1.7vw, 1.2rem); font-weight: 300; color: var(--mid); line-height: 1.7; margin-bottom: 16px;">I&rsquo;d love to receive your voice notes</p>
-      <form class="ln-form" id="ln-form">
-        <input class="ln-input" type="text" name="fname" placeholder="your name" required>
-        <input class="ln-input" type="email" name="email" placeholder="your email" required>
-        <button class="btn-soft" type="submit">Yes, send them to me &nbsp;♡</button>
-      </form>
-
-      <!-- Option 3: $17 via masterclass -->
-      <a class="masterclass-link" href="index.html">Or come for $17 with the free masterclass &rarr;</a>
+      <a class="masterclass-link" href="index.html">Or join for $17 with the free masterclass &rarr;</a>
 
     </div>
   </section>
@@ -627,63 +561,22 @@
   <p class="page-meta">Making Love with Life <span>·</span> Private Telegram Community <span>·</span> Nina Rose</p>
 
 
-  <!-- Hidden Love Notes MailerLite bridge -->
-  <div id="ml-bridge-lovenotes" style="position:fixed;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;">
-    <div class="ml-embedded" data-form="zyLWQW"></div>
-  </div>
-
-
   <script>
-    document.documentElement.classList.add('js-ready');
+    document.documentElement.classList.add(‘js-ready’);
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
-          e.target.classList.add('visible');
+          e.target.classList.add(‘visible’);
           observer.unobserve(e.target);
         }
       });
     }, { threshold: 0.12 });
-    document.querySelectorAll('.rv').forEach(el => observer.observe(el));
+    document.querySelectorAll(‘.rv’).forEach(el => observer.observe(el));
 
-    // Fallback: reveal everything after 600ms in case observer doesn't fire
     setTimeout(() => {
-      document.querySelectorAll('.rv').forEach(el => el.classList.add('visible'));
+      document.querySelectorAll(‘.rv’).forEach(el => el.classList.add(‘visible’));
     }, 600);
-
-    function fillAndSubmitMLForm(bridgeId, fname, email) {
-      return new Promise(resolve => {
-        function attempt(tries) {
-          const mlForm = document.querySelector('#' + bridgeId + ' form');
-          if (!mlForm || tries <= 0) { resolve(); return; }
-          const emailEl = mlForm.querySelector('input[type="email"]');
-          const nameEl  = mlForm.querySelector('input[type="text"]');
-          if (!emailEl) { setTimeout(() => attempt(tries - 1), 300); return; }
-          if (nameEl)  { nameEl.value = fname; nameEl.dispatchEvent(new Event('input', {bubbles:true})); }
-          emailEl.value = email; emailEl.dispatchEvent(new Event('input', {bubbles:true}));
-          const btn = mlForm.querySelector('button[type="submit"]') || mlForm.querySelector('button');
-          if (btn) btn.click();
-          resolve();
-        }
-        attempt(15);
-      });
-    }
-
-    // Love Notes form
-    document.getElementById(‘ln-form’).addEventListener(‘submit’, async e => {
-      e.preventDefault();
-      const fname = e.target.querySelector(‘[name="fname"]’).value.trim();
-      const email = e.target.querySelector(‘[name="email"]’).value.trim();
-      const btn = e.target.querySelector(‘button[type="submit"]’);
-      if (btn) { btn.disabled = true; btn.textContent = ‘Saving…’; }
-      await fillAndSubmitMLForm(‘ml-bridge-lovenotes’, fname, email);
-      if (btn) {
-        btn.textContent = ‘You\’re in ♡’;
-        btn.style.background = ‘var(--accent)’;
-        btn.style.borderColor = ‘var(--accent)’;
-        btn.style.color = ‘var(--c1)’;
-      }
-    });
   </script>
 
 </body>
