@@ -357,13 +357,54 @@
       display: block;
       font-family: var(--serif);
       font-style: italic;
-      font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-      color: var(--muted);
+      font-size: clamp(1.1rem, 1.9vw, 1.35rem);
+      color: var(--mid);
       text-decoration: none;
       padding-top: 28px;
       transition: color 0.3s;
     }
-    .masterclass-link:hover { color: var(--mid); }
+    .masterclass-link:hover { color: var(--accent); }
+
+    /* ── Love Notes toggle ── */
+    .form-toggle-wrap {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      cursor: pointer;
+      margin: 0 0 16px;
+      width: 100%;
+      max-width: 360px;
+      text-align: left;
+    }
+    .form-toggle-check {
+      appearance: none;
+      -webkit-appearance: none;
+      flex-shrink: 0;
+      width: 17px;
+      height: 17px;
+      margin-top: 3px;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      background: rgba(255,255,255,0.45);
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .form-toggle-check:checked {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+    .form-toggle-text {
+      font-size: 0.88rem;
+      color: var(--mid);
+      line-height: 1.65;
+    }
+    .toggle-email-reveal {
+      width: 100%;
+      max-width: 360px;
+      margin-bottom: 16px;
+      display: none;
+    }
+    .toggle-email-reveal.show { display: block; }
 
     /* ── Little note ── */
     .little-note {
@@ -517,8 +558,17 @@
 
     <div class="cta-stack rv">
 
+      <!-- Toggle: Love Notes opt-in before payment -->
+      <label class="form-toggle-wrap">
+        <input type="checkbox" class="form-toggle-check" id="ln-toggle">
+        <span class="form-toggle-text">I&rsquo;d also love to receive your notes on life, staying with ourselves, and everything in between. ♡</span>
+      </label>
+      <div class="toggle-email-reveal" id="toggle-email-wrap">
+        <input class="ln-input" type="email" id="ln-toggle-email" placeholder="your email for love notes">
+      </div>
+
       <!-- Option 1: Join for $47 -->
-      <a class="btn-primary" href="https://checkout.revolut.com/pay/c746b000-4ab0-4a0d-965e-588fa2c9e338" target="_blank">Yes, I&rsquo;d like to join for $47</a>
+      <button class="btn-primary" id="join-47-btn">Yes, I&rsquo;d like to join for $47</button>
       <p class="price-caption" style="margin-top: 8px;">You&rsquo;ll receive the private Telegram link after the payment &nbsp;♡</p>
 
       <!-- Option 2: Voice notes / Love Notes -->
@@ -589,18 +639,36 @@
       });
     }
 
-    document.getElementById('ln-form').addEventListener('submit', async e => {
+    // Toggle shows email field when checked
+    const lnToggle = document.getElementById(‘ln-toggle’);
+    const toggleEmailWrap = document.getElementById(‘toggle-email-wrap’);
+    lnToggle.addEventListener(‘change’, () => {
+      toggleEmailWrap.classList.toggle(‘show’, lnToggle.checked);
+    });
+
+    // $47 button: optionally subscribe to Love Notes, then open Revolut
+    document.getElementById(‘join-47-btn’).addEventListener(‘click’, async function() {
+      const wantsLN = lnToggle.checked;
+      const email = document.getElementById(‘ln-toggle-email’).value.trim();
+      if (wantsLN && email) {
+        await fillAndSubmitMLForm(‘ml-bridge-lovenotes’, ‘’, email);
+      }
+      window.open(‘https://checkout.revolut.com/pay/c746b000-4ab0-4a0d-965e-588fa2c9e338’, ‘_blank’);
+    });
+
+    // Standalone Love Notes form (for those not joining for $47)
+    document.getElementById(‘ln-form’).addEventListener(‘submit’, async e => {
       e.preventDefault();
-      const fname = e.target.querySelector('[name="fname"]').value.trim();
-      const email = e.target.querySelector('[name="email"]').value.trim();
-      const btn = e.target.querySelector('button[type="submit"]');
-      if (btn) { btn.disabled = true; btn.textContent = 'Saving…'; }
-      await fillAndSubmitMLForm('ml-bridge-lovenotes', fname, email);
+      const fname = e.target.querySelector(‘[name="fname"]’).value.trim();
+      const email = e.target.querySelector(‘[name="email"]’).value.trim();
+      const btn = e.target.querySelector(‘button[type="submit"]’);
+      if (btn) { btn.disabled = true; btn.textContent = ‘Saving…’; }
+      await fillAndSubmitMLForm(‘ml-bridge-lovenotes’, fname, email);
       if (btn) {
-        btn.textContent = 'You’re in ♡';
-        btn.style.background = 'var(--accent)';
-        btn.style.borderColor = 'var(--accent)';
-        btn.style.color = 'var(--c1)';
+        btn.textContent = ‘You\’re in ♡’;
+        btn.style.background = ‘var(--accent)’;
+        btn.style.borderColor = ‘var(--accent)’;
+        btn.style.color = ‘var(--c1)’;
       }
     });
   </script>
