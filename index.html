@@ -917,6 +917,47 @@
     }
 
     /* ─────────────────────────────
+       TESTIMONIALS
+    ───────────────────────────── */
+    .testimonials {
+      position: relative;
+      z-index: 1;
+      background: var(--c2);
+      padding: 96px 24px;
+      text-align: center;
+    }
+    .testimonials .eyebrow { margin-bottom: 72px; }
+    .testimonial {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 0 56px;
+    }
+    .testimonial:last-of-type { padding-bottom: 0; }
+    .testimonial-text {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(1.1rem, 2vw, 1.45rem);
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+    .testimonial-attr {
+      font-family: var(--sans);
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .t-heart {
+      color: var(--accent);
+      font-size: 0.9rem;
+      letter-spacing: 0.3em;
+      display: block;
+      margin: 0 auto 56px;
+    }
+
+    /* ─────────────────────────────
        FORM (new multi-field)
     ───────────────────────────── */
     .hero-form-wrap { max-width: 380px; text-align: left; }
@@ -1399,6 +1440,40 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════
+       TESTIMONIALS
+  ══════════════════════════ -->
+  <section class="testimonials">
+    <span class="eyebrow rv">What they said after our last masterclass</span>
+
+    <div class="testimonial rv">
+      <p class="testimonial-text">&ldquo;You never pretend hard things won&rsquo;t happen. You show that you always have yourself to come back to. I left feeling braver.&rdquo;</p>
+      <span class="testimonial-attr">&mdash; B, Thailand</span>
+    </div>
+
+    <span class="t-heart rv">♡</span>
+
+    <div class="testimonial rv">
+      <p class="testimonial-text">&ldquo;Being with Nina is like standing in the sun. It burns everything that isn&rsquo;t yours away and leaves the purest version of you.&rdquo;</p>
+      <span class="testimonial-attr">&mdash; M, Croatia</span>
+    </div>
+
+    <span class="t-heart rv">♡</span>
+
+    <div class="testimonial rv">
+      <p class="testimonial-text">&ldquo;I put away the stuff that isn&rsquo;t mine and refilled myself with light and energy. I&rsquo;m calm, and I&rsquo;m okay.&rdquo;</p>
+      <span class="testimonial-attr">&mdash; M, Croatia</span>
+    </div>
+
+    <span class="t-heart rv">♡</span>
+
+    <div class="testimonial rv">
+      <p class="testimonial-text">&ldquo;So simple and easy to absorb. The tools gave me more clarity and focus I can actually use in daily life.&rdquo;</p>
+      <span class="testimonial-attr">&mdash; K, Myanmar</span>
     </div>
   </section>
 
