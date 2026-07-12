@@ -922,9 +922,9 @@
     .testimonials {
       position: relative;
       z-index: 1;
-      background: var(--c1);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      background: var(--c2);
+      border-top: 1px solid rgba(255,255,255,0.8);
+      border-bottom: 1px solid rgba(255,255,255,0.8);
       padding: 96px 24px;
       text-align: center;
     }
@@ -977,8 +977,8 @@
     }
     .testimonial-message-frame:nth-child(2) { transform: rotate(1.5deg); }
     .testimonial-message-frame:hover { transform: rotate(0deg) scale(1.02); }
-    .testimonial-message-frame img { width: 100%; display: block; object-fit: cover; object-position: top center; }
-    .testimonial-message-frame:nth-child(1) img { height: 220px; }
+    .testimonial-message-frame img { width: 100%; display: block; }
+    .testimonial-message-frame:nth-child(2) img { height: 220px; object-fit: cover; object-position: top center; }
     @media (max-width: 600px) {
       .testimonial-messages { gap: 20px; }
       .testimonial-message-frame { max-width: 300px; }
