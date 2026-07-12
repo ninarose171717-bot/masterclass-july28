@@ -956,6 +956,30 @@
       display: block;
       margin: 0 auto 56px;
     }
+    .testimonial-messages {
+      display: flex;
+      gap: 28px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 72px;
+    }
+    .testimonial-message-frame {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 40px rgba(24,18,13,0.10);
+      overflow: hidden;
+      max-width: 260px;
+      width: 100%;
+      transform: rotate(-1.2deg);
+      transition: transform 0.3s;
+    }
+    .testimonial-message-frame:nth-child(2) { transform: rotate(1.5deg); }
+    .testimonial-message-frame:hover { transform: rotate(0deg) scale(1.02); }
+    .testimonial-message-frame img { width: 100%; display: block; }
+    @media (max-width: 600px) {
+      .testimonial-messages { gap: 20px; }
+      .testimonial-message-frame { max-width: 300px; }
+    }
 
     /* ─────────────────────────────
        FORM (new multi-field)
@@ -1474,6 +1498,15 @@
     <div class="testimonial rv">
       <p class="testimonial-text">&ldquo;So simple and easy to absorb. The tools gave me more clarity and focus I can actually use in daily life.&rdquo;</p>
       <span class="testimonial-attr">&mdash; K, Myanmar</span>
+    </div>
+
+    <div class="testimonial-messages rv">
+      <div class="testimonial-message-frame">
+        <img src="./photos that can be used/opinions/IMG_2384.jpeg" alt="Message from a participant">
+      </div>
+      <div class="testimonial-message-frame">
+        <img src="./photos that can be used/opinions/IMG_2387.jpeg" alt="Message from a participant">
+      </div>
     </div>
   </section>
 
