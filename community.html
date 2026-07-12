@@ -365,46 +365,6 @@
     }
     .masterclass-link:hover { color: var(--accent); }
 
-    /* ── Love Notes toggle ── */
-    .form-toggle-wrap {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      cursor: pointer;
-      margin: 0 0 16px;
-      width: 100%;
-      max-width: 360px;
-      text-align: left;
-    }
-    .form-toggle-check {
-      appearance: none;
-      -webkit-appearance: none;
-      flex-shrink: 0;
-      width: 17px;
-      height: 17px;
-      margin-top: 3px;
-      cursor: pointer;
-      border: 1px solid var(--border);
-      border-radius: 2px;
-      background: rgba(255,255,255,0.45);
-      transition: background 0.2s, border-color 0.2s;
-    }
-    .form-toggle-check:checked {
-      background: var(--accent);
-      border-color: var(--accent);
-    }
-    .form-toggle-text {
-      font-size: 0.88rem;
-      color: var(--mid);
-      line-height: 1.65;
-    }
-    .toggle-email-reveal {
-      width: 100%;
-      max-width: 360px;
-      margin-bottom: 16px;
-      display: none;
-    }
-    .toggle-email-reveal.show { display: block; }
 
     /* ── Little note ── */
     .little-note {
@@ -447,6 +407,54 @@
     }
     .page-meta span { color: var(--border); margin: 0 8px; }
 
+    /* ── About section ── */
+    .arch { border-radius: 50% 50% 0 0; overflow: hidden; }
+    .arch img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+
+    .about-wrap {
+      position: relative;
+      z-index: 1;
+      background: var(--c1);
+      padding: 96px 24px;
+      border-top: 14px solid #fff;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 72px;
+      align-items: start;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .about-photo-wrap { position: relative; }
+    .about-arch { width: 100%; aspect-ratio: 3/4; }
+    .about-float {
+      position: absolute;
+      bottom: -28px; right: -36px;
+      background: var(--c1);
+      padding: 12px 14px;
+      max-width: 168px;
+      box-shadow: 0 12px 48px rgba(24,18,13,0.10);
+      z-index: 2;
+    }
+    .about-float p { font-family: var(--serif); font-style: italic; font-size: 0.82rem; color: var(--mid); line-height: 1.65; }
+    .about-sig { display: block; width: 110px; margin-top: 10px; filter: invert(1); mix-blend-mode: multiply; opacity: 0.82; }
+    .about-section-heading {
+      font-family: var(--sans); font-size: 0.6rem; font-weight: 400;
+      letter-spacing: 0.28em; text-transform: uppercase; color: var(--mid); margin-bottom: 14px;
+    }
+    .about-name {
+      font-family: var(--serif); font-size: clamp(2rem, 2.8vw, 2.8rem);
+      font-weight: 300; font-style: italic; color: var(--text); margin-bottom: 40px;
+    }
+    .about-body p { font-size: 0.87rem; color: var(--mid); line-height: 1.92; margin-bottom: 20px; }
+    .about-body p.em { font-family: var(--serif); font-size: 1.06rem; font-style: italic; color: var(--text); }
+
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-float { right: 0; bottom: -20px; }
+    }
+
     @media (max-width: 600px) {
       nav { padding: 14px 20px; }
       .nav-brand { display: none; }
@@ -478,8 +486,8 @@
       <span class="ornament rise d1">♡</span>
       <h1 class="rise d2">Making Love<br>with Life</h1>
       <p class="hero-intro rise d3">
-        A private Telegram space for women to gather, soften,
-        be seen, and stay connected &mdash; with themselves and each other.
+        If you&rsquo;ve been longing for a softer place &mdash;<br>
+        one that&rsquo;s just for you &mdash; this was made with you in mind.
       </p>
     </div>
   </section>
@@ -534,21 +542,47 @@
   </section>
 
 
+  <!-- ── ABOUT NINA ── -->
+  <div class="about-wrap">
+    <div class="about-grid">
+      <div class="about-photo-wrap">
+        <div class="about-arch arch">
+          <img src="./photos that can be used/Photo 1.jpeg" alt="Nina Rose">
+        </div>
+        <div class="about-float">
+          <p>&ldquo;Because you&rsquo;re done being perfect. You want to be honest. And finally exhale.&rdquo;</p>
+          <img class="about-sig" src="./photos that can be used/signature.png" alt="Nina Rose">
+        </div>
+      </div>
+      <div class="about-text">
+        <h2 class="about-section-heading">Your Host</h2>
+        <h3 class="about-name">Nina Rose</h3>
+        <div class="about-body">
+          <p class="em">I created this space for the woman who looks like she&rsquo;s holding it all together, but privately knows she has been living from &ldquo;should&rdquo; for too long.</p>
+          <p>For the woman who somewhere along the way learned that being loved meant being useful. Being safe meant being low-maintenance. Being good meant not needing too much.</p>
+          <p>In the past few years, I&rsquo;ve worked with women online and in person, as well as with people in recovery in rehab, around one pattern that sits beneath so much of what keeps us stuck: the habit of leaving ourselves.</p>
+          <p>My work is grounded in the body, because real change doesn&rsquo;t happen through insight alone. I bring a willingness to stay with what is here without rushing to fix, change, numb, or look away.</p>
+          <p>I&rsquo;m originally from Slovenia and now live in Thailand. Choosing a life that felt true, rather than one that only looked right, has shaped everything about the work I do.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <!-- ── YOUR INVITATION ── -->
   <section class="invitation">
-    <span class="eyebrow rv" style="margin-bottom: 32px;">Your invitation</span>
+    <span class="eyebrow rv" style="margin-bottom: 32px;">Join the community</span>
 
     <p class="body-serif rv" style="max-width: 500px; margin: 0 auto;">
-      Your $47 invitation is a one-time payment. Because this is a digital
-      community space with immediate access, this payment is non-refundable.
+      This is a one-time payment of $47 to join the space permanently.
+      Because it&rsquo;s a digital space with immediate access, this payment is non-refundable.
     </p>
     <p class="body-serif rv" style="max-width: 520px; margin: 16px auto 0;">
-      I&rsquo;m also so glad to share that you&rsquo;ll be part of the
-      founding circle of women, which means you&rsquo;ll be helping shape
+      You&rsquo;ll be part of the founding circle of women helping shape
       the energy of this space as it unfolds.
     </p>
     <p class="body-serif rv" style="font-style: italic; max-width: 480px; margin: 16px auto 0;">
-      If you&rsquo;re joining through the free masterclass on July&nbsp;28, your price is $17.
+      Joining through the free masterclass on July&nbsp;28? Your price is $17.
     </p>
 
     <div class="price-display rv">
@@ -558,17 +592,8 @@
 
     <div class="cta-stack rv">
 
-      <!-- Toggle: Love Notes opt-in before payment -->
-      <label class="form-toggle-wrap">
-        <input type="checkbox" class="form-toggle-check" id="ln-toggle">
-        <span class="form-toggle-text">I&rsquo;d also love to receive your notes on life, staying with ourselves, and everything in between. ♡</span>
-      </label>
-      <div class="toggle-email-reveal" id="toggle-email-wrap">
-        <input class="ln-input" type="email" id="ln-toggle-email" placeholder="your email for love notes">
-      </div>
-
       <!-- Option 1: Join for $47 -->
-      <button class="btn-primary" id="join-47-btn">Yes, I&rsquo;d like to join for $47</button>
+      <a class="btn-primary" href="https://checkout.revolut.com/pay/c746b000-4ab0-4a0d-965e-588fa2c9e338" target="_blank">Yes, I&rsquo;d like to join for $47</a>
       <p class="price-caption" style="margin-top: 8px;">You&rsquo;ll receive the private Telegram link after the payment &nbsp;♡</p>
 
       <!-- Option 2: Voice notes / Love Notes -->
@@ -646,24 +671,7 @@
       });
     }
 
-    // Toggle shows email field when checked
-    const lnToggle = document.getElementById(‘ln-toggle’);
-    const toggleEmailWrap = document.getElementById(‘toggle-email-wrap’);
-    lnToggle.addEventListener(‘change’, () => {
-      toggleEmailWrap.classList.toggle(‘show’, lnToggle.checked);
-    });
-
-    // $47 button: optionally subscribe to Love Notes, then open Revolut
-    document.getElementById(‘join-47-btn’).addEventListener(‘click’, async function() {
-      const wantsLN = lnToggle.checked;
-      const email = document.getElementById(‘ln-toggle-email’).value.trim();
-      if (wantsLN && email) {
-        await fillAndSubmitMLForm(‘ml-bridge-lovenotes’, ‘’, email);
-      }
-      window.open(‘https://checkout.revolut.com/pay/c746b000-4ab0-4a0d-965e-588fa2c9e338’, ‘_blank’);
-    });
-
-    // Standalone Love Notes form (for those not joining for $47)
+    // Love Notes form
     document.getElementById(‘ln-form’).addEventListener(‘submit’, async e => {
       e.preventDefault();
       const fname = e.target.querySelector(‘[name="fname"]’).value.trim();
