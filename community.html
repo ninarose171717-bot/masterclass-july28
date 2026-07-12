@@ -621,6 +621,11 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.rv').forEach(el => observer.observe(el));
 
+    // Fallback: reveal everything after 600ms in case observer doesn't fire
+    setTimeout(() => {
+      document.querySelectorAll('.rv').forEach(el => el.classList.add('visible'));
+    }, 600);
+
     function fillAndSubmitMLForm(bridgeId, fname, email) {
       return new Promise(resolve => {
         function attempt(tries) {
