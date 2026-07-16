@@ -28,7 +28,7 @@
   <!-- End MailerLite Universal -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,600&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,600&family=Jost:wght@300;400&family=Alex+Brush&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -108,9 +108,9 @@
     .nav-left { display: flex; flex-direction: column; gap: 3px; }
     .nav-brand {
       font-family: var(--sans);
-      font-size: 0.57rem;
+      font-size: 0.7rem;
       font-weight: 300;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--mid);
       text-decoration: none;
@@ -121,9 +121,9 @@
     }
     .nav-contact-link {
       font-family: var(--sans);
-      font-size: 0.57rem;
+      font-size: 0.7rem;
       font-weight: 300;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--mid);
       text-decoration: none;
@@ -132,9 +132,9 @@
     .nav-contact-link:hover { color: var(--accent); }
     .nav-seat {
       font-family: var(--sans);
-      font-size: 0.57rem;
+      font-size: 0.7rem;
       font-weight: 300;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--mid);
       text-decoration: none;
@@ -156,6 +156,7 @@
       object-position: center top;
       display: block;
     }
+    .hero-arch img { object-position: center 22%; }
 
     .circle {
       border-radius: 50%;
@@ -172,21 +173,50 @@
        HERO
     ───────────────────────────── */
     .hero {
-      min-height: 130vh;
+      min-height: 100vh;
       background: var(--c1);
       display: grid;
-      grid-template-columns: 52% 48%;
+      grid-template-columns: 1fr 1fr;
       align-items: stretch;
+      position: relative;
+      overflow: hidden;
     }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url('./photos%20that%20can%20be%20used/drapes.png');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.38;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero > * { position: relative; z-index: 1; }
 
     .hero-left {
-      padding: 160px 48px 140px 80px;
+      padding: 140px 4vw 100px 5vw;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       align-items: center;
+      justify-content: flex-start;
       text-align: center;
+      gap: 0;
+      min-width: 0;
+      overflow: hidden;
     }
+
+    .hero-middle { display: none; }
+
+    .hero-right {
+      padding: 160px 4vw 120px 4vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-photo-sm { display: none; }
 
     .hero-eyebrow {
       font-size: 0.6rem;
@@ -198,14 +228,16 @@
 
     h1 {
       font-family: var(--serif);
-      font-size: clamp(3rem, 4.6vw, 5.2rem);
+      font-size: clamp(1.8rem, 2.6vw, 2.9rem);
       font-weight: 300;
       font-style: italic;
-      line-height: 1.07;
+      line-height: 1.25;
       color: var(--text);
-      margin-bottom: 28px;
+      margin-bottom: 40px;
       max-width: 440px;
     }
+    .h1-line1 { color: var(--text); }
+    .h1-line2 { color: var(--accent); }
 
     .hero-sub {
       font-family: var(--serif);
@@ -218,13 +250,26 @@
     }
 
     .hero-desc {
-      font-size: 0.8rem;
-      color: var(--muted);
+      font-family: var(--serif);
+      font-size: clamp(0.9rem, 1.15vw, 1rem);
+      font-weight: 300;
+      color: var(--mid);
       line-height: 1.85;
-      max-width: 380px;
+      max-width: 400px;
       margin-bottom: 28px;
     }
     .hero-desc + .hero-desc { margin-bottom: 28px; }
+    .hero-desc--lead {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+      font-weight: 500;
+      font-style: italic;
+      color: var(--mid);
+      line-height: 1.75;
+      max-width: 420px;
+      margin-bottom: 36px;
+      margin-top: 40px;
+    }
 
     /* Form */
     /*
@@ -253,11 +298,11 @@
 
     .signup-btn {
       padding: 15px 24px;
-      background: var(--text);
+      background: var(--accent);
       color: var(--c1);
-      border: 1px solid var(--text);
+      border: 1px solid var(--accent);
       font-family: var(--sans);
-      font-size: 0.6rem;
+      font-size: 0.72rem;
       font-weight: 400;
       letter-spacing: 0.22em;
       text-transform: uppercase;
@@ -275,19 +320,50 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 160px 48px 0 0;
+      justify-content: flex-start;
+      padding: 140px 5vw 0 0;
     }
 
+    /* Drapes overlay on "doing" section */
+    .doing-section { position: relative; overflow: hidden; }
+    .doing-section::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url('./photos that can be used/drapes.png?v=2');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.28;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .doing-section .inner { position: relative; z-index: 1; }
+
+    /* Drapes background on longing section */
+    .longing-section { position: relative; overflow: hidden; }
+    .longing-section::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url('./photos%20that%20can%20be%20used/drapes.png');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.22;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .longing-section .inner { position: relative; z-index: 1; }
+
     .hero-date {
-      font-size: 0.57rem;
-      letter-spacing: 0.22em;
+      font-size: 0.82rem;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 28px;
-      padding: 10px 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      max-width: 380px;
+      color: var(--mid);
+      margin-bottom: 56px;
+      padding: 14px 0;
+      border-top: 1px solid var(--muted);
+      border-bottom: 1px solid var(--muted);
+      max-width: 440px;
       width: 100%;
     }
 
@@ -306,8 +382,8 @@
 
     .eyebrow {
       display: block;
-      font-size: 0.58rem;
-      letter-spacing: 0.28em;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--accent);
       text-align: center;
@@ -340,13 +416,13 @@
     ───────────────────────────── */
     .resonance-quote {
       font-family: var(--serif);
-      font-size: clamp(2.2rem, 3.8vw, 3.8rem);
+      font-size: clamp(1.8rem, 2.8vw, 2.8rem);
       font-style: italic;
       font-weight: 300;
-      line-height: 1.2;
+      line-height: 1.25;
       color: var(--text);
       text-align: center;
-      margin-bottom: 72px;
+      margin-bottom: 32px;
     }
 
     .resonance-cols {
@@ -357,7 +433,7 @@
     }
     .resonance-cols p {
       font-family: var(--serif);
-      font-size: 1.1rem;
+      font-size: 1.25rem;
       line-height: 1.9;
       color: var(--mid);
       margin-bottom: 32px;
@@ -606,21 +682,35 @@
 
     .item-n {
       display: block;
-      font-size: 0.55rem;
-      letter-spacing: 0.22em;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
       color: var(--accent);
       margin-bottom: 10px;
     }
     .for-you-grid li p {
       font-family: var(--serif);
-      font-size: 1.05rem;
-      line-height: 1.75;
-      color: rgba(243, 237, 229, 0.72);
+      font-size: 1.28rem;
+      line-height: 1.85;
+      color: rgba(243, 237, 229, 0.78);
     }
 
     /* ─────────────────────────────
        TAKEAWAYS
     ───────────────────────────── */
+    .takeaways-section { overflow: hidden; }
+    .takeaways-section::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url('./photos that can be used/drapes.png?v=2');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.22;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .takeaways-section .inner { position: relative; z-index: 1; }
+
     .takeaways-heading {
       font-family: var(--serif);
       font-size: clamp(1.8rem, 2.8vw, 2.5rem);
@@ -635,14 +725,12 @@
       list-style: none;
       max-width: 640px;
       margin: 0 auto;
-      border-top: 1px solid var(--border);
     }
     .takeaways-list li {
-      padding: 32px 0;
-      border-bottom: 1px solid var(--border);
+      padding: 28px 0;
       font-family: var(--serif);
-      font-size: 1.06rem;
-      line-height: 1.55;
+      font-size: 1.32rem;
+      line-height: 1.75;
       color: var(--mid);
       text-align: center;
     }
@@ -668,7 +756,7 @@
     ───────────────────────────── */
     .photo-moment {
       position: relative;
-      height: 320px;
+      height: 420px;
       overflow: hidden;
       max-width: 100%;
       margin: 0 auto;
@@ -779,16 +867,21 @@
     }
 
     .about-body p {
-      font-size: 0.87rem;
+      font-family: var(--serif);
+      font-size: clamp(1.2rem, 1.6vw, 1.38rem);
+      font-weight: 300;
       color: var(--mid);
       line-height: 1.92;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
     .about-body p.em {
       font-family: var(--serif);
-      font-size: 1.06rem;
+      font-size: clamp(1.1rem, 1.4vw, 1.3rem);
       font-style: italic;
+      font-weight: 400;
       color: var(--text);
+      line-height: 1.65;
+      margin-bottom: 28px;
     }
 
     /* ─────────────────────────────
@@ -833,7 +926,7 @@
 
     .invite-body p {
       font-family: var(--serif);
-      font-size: 1.06rem;
+      font-size: 1.25rem;
       line-height: 1.88;
       color: var(--mid);
       margin-bottom: 24px;
@@ -844,11 +937,11 @@
 
     .invite-closing {
       font-family: var(--serif);
-      font-size: clamp(1.3rem, 2.4vw, 1.85rem);
+      font-size: clamp(1.3rem, 2.2vw, 1.75rem);
       font-style: italic;
       font-weight: 300;
       color: var(--text);
-      margin: 80px auto;
+      margin: 0 auto 48px;
       line-height: 1.7;
       max-width: 440px;
       scroll-margin-top: 80px;
@@ -885,7 +978,7 @@
       color: var(--muted);
       text-decoration: none;
     }
-    .footer-note { font-size: 0.66rem; color: var(--muted); letter-spacing: 0.04em; }
+    .footer-note { font-size: 0.82rem; color: var(--muted); letter-spacing: 0.04em; }
 
     /* ─────────────────────────────
        MOBILE
@@ -958,7 +1051,7 @@
 
     @media (max-width: 480px) {
       h1 { font-size: 2.6rem; }
-      .resonance-quote { font-size: 1.9rem; }
+      .resonance-quote { font-size: 2.4rem; }
       .ghost-word { font-size: 30vw; }
     }
 
@@ -968,31 +1061,33 @@
     .countdown {
       display: flex;
       justify-content: center;
-      align-items: flex-end;
+      align-items: center;
       gap: 20px;
       margin-bottom: 28px;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 14px 0 10px;
+      border-top: 1px solid var(--muted);
+      border-bottom: 1px solid var(--muted);
+      padding: 14px 0;
     }
     .cd-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
     .cd-num {
-      font-family: var(--serif);
-      font-size: 2.2rem;
+      font-family: var(--sans);
+      font-size: 0.88rem;
       font-weight: 300;
       line-height: 1;
+      letter-spacing: 0.14em;
       color: var(--mid);
     }
     .cd-label {
-      font-size: 0.5rem;
-      letter-spacing: 0.22em;
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      font-weight: 300;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--mid);
     }
     .cd-sep {
-      font-size: 1.4rem;
-      color: var(--blush);
-      margin-bottom: 16px;
+      font-size: 0.82rem;
+      color: var(--mid);
       line-height: 1;
     }
 
@@ -1003,9 +1098,22 @@
       position: relative;
       z-index: 1;
       background: #EAE0D5;
+      overflow: hidden;
       padding: 96px 24px;
       text-align: center;
     }
+    .testimonials::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url('./photos that can be used/drapes.png?v=2');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.22;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .testimonials > * { position: relative; z-index: 1; }
     .testimonials .eyebrow { margin-bottom: 16px; color: var(--mid); }
     .testimonials-heading {
       font-family: var(--serif);
@@ -1025,7 +1133,7 @@
     .testimonial-text {
       font-family: var(--serif);
       font-style: italic;
-      font-size: clamp(1.1rem, 2vw, 1.45rem);
+      font-size: clamp(1.25rem, 2vw, 1.6rem);
       font-weight: 300;
       color: var(--mid);
       line-height: 1.85;
@@ -1033,8 +1141,8 @@
     }
     .testimonial-attr {
       font-family: var(--sans);
-      font-size: 0.58rem;
-      letter-spacing: 0.2em;
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--mid);
     }
@@ -1073,7 +1181,7 @@
     /* ─────────────────────────────
        FORM (new multi-field)
     ───────────────────────────── */
-    .hero-form-wrap { max-width: 380px; text-align: left; }
+    .hero-form-wrap { max-width: 440px; width: 100%; text-align: left; }
 
     .form-field {
       display: flex;
@@ -1082,25 +1190,26 @@
       margin-bottom: 10px;
     }
     .form-label {
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--accent);
     }
     .form-input {
-      padding: 15px 18px;
+      padding: 16px 18px;
       background: rgba(255,255,255,0.55);
       border: 1px solid var(--border);
-      font-family: var(--sans);
-      font-size: 0.92rem;
+      font-family: var(--serif);
+      font-size: 1.15rem;
       font-weight: 300;
+      font-style: italic;
       color: var(--text);
       outline: none;
       border-radius: 4px;
       transition: border-color 0.3s;
       width: 100%;
     }
-    .form-input::placeholder { color: var(--muted); }
+    .form-input::placeholder { color: var(--muted); font-style: italic; }
     .form-input:focus { border-color: var(--accent); }
 
     .form-toggle-wrap {
@@ -1128,7 +1237,10 @@
       border-color: var(--accent);
     }
     .form-toggle-text {
-      font-size: 0.88rem;
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.05rem;
       color: var(--mid);
       line-height: 1.65;
     }
@@ -1136,15 +1248,16 @@
     .btn-submit {
       display: block;
       width: 100%;
-      padding: 17px;
-      background: var(--mid);
+      padding: 20px;
+      background: var(--accent);
       color: var(--c1);
-      border: 1px solid var(--mid);
-      font-family: var(--sans);
-      font-size: 0.76rem;
+      border: 1px solid var(--accent);
+      font-family: var(--serif);
+      font-size: 1.25rem;
       font-weight: 400;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
+      font-style: italic;
+      letter-spacing: 0.08em;
+      text-transform: none;
       cursor: pointer;
       border-radius: 1px;
       transition: background 0.35s, border-color 0.35s;
@@ -1154,9 +1267,12 @@
 
     .form-note {
       display: block;
-      font-size: 0.62rem;
-      color: var(--muted);
-      letter-spacing: 0.06em;
+      font-family: var(--serif);
+      font-size: 0.88rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--mid);
+      letter-spacing: 0.04em;
       text-align: center;
     }
 
@@ -1180,13 +1296,23 @@
     .invite-form-wrap .btn-submit { max-width: 360px; margin-left: auto; margin-right: auto; }
     .invite-form-wrap .form-note { text-align: center; }
 
-    /* ── Hero arch: fixed vertical radius so it stays a dome, not a Gothic point ── */
+    /* ── Hero arch: dome shape ── */
     .hero-arch {
       flex: 1;
       width: 100%;
-      max-width: 560px;
-      min-height: 320px;
-      border-radius: 50% 50% 0 0 / 160px 160px 0 0;
+      min-height: 480px;
+      border-radius: 50% 50% 0 0 / 130px 130px 0 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-arch::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 30%;
+      background: linear-gradient(to bottom, transparent, var(--c1));
+      pointer-events: none;
+      z-index: 1;
     }
 
     /* ── Arch dome CTA: photo bg ── */
@@ -1242,8 +1368,8 @@
     .ml-embedded .ml-form-embedSubmit { padding: 0 !important; }
     .ml-embedded .ml-form-embedSubmit button {
       display: block !important; width: 100% !important; padding: 15px !important;
-      background: var(--mid) !important; color: var(--c1) !important;
-      border: 1px solid var(--mid) !important; border-radius: 1px !important;
+      background: var(--accent) !important; color: var(--c1) !important;
+      border: 1px solid var(--accent) !important; border-radius: 1px !important;
       font-family: var(--sans) !important; font-size: 0.68rem !important; font-weight: 400 !important;
       letter-spacing: 0.2em !important; text-transform: uppercase !important;
       cursor: pointer !important; margin-bottom: 12px !important; transition: background 0.35s, border-color 0.35s !important;
@@ -1269,6 +1395,357 @@
     .ml-embedded .ml-form-successBody { text-align: center !important; padding: 24px 0 !important; }
     .ml-embedded .ml-form-successBody h4 { font-family: var(--serif) !important; font-style: italic !important; font-weight: 300 !important; font-size: 1.4rem !important; color: var(--mid) !important; }
     .ml-embedded .ml-form-successBody p { font-family: var(--sans) !important; font-size: 0.75rem !important; color: var(--muted) !important; }
+
+    /* ── Hero imagine prose ── */
+    .hero-imagine {
+      font-family: var(--serif); font-size: clamp(0.82rem, 1.05vw, 0.96rem);
+      color: var(--mid); line-height: 1.85; font-style: italic; font-weight: 300;
+      text-align: center; margin: 0 0 40px; padding: 0;
+      max-width: 400px; width: 100%;
+    }
+    .hero-desc--body {
+      font-family: var(--serif); font-size: clamp(0.86rem, 1.1vw, 1rem);
+      color: var(--mid); line-height: 1.85; font-weight: 300; font-style: italic;
+      text-align: center; margin-bottom: 20px; text-wrap: balance;
+    }
+
+    /* ── When life asks section ── */
+    .when-heading {
+      font-family: var(--serif); font-size: clamp(1.9rem, 3.5vw, 3.2rem);
+      font-weight: 300; font-style: italic; color: var(--text);
+      text-align: center; margin-bottom: 64px; line-height: 1.3;
+    }
+    .when-intro {
+      font-family: var(--serif); font-size: clamp(1.2rem, 1.6vw, 1.4rem);
+      color: var(--mid); line-height: 1.85; max-width: 520px;
+      margin: 0 auto 64px; text-align: center; font-weight: 300;
+    }
+    .when-list { list-style: none; padding: 0; margin: 0 auto 64px; max-width: 480px; text-align: center; }
+    .when-list li {
+      font-family: var(--serif); font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+      color: var(--text); line-height: 2; padding: 2px 0; font-weight: 300;
+    }
+    .when-shift {
+      font-family: var(--serif); font-size: clamp(1.1rem, 1.45vw, 1.28rem);
+      color: var(--mid); line-height: 1.9; max-width: 540px;
+      margin: 0 auto; text-align: center; font-weight: 300;
+    }
+    .when-shift p { margin-bottom: 28px; }
+    .when-shift .beat {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 1.7vw, 1.35rem);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.75;
+      margin: 52px 0;
+    }
+    .when-shift .breathe { margin-top: 60px; }
+    .when-divider {
+      max-width: 100px;
+      margin: 64px auto;
+      border: none;
+      border-top: 1px solid var(--border);
+    }
+    .when-rare {
+      font-family: var(--serif); font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+      color: var(--mid); line-height: 1.9; max-width: 540px;
+      margin: 0 auto; text-align: center; font-weight: 300;
+    }
+    .when-rare p { margin-bottom: 24px; }
+    .when-rare .beat {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 1.7vw, 1.35rem);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.75;
+      margin-bottom: 40px;
+    }
+    .when-close {
+      font-family: var(--serif); font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+      color: var(--text); line-height: 1.8; max-width: 480px;
+      margin: 64px auto 64px; text-align: center; font-style: italic; font-weight: 300;
+    }
+    .when-close em { font-style: italic; color: var(--text); }
+
+    /* ── Longing section ── */
+    .longing-intro {
+      font-family: var(--serif); font-size: clamp(1.3rem, 2.2vw, 2rem);
+      color: var(--mid); line-height: 1.5; max-width: 540px;
+      margin: 0 auto 44px; text-align: center; font-weight: 300; font-style: italic;
+    }
+    .longing-body { max-width: 540px; margin: 0 auto 40px; text-align: center; }
+    .longing-body p {
+      font-family: var(--serif); font-size: clamp(1.1rem, 1.4vw, 1.22rem);
+      color: var(--mid); line-height: 1.85; font-weight: 300; margin-bottom: 16px;
+    }
+    .longing-list { list-style: none; padding: 0; margin: 0 auto 44px; max-width: 500px; text-align: center; }
+    .longing-list li {
+      font-family: var(--serif); font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+      color: var(--text); line-height: 2.1; font-style: italic; font-weight: 300;
+    }
+    .longing-close { max-width: 680px; margin: 0 auto; text-align: center; }
+    .longing-close p {
+      font-family: var(--serif);
+      font-size: clamp(1.15rem, 1.7vw, 1.5rem);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.9;
+      letter-spacing: 0.01em;
+      margin-bottom: 32px;
+      text-wrap: balance;
+    }
+    .resonance-invite {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.75;
+      margin-top: 32px;
+    }
+
+    /* ── What this masterclass is really about ── */
+    .mc-about-heading {
+      font-family: var(--serif); font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+      font-weight: 300; font-style: italic; color: var(--text);
+      text-align: center; margin-bottom: 52px; line-height: 1.3;
+    }
+    .question-block { max-width: 520px; margin: 0 auto 52px; text-align: center; }
+    .question-block p {
+      font-family: var(--serif); font-size: clamp(1rem, 1.4vw, 1.2rem);
+      color: var(--mid); line-height: 1.8; font-weight: 300; margin-bottom: 24px;
+    }
+    .question-block p strong { font-weight: 400; color: var(--text); font-style: italic; }
+    .mc-about-body { max-width: 560px; margin: 0 auto 0; text-align: center; }
+    .mc-about-body p {
+      font-family: var(--serif); font-size: clamp(1.1rem, 1.45vw, 1.28rem);
+      color: var(--mid); line-height: 1.9; font-weight: 300; margin-bottom: 18px;
+    }
+    .mc-about-body p em { color: var(--text); font-style: italic; }
+    .mc-about-subhead {
+      display: block; font-family: var(--sans); font-size: 0.57rem;
+      letter-spacing: 0.24em; text-transform: uppercase; color: var(--accent);
+      text-align: center; margin: 60px auto 28px;
+    }
+    .mc-about-sub-body { max-width: 480px; margin: 0 auto; text-align: center; }
+    .mc-about-sub-body p {
+      font-family: var(--serif); font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+      color: var(--mid); line-height: 2.1; font-weight: 300; font-style: italic;
+      margin-bottom: 4px;
+    }
+    .mc-about-sub-body p strong { font-style: normal; font-weight: 400; color: var(--text); }
+
+    /* ── What if the problem isn't (dark) ── */
+    .what-if-heading {
+      font-family: var(--serif); font-size: clamp(1.5rem, 2.6vw, 2.5rem);
+      font-weight: 300; font-style: italic; color: rgba(243,237,229,0.95);
+      text-align: center; margin-bottom: 36px; line-height: 1.3;
+      max-width: 580px; margin-left: auto; margin-right: auto;
+    }
+    .what-if-bridge {
+      font-family: var(--serif); font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+      font-weight: 300; font-style: italic; color: rgba(243,237,229,0.65);
+      text-align: center; margin: 0 auto 48px; max-width: 520px; line-height: 1.7;
+    }
+    .what-if-list { list-style: none; padding: 0; margin: 0 auto; max-width: 440px; text-align: center; }
+    .what-if-list li {
+      font-family: var(--serif); font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+      color: rgba(243,237,229,0.82); line-height: 2.2;
+      font-style: italic; font-weight: 300;
+    }
+
+    /* ── Drapes overlay on "When life asks" section ── */
+    .when-section { position: relative; overflow: hidden; }
+    .when-section::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url('./photos that can be used/drapes.png?v=2');
+      background-size: cover; background-position: center;
+      opacity: 0.22; mix-blend-mode: multiply; pointer-events: none; z-index: 0;
+    }
+    .when-section .inner { position: relative; z-index: 1; }
+
+    /* ── Hero middle circle (hands photo) ── */
+    .hero-photo-circle {
+      width: 320px; height: 320px;
+      border-radius: 50%; overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 0 0 1px rgba(188,148,120,0.45), 0 0 0 14px rgba(243,237,229,0.9), 0 0 0 15px rgba(188,148,120,0.18);
+    }
+    .hero-photo-circle img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+    /* ── Explore card drapes bg + number ── */
+    .explore-drapes-bg {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
+      opacity: 0.82;
+    }
+    .explore-card-photo::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, rgba(243,237,229,0.65) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .explore-card-num {
+      position: absolute; inset: 0;
+      display: flex; align-items: flex-end; justify-content: center;
+      padding-bottom: 24px;
+      font-family: var(--serif);
+      font-size: 5rem; font-style: italic; font-weight: 300;
+      color: rgba(243,237,229,0.95);
+      text-shadow: 0 2px 16px rgba(24,18,13,0.22);
+      z-index: 2;
+    }
+    .explore-card-body h3 {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 1.55vw, 1.35rem);
+      font-style: italic; font-weight: 400;
+      color: var(--text);
+      line-height: 1.55; margin-bottom: 16px;
+      min-height: 180px;
+    }
+    .explore-card-body p {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 1.3vw, 1.15rem);
+      color: var(--mid);
+      line-height: 1.9; font-weight: 300;
+    }
+
+    /* ── Explore arch cards — 3-column horizontal ── */
+    .explore-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 1000px;
+      margin: 0 auto 56px;
+    }
+    .explore-card {
+      display: flex; flex-direction: column; text-align: center;
+    }
+    .explore-card-photo {
+      width: 100%;
+      aspect-ratio: 2/3;
+      border-radius: 50% 50% 0 0 / 110px 110px 0 0;
+      overflow: hidden;
+      margin-bottom: 28px;
+      position: relative;
+    }
+    .explore-card-photo img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center top;
+    }
+    .explore-card-body { padding: 0 16px 40px; }
+    @media (max-width: 760px) {
+      .explore-cards { grid-template-columns: 1fr; }
+      .explore-card-photo { aspect-ratio: 3/2; border-radius: 50% 50% 0 0 / 60px 60px 0 0; }
+    }
+
+    /* ── When-shift text (italic flow between list and close) ── */
+    .when-middle {
+      font-family: var(--serif); font-size: clamp(1rem, 1.35vw, 1.18rem);
+      color: var(--mid); line-height: 2; text-align: center; font-weight: 300;
+      max-width: 480px; margin: 0 auto 32px;
+    }
+    .when-middle p { margin-bottom: 4px; }
+
+    /* ── Drapes overlay on "What this masterclass" section ── */
+    .mc-about-section { position: relative; overflow: hidden; }
+    .mc-about-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('./photos that can be used/drapes.png') center/cover no-repeat;
+      opacity: 0.44;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+    .mc-about-section .inner { position: relative; z-index: 1; }
+
+    /* ── Blurred oval photo backgrounds ── */
+    .oval-bg {
+      position: absolute;
+      inset: -24px;
+      background-size: cover;
+      background-position: center;
+      filter: blur(3px);
+      opacity: 0.6;
+      border-radius: inherit;
+      z-index: 0;
+    }
+    .explore-oval > *:not(.oval-bg) { position: relative; z-index: 1; }
+
+    /* ── Explore ovals ── */
+    .explore-intro {
+      font-family: var(--serif); font-size: clamp(1.4rem, 2.2vw, 2rem);
+      font-weight: 300; font-style: italic; color: var(--text);
+      text-align: center; margin-bottom: 52px; line-height: 1.3;
+    }
+    .explore-ovals { display: flex; flex-direction: column; gap: 0; max-width: 720px; margin: 0 auto 56px; }
+    .explore-oval {
+      background: transparent;
+      border-radius: 0;
+      padding: 56px 40px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      position: relative;
+    }
+    .explore-oval:last-child { border-bottom: 1px solid var(--border); }
+    .explore-oval-n {
+      display: block;
+      font-family: var(--serif);
+      font-size: 5rem;
+      font-style: italic;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      text-transform: none;
+      color: var(--accent);
+      opacity: 0.3;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .explore-oval h3 {
+      font-family: var(--serif); font-size: clamp(1.3rem, 1.8vw, 1.6rem);
+      font-style: italic; font-weight: 400; color: var(--text);
+      margin-bottom: 20px; line-height: 1.4; max-width: 520px; margin-left: auto; margin-right: auto;
+    }
+    .explore-oval p {
+      font-family: var(--serif); font-size: clamp(1.1rem, 1.45vw, 1.28rem);
+      color: var(--mid); line-height: 1.9; font-weight: 300; max-width: 560px; margin: 0 auto;
+    }
+
+    /* ── Thursday narrative section ── */
+    .thursday-eyebrow {
+      display: block; font-family: var(--sans); font-size: 0.72rem;
+      letter-spacing: 0.24em; text-transform: uppercase; color: var(--mid);
+      text-align: center; margin-bottom: 48px;
+    }
+    .thursday-body { max-width: 520px; margin: 0 auto; text-align: center; }
+    .thursday-body p {
+      font-family: var(--serif); font-size: clamp(1.2rem, 1.6vw, 1.38rem);
+      color: var(--mid); line-height: 2; font-weight: 300; margin-bottom: 18px;
+    }
+    .thursday-close {
+      font-family: var(--serif); font-size: clamp(1.15rem, 1.7vw, 1.4rem);
+      color: var(--text); line-height: 1.85; font-style: italic; font-weight: 300;
+      margin-top: 32px;
+    }
+
+    /* ── Final CTA richness ── */
+    .richness-headline {
+      font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 300; font-style: italic; color: var(--text);
+      text-align: center; line-height: 1.35; margin-bottom: 48px;
+      max-width: 580px; margin-left: auto; margin-right: auto;
+    }
+    .richness-sub {
+      font-family: var(--serif); font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+      color: var(--mid); font-style: italic; font-weight: 300;
+      text-align: center; margin-bottom: 48px; line-height: 1.8;
+    }
   </style>
 </head>
 <body>
@@ -1293,12 +1770,20 @@
 
     <div class="hero-left">
       <p class="hero-date h-rise">28/7 &nbsp;·&nbsp; 2 PM Bangkok &nbsp;·&nbsp; 9 AM Europe</p>
-      <h1 class="h-rise d1">You haven't<br>lost yourself.</h1>
-      <p class="hero-sub h-rise d2">You've just learned to give your attention to everyone but you.</p>
-      <p class="hero-desc h-rise d3">A free 90-minute masterclass for the woman who may already be caring for herself in many beautiful ways &hellip; but still feels how hard it can be to stay with herself when life, love, fear, desire, or other people come into the picture.</p>
-      <p class="hero-desc h-rise d4">Inside, we&rsquo;ll begin moving from orienting outward to returning to your own inner desires, needs, signals, and unexpressed essence.<br><br>Not through another self-improvement plan.<br>Through attention.<br>Through felt sense of presence.<br>Through learning how to stay close to yourself, especially when life gets tough.</p>
+      <h1 class="h-rise d1"><span class="h1-line1">Come back to yourself.</span><br><span class="h1-line2">Feel your life again.</span></h1>
 
-      <div class="hero-form-wrap h-rise d5" id="hero-form">
+      <p class="hero-desc--lead h-rise d2">This is a free 90-minute masterclass about the gap between managing your life well and actually feeling like you&rsquo;re inside it.</p>
+
+    </div>
+
+    <div class="hero-middle h-appear d1">
+      <div class="hero-photo-circle">
+        <img src="./photos%20that%20can%20be%20used/hands-flower.png" alt="" loading="eager">
+      </div>
+    </div>
+
+    <div class="hero-right h-rise d3" id="hero-form">
+      <div class="hero-form-wrap">
         <div class="countdown" id="hero-countdown">
           <div class="cd-item"><span class="cd-num" id="cd-days">--</span><span class="cd-label">Days</span></div>
           <span class="cd-sep">·</span>
@@ -1323,240 +1808,211 @@
       </div>
     </div>
 
-    <!-- Arch photo of Nina -->
-    <div class="hero-right h-appear d1">
-      <div class="hero-arch arch">
-        <img src="./photos that can be used/Photo 2.jpeg" alt="Nina Rose" loading="eager">
-      </div>
-    </div>
-
   </section>
 
 
   <!-- ══════════════════════════
-       RESONANCE
+       HERO BRIDGE
   ══════════════════════════ -->
   <section class="section s-c2">
-    <div class="inner">
+    <div class="inner" style="max-width: 620px;">
 
-      <p class="resonance-quote rv s1">
-        You know how to keep going.
-      </p>
+      <p class="rv"   style="font-family:var(--serif); font-size:clamp(1.1rem,1.6vw,1.38rem); color:var(--mid); line-height:2; font-weight:300; font-style:italic; text-align:center; margin-bottom:4px;">Imagine really tasting your morning tea.</p>
+      <p class="rv s1" style="font-family:var(--serif); font-size:clamp(1.1rem,1.6vw,1.38rem); color:var(--mid); line-height:2; font-weight:300; font-style:italic; text-align:center; margin-bottom:4px;">Feeling your laughter in your body before it disappears.</p>
+      <p class="rv s1" style="font-family:var(--serif); font-size:clamp(1.1rem,1.6vw,1.38rem); color:var(--mid); line-height:2; font-weight:300; font-style:italic; text-align:center; margin-bottom:4px;">Feeling the water on your skin during your morning shower.</p>
+      <p class="rv s2" style="font-family:var(--serif); font-size:clamp(1.1rem,1.6vw,1.38rem); color:var(--mid); line-height:2; font-weight:300; font-style:italic; text-align:center; margin-bottom:4px;">Allowing your body to move to a great song.</p>
+      <p class="rv s2" style="font-family:var(--serif); font-size:clamp(1.1rem,1.6vw,1.38rem); color:var(--mid); line-height:2; font-weight:300; font-style:italic; text-align:center; margin-bottom:4px;">Swinging your hips freely while you&rsquo;re walking, and invite life in.</p>
+      <p class="rv s3" style="font-family:var(--serif); font-size:clamp(1.1rem,1.6vw,1.38rem); color:var(--mid); line-height:2; font-weight:300; font-style:italic; text-align:center; margin-bottom:4px;">To really see your friend&rsquo;s face instead of rehearsing your response.</p>
+      <p class="rv s3" style="font-family:var(--serif); font-size:clamp(1.3rem,1.95vw,1.65rem); color:var(--text); line-height:1.85; font-weight:300; font-style:italic; text-align:center; margin-bottom:72px;">Becoming fully available to the woman who is actually living your life.</p>
 
-      <div class="resonance-cols">
-        <div>
-          <p class="rv">You know how to show up. How to anticipate what other people need. How to keep the peace. How to be useful. How to make things work. How to hold it all together.</p>
-          <p class="rv s1">And maybe, in many ways, you are caring for yourself.</p>
-          <p class="rv s2">Maybe you journal. Maybe you move your body. Maybe you take the walks, drink the water, book the therapy, light the candle, pull the cards, create the space for you.</p>
-          <p class="rv s3">And still &hellip; there are moments when life is life-ing and you leave yourself behind.</p>
-        </div>
-        <div>
-          <p class="rv s1">A conversation gets tense, and suddenly your attention is on keeping them okay.</p>
-          <p class="rv s2">Someone is disappointed, and you forget what you actually feel.</p>
-          <p class="rv s2">You want something, but before you even let yourself have the desire, you start negotiating it down.</p>
-          <p class="rv s3">You feel hurt, but instead of staying with yourself while feeling that hurt, you move into explaining, fixing, hiding what you really mean, performing you&rsquo;re okay, or becoming very, very reasonable.</p>
-        </div>
-      </div>
+      <p class="rv s4" style="font-family:var(--serif); font-size:clamp(1.1rem,1.6vw,1.38rem); color:var(--mid); line-height:1.85; font-weight:300; font-style:italic; text-align:center; margin-bottom:4px;">In this masterclass we&rsquo;ll notice where our attention goes when life turns tender, messy, or<br>overwhelming,</p>
+      <p class="rv s4" style="font-family:var(--serif); font-size:clamp(1.1rem,1.6vw,1.38rem); color:var(--muted); line-height:1.85; font-weight:300; font-style:italic; text-align:center; margin-bottom:72px;">and what becomes possible when we begin including ourselves again.</p>
 
-      <!-- Beach photo in a large circle -->
-      <div class="circle-break circle ri s1">
-        <img src="./photos that can be used/3370666B-967B-449E-AD51-E64A01C03DB6.png"
-             alt="" style="object-position: center 18%;">
-      </div>
-
-      <p class="resonance-close rv s2">
-        It happens because somewhere along the way, something in you learned that being loved meant being useful. Being safe meant being low-maintenance. Being connected meant not needing too much. Being okay meant leaving yourself before anyone else could.
-        <span>And eventually, your body starts to speak. Through exhaustion after work. Through resentment toward your partner or friends. Through restlessness and constantly planning the next thing. Through numbness in conversations you wish you could feel present for. Through cravings, shutdown, overthinking, or the ache of knowing your life looks &lsquo;okay,&rsquo; but you don&rsquo;t feel fully here for it.</span>
-      </p>
-      <p class="resonance-close rv s3" style="margin-top: 64px;">
-        This masterclass is not about blaming yourself for the ways you learned to survive.
-        <span>It&rsquo;s about beginning to notice the moment you leave yourself &hellip; and learning how to stay with more softness towards yourself.</span>
-      </p>
-
-      <div class="cta-row rv s3">
-        <a href="#register" class="btn btn--dark">Save My Seat</a>
-      </div>
+      <p class="rv s5" style="font-family:var(--serif); font-size:clamp(1.4rem,2.1vw,1.85rem); color:var(--text); line-height:1.65; font-weight:300; font-style:italic; text-align:center; margin-bottom:0;">Maybe it&rsquo;s not about building a different life. But making the one we already have richer &hellip; through a deeper intimacy with the woman who is living it.</p>
 
     </div>
   </section>
 
 
   <!-- ══════════════════════════
-       WHAT'S INSIDE  — arch cards
-  ══════════════════════════ -->
-  <section class="section s-c3">
-
-    <!-- Ghost word behind content -->
-    <span class="ghost-word" aria-hidden="true">stay</span>
-
-    <div class="inner--wide" style="position:relative; z-index:1;">
-
-      <p class="inside-intro rv s1">
-        Inside this masterclass, you&rsquo;ll learn how to see the pattern<br>that has been running your life.
-      </p>
-
-      <div class="arch-cards">
-
-        <div class="arch-card rv">
-          <div class="arch-card-photo">
-            <img src="./photos that can be used/FB4C9617-DADC-4764-911C-938DA5838BF0.png" alt="">
-          </div>
-          <div class="arch-card-body">
-            <span class="inside-n">01</span>
-            <h3>The attention pattern</h3>
-            <p>Why your focus keeps moving toward what needs to be done, who needs you, how others feel, and what might go wrong, while the woman actually living your life disappears from your own attention.</p>
-          </div>
-        </div>
-
-        <div class="arch-card rv s2">
-          <div class="arch-card-photo">
-            <img src="./photos that can be used/drapes.png" alt="" style="object-position: center center;">
-          </div>
-          <div class="arch-card-body">
-            <span class="inside-n">02</span>
-            <h3>The hidden association</h3>
-            <p>Why paying attention to you may feel selfish, unsafe, inconvenient, indulgent, unfamiliar, or even dangerous. We&rsquo;ll explore why your needs, desires, emotions, and inner signals may not feel easy to stay with, especially when love, conflict, fear, disappointment, or other people are involved.</p>
-          </div>
-        </div>
-
-        <div class="arch-card rv s3">
-          <div class="arch-card-photo">
-            <img src="./photos that can be used/B41D525A-4AF2-4DCC-B76C-1D35E320E1A3.png" alt="">
-          </div>
-          <div class="arch-card-body">
-            <span class="inside-n">03</span>
-            <h3>The return</h3>
-            <p>A simple way to begin staying with yourself in real time. Not by blowing up your life, becoming someone else, or adding another complicated self-care routine to your list. But by learning how to bring your attention back to the one who is feeling, needing, wanting, aching, longing, and living this life.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="inside-bonus rv s3">
-        <div class="bonus-inner">
-          <span class="bonus-label">Bonus Practice</span>
-          <h3 class="bonus-heading">staying with yourself, even when you speak</h3>
-          <p class="bonus-text">You&rsquo;ll also receive a simple communication practice to support you in expressing yourself without abandoning yourself. So you can begin speaking from steadiness instead of from the tender part of you that feels scared, rejected, unseen, or urgent. Not to control how someone receives you. But so that even if they don&rsquo;t understand right away, you don&rsquo;t have to leave yourself in order to be heard.</p>
-        </div>
-      </div>
-
-      <p class="inside-outro rv s2" style="margin-top: 64px;">
-        By the end, you&rsquo;ll understand yourself differently.<br>
-        <strong>Not as someone who needs to be fixed.</strong><br>
-        But as someone who is ready to stop leaving herself<br>
-        in order to be loved, useful, approved of, needed, or okay.
-      </p>
-      <p class="inside-outro rv s3" style="margin-top: 56px; font-weight: 300; font-style: normal; font-size: clamp(1rem, 1.5vw, 1.2rem); color: var(--mid);">
-        You&rsquo;ll begin to see that the quality of the relationship<br>
-        you have with yourself changes the way you move<br>
-        through every other relationship.
-      </p>
-      <p class="inside-outro rv s3" style="margin-top: 40px; font-weight: 300; font-style: normal; font-size: clamp(1rem, 1.5vw, 1.2rem); color: var(--mid);">
-        When you have your own back, you don&rsquo;t have to fight so hard to be approved of.<br>
-        You don&rsquo;t have to prove your needs are reasonable before you&rsquo;re allowed to have them.<br>
-        You don&rsquo;t have to hand your center over to someone else&rsquo;s reaction.
-      </p>
-      <p class="inside-outro rv s3" style="margin-top: 40px; font-weight: 300; font-style: italic; font-size: clamp(1rem, 1.5vw, 1.2rem); color: var(--text);">
-        You can communicate more cleanly. You can want what you want more honestly.<br>
-        You can feel what you feel without making it wrong.<br>
-        You can stay close to yourself, even when life pulls hard.
-      </p>
-
-      <div class="cta-row rv s3">
-        <a href="#register" class="btn btn--dark">Save My Seat</a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ══════════════════════════
-       FOR YOU  (dark)
+       THIS IS FOR YOU
   ══════════════════════════ -->
   <section class="section s-dark">
     <div class="inner">
-
-      <h2 class="for-you-headline rv">This is for you if &hellip;</h2>
-
+      <h2 class="for-you-headline rv">This Is for You</h2>
       <ul class="for-you-grid">
         <li class="rv">
           <span class="item-n">01</span>
-          <p>You may already care for yourself in many beautiful ways, but you still notice how quickly you can leave yourself when life, love, fear, desire, or other people come into the picture.</p>
+          <p>You&rsquo;ve built a beautiful life and still feel strangely absent from it.</p>
         </li>
         <li class="rv s1">
           <span class="item-n">02</span>
-          <p>You often know what everyone else needs before you know what you need.</p>
+          <p>You&rsquo;re the one everyone comes to, and still feel alone sometimes.</p>
         </li>
         <li class="rv s1">
           <span class="item-n">03</span>
-          <p>You are tired of being the one who holds everything together while wondering who is holding you.</p>
+          <p>You read a room instantly, but rarely feel yourself in it.</p>
         </li>
         <li class="rv s2">
           <span class="item-n">04</span>
-          <p>You feel exhausted, resentful, numb, restless, or shut down, and you&rsquo;re ready to stop making those signals mean you&rsquo;re doing something wrong.</p>
+          <p>You&rsquo;ve done deep inner work, yet still leave yourself when life gets messy.</p>
         </li>
-        <li class="rv s2">
+        <li class="rv s2 full">
           <span class="item-n">05</span>
-          <p>You want to build a more intimate relationship with yourself, not just with your emotions, but with the woman feeling them.</p>
-        </li>
-        <li class="rv s3">
-          <span class="item-n">06</span>
-          <p>You want to know what it feels like to have your own back, even when someone else doesn&rsquo;t understand you right away.</p>
-        </li>
-        <li class="rv s3 full">
-          <span class="item-n">07</span>
-          <p>You are ready to stop being the strongest one, the smartest one, the most capable one, the most low-maintenance one &hellip; and begin feeling what it is like to be alive in your own body again.</p>
+          <p>You&rsquo;re longing to feel more alive, not by needing less, but by being more available to yourself.</p>
         </li>
       </ul>
-
       <div class="cta-row rv s4">
         <a href="#register" class="btn btn--ghost">Save My Seat</a>
       </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════
+       YOU'RE DOING WHAT NEEDS TO BE DONE
+  ══════════════════════════ -->
+  <section class="section s-c2 doing-section">
+    <div class="inner" style="max-width: 620px;">
+
+      <p class="resonance-quote rv s1">You&rsquo;re doing what needs to be done.</p>
+      <p class="rv s1" style="font-family: var(--serif); font-size: clamp(1.15rem, 1.7vw, 1.38rem); color: var(--mid); line-height: 1.9; text-align: center; font-weight: 300; margin-top: 20px;">Caring for the people you love. Building the life you once hoped for.</p>
+      <p class="rv s2" style="font-family: var(--serif); font-size: clamp(1.15rem, 1.7vw, 1.38rem); color: var(--mid); line-height: 1.9; text-align: center; font-weight: 300; margin-top: 20px;">And yet, something quietly tells you you&rsquo;re not fully here for it.</p>
+      <p class="rv s3" style="font-family: var(--serif); font-size: clamp(1.15rem, 1.7vw, 1.38rem); color: var(--mid); line-height: 1.9; text-align: center; font-weight: 300; margin-top: 24px;">Not because you wouldn&rsquo;t be happy. Somewhere along the way, your attention grew so practiced at tending everyone else&rsquo;s needs that you slowly stopped including yourself in your own life.</p>
+      <p class="rv s4" style="font-family: var(--serif); font-size: clamp(1.3rem, 1.95vw, 1.6rem); color: var(--mid); line-height: 1.9; text-align: center; font-weight: 300; margin-top: 32px;">This masterclass is an invitation to notice ourselves again, and discover what becomes possible when we do.</p>
 
     </div>
   </section>
 
 
   <!-- ══════════════════════════
-       TAKEAWAYS
+       WHEN LIFE ASKS SOMETHING OF US
   ══════════════════════════ -->
-  <section class="section s-c4">
-    <div class="inner">
+  <section class="section s-c1 when-section">
+    <div class="inner" style="max-width: 560px;">
 
-      <h2 class="takeaways-heading rv">What you&rsquo;ll walk away with</h2>
+      <h2 class="when-heading rv s1">When Life Asks Something of Us</h2>
 
-      <ul class="takeaways-list">
-        <li class="rv">A deeper understanding of why you leave yourself, even when you know better. You&rsquo;ll begin to see the pattern without shaming yourself for it.</li>
-        <li class="rv s1">A felt sense of what it means to stay with yourself. Not as an idea or another thing to get right, but as a practice you can return to in ordinary, real-life moments.</li>
-        <li class="rv s2">Language for the places where you over-function, people-please, numb, shrink, perform, or become &ldquo;fine&rdquo;. So you can recognize what&rsquo;s happening while it&rsquo;s happening.</li>
-        <li class="rv s2">A simple way to return to yourself in real time. Especially when you feel activated, urgent, afraid, rejected, unseen, or pulled into someone else&rsquo;s emotional world.</li>
-        <li class="rv s3">A beginning point for relating to your needs, desires, and emotions differently. So the woman who is yearning, longing, needing, wanting, and feeling does not have to be abandoned by you anymore.</li>
-        <li class="rv s3">A gentle communication practice for staying connected to yourself while expressing what is true. So you can speak from steadiness, not from the part of you that feels like she has to prove, defend, collapse, or disappear.</li>
-      </ul>
+      <!-- Opening — two lines, one breath -->
+      <p class="rv s2" style="font-family:var(--serif); font-size:clamp(1.2rem,1.75vw,1.52rem); color:var(--mid); font-style:italic; font-weight:300; text-align:center; line-height:1.5; margin-bottom:16px;">We stay close to ourselves, &hellip;</p>
+      <p class="rv s2" style="font-family:var(--serif); font-size:clamp(1.3rem,2vw,1.9rem); color:var(--mid); font-style:italic; font-weight:300; text-align:center; line-height:1.3; margin-bottom:88px;">until something meaningful happens.</p>
 
-      <div class="shift-moment rv s2">
-        <span class="shift-ornament">♡</span>
-        <p class="shift-lead">And maybe the shift begins in the smallest places.</p>
-        <div class="shift-body">
-          <p>A regular Thursday.<br>
-          You&rsquo;re in a conversation, and instead of immediately scanning for what they need, you notice what is happening inside of you.</p>
-          <p>You feel the old pull to explain, soften, fix, or make it okay for everyone else.<br>
-          But this time, you pause.<br>
-          You come back into your body.<br>
-          You come back to yourself.<br>
-          You stay with yourself, even if just for a moment, while the pull is there.</p>
-          <p>And now, maybe you say the truer thing. Maybe you ask for what you actually want. Maybe you let there be a little space instead of rushing to fill it.</p>
-          <p><em>And it&rsquo;s subtle.</em><br>
-          But something in you starts to change.</p>
-          <p>You begin to realize that including yourself in your life doesn&rsquo;t always look like a massive reinvention.<br>
-          Sometimes it looks like not overriding the tiny whisper inside of you.<br>
-          Sometimes it looks like letting yourself matter in the room.<br>
-          Sometimes it looks like remembering, in real time:</p>
-          <p class="shift-closing">I am here too.</p>
+      <!-- Trigger moments — each one lands alone -->
+      <p class="rv s2" style="font-family:var(--serif); font-size:clamp(1.15rem,1.7vw,1.38rem); color:var(--text); font-style:italic; font-weight:300; text-align:center; line-height:2.6;">A hard conversation.</p>
+      <p class="rv s3" style="font-family:var(--serif); font-size:clamp(1.15rem,1.7vw,1.38rem); color:var(--text); font-style:italic; font-weight:300; text-align:center; line-height:2.6;">Someone pulling away.</p>
+      <p class="rv s3" style="font-family:var(--serif); font-size:clamp(1.15rem,1.7vw,1.38rem); color:var(--text); font-style:italic; font-weight:300; text-align:center; line-height:2.6;">A desire we&rsquo;re not sure we&rsquo;re allowed to want.</p>
+      <p class="rv s3" style="font-family:var(--serif); font-size:clamp(1.1rem,1.6vw,1.3rem); color:var(--text); font-style:italic; font-weight:300; text-align:center; line-height:3;">Grief.</p>
+      <p class="rv s3" style="font-family:var(--serif); font-size:clamp(1.1rem,1.6vw,1.3rem); color:var(--text); font-style:italic; font-weight:300; text-align:center; line-height:3;">Shame.</p>
+      <p class="rv s4" style="font-family:var(--serif); font-size:clamp(1.15rem,1.7vw,1.38rem); color:var(--text); font-style:italic; font-weight:300; text-align:center; line-height:2.6; margin-bottom:88px;">Too much feeling, all at once.</p>
+
+      <!-- Attention shifts -->
+      <p class="rv s4" style="font-family:var(--serif); font-size:clamp(1.15rem,1.7vw,1.38rem); color:var(--mid); line-height:1.95; font-weight:300; text-align:center; margin-bottom:64px;">And almost without noticing, our attention leaves us, moving toward managing the other person, shrinking ourselves, explaining, or simply waiting it out until we can <span style="font-size:1.2em; color:var(--text); font-style:italic;">perform okay.</span></p>
+
+      <!-- Human truth -->
+      <p class="rv s4" style="font-family:var(--serif); font-size:clamp(1.15rem,1.7vw,1.38rem); color:var(--mid); line-height:1.95; font-weight:300; text-align:center; margin-bottom:80px;">This is deeply human. Many of us learned that staying connected to others meant quietly leaving ourselves, not because anyone asked, but because we learned what helped us belong, and kept doing it.</p>
+
+      <!-- Life goes flat — poetic stagger -->
+      <p class="rv s5" style="font-family:var(--serif); font-size:clamp(1.1rem,1.5vw,1.28rem); color:var(--mid); font-style:italic; font-weight:300; text-align:center; line-height:2.5;">Over time, life doesn&rsquo;t turn bad.</p>
+      <p class="rv s5" style="font-family:var(--serif); font-size:clamp(1.1rem,1.5vw,1.28rem); color:var(--mid); font-style:italic; font-weight:300; text-align:center; line-height:2.5;">It just goes flatter.</p>
+      <p class="rv s5" style="font-family:var(--serif); font-size:clamp(1.1rem,1.5vw,1.28rem); color:var(--muted); font-style:italic; font-weight:300; text-align:center; line-height:2.5;">Less vivid.</p>
+      <p class="rv s5" style="font-family:var(--serif); font-size:clamp(1.1rem,1.5vw,1.28rem); color:var(--muted); font-style:italic; font-weight:300; text-align:center; line-height:2.5; margin-bottom:80px;">Less felt.</p>
+
+      <!-- The rare afternoon — vivid, present -->
+      <p class="rv s5" style="font-family:var(--serif); font-size:clamp(1.15rem,1.7vw,1.38rem); color:var(--text); font-style:italic; line-height:1.95; font-weight:300; text-align:center; margin-bottom:80px;">But then &hellip; a rare afternoon walking home, or swimming in the sea &hellip; colors sharpen, the sun warms your skin, time slows. Nothing extraordinary happened. Life just feels astonishingly intimate.</p>
+
+      <!-- Closing truth — large, still -->
+      <p class="when-close rv s5"><em>I don&rsquo;t think that&rsquo;s life cooperating.<br>I think that&rsquo;s us, finally staying.</em></p>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- ══════════════════════════
+       WHAT THIS MASTERCLASS IS REALLY ABOUT
+  ══════════════════════════ -->
+  <section class="section s-dark">
+    <div class="inner" style="max-width: 680px;">
+      <h2 class="when-heading rv s1" style="color: rgba(249,245,240,0.95);">What This Masterclass Is Really About</h2>
+
+      <p class="rv s2" style="font-family:var(--serif); font-size:clamp(1.2rem,1.8vw,1.55rem); color:rgba(249,245,240,0.92); font-style:italic; line-height:1.85; font-weight:300; text-align:center; margin-bottom:56px;">Maybe the question isn&rsquo;t how to get better at self-care.<br>Maybe it&rsquo;s: how do I stay connected to myself<br>while actually living my life?</p>
+
+      <p class="rv s3" style="font-family:var(--serif); font-size:clamp(1.25rem,1.85vw,1.55rem); color:rgba(249,245,240,0.88); font-style:italic; line-height:1.7; font-weight:300; text-align:center; margin-bottom:8px;">Staying with yourself means you don&rsquo;t have to disappear,</p>
+      <p class="rv s3" style="font-family:var(--serif); font-size:clamp(1.1rem,1.6vw,1.32rem); color:rgba(243,237,229,0.60); font-style:italic; line-height:1.7; font-weight:300; text-align:center; margin-bottom:48px;">even mid-uncertainty, conflict, longing, or joy.</p>
+      <p class="rv s4" style="font-family:var(--serif); font-size:clamp(1.1rem,1.6vw,1.32rem); color:rgba(243,237,229,0.78); font-style:italic; line-height:1.7; font-weight:300; text-align:center; margin-bottom:8px;">You get to remain there too,</p>
+      <p class="rv s4" style="font-family:var(--serif); font-size:clamp(1.2rem,1.75vw,1.48rem); color:rgba(243,237,229,0.88); font-style:italic; line-height:1.7; font-weight:300; text-align:center; margin-bottom:80px;">while you love, speak, ache, long, grieve, live.</p>
+
+      <!-- Cascade -->
+      <p class="rv s4" style="font-family:var(--serif); font-size:clamp(1.15rem,1.7vw,1.38rem); color:rgba(243,237,229,0.68); font-style:italic; font-weight:300; text-align:center; line-height:2.2; margin-bottom:4px;">Maybe we haven&rsquo;t lost ourselves at all.</p>
+      <p class="rv s4" style="font-family:var(--serif); font-size:clamp(1.15rem,1.7vw,1.38rem); color:rgba(243,237,229,0.68); font-style:italic; font-weight:300; text-align:center; line-height:2.2; margin-bottom:36px;">Maybe we&rsquo;ve simply forgotten what it feels like to stay,</p>
+      <p class="rv s5" style="font-family:var(--serif); font-size:clamp(1.12rem,1.55vw,1.3rem); color:rgba(243,237,229,0.48); font-style:italic; font-weight:300; text-align:center; line-height:2.5;">while disappointed,</p>
+      <p class="rv s5" style="font-family:var(--serif); font-size:clamp(1.12rem,1.55vw,1.3rem); color:rgba(243,237,229,0.48); font-style:italic; font-weight:300; text-align:center; line-height:2.5;">while afraid,</p>
+      <p class="rv s5" style="font-family:var(--serif); font-size:clamp(1.12rem,1.55vw,1.3rem); color:rgba(243,237,229,0.48); font-style:italic; font-weight:300; text-align:center; line-height:2.5;">while desiring something,</p>
+      <p class="rv s5" style="font-family:var(--serif); font-size:clamp(1.12rem,1.55vw,1.3rem); color:rgba(243,237,229,0.48); font-style:italic; font-weight:300; text-align:center; line-height:2.5;">while misunderstood,</p>
+      <p class="rv s5" style="font-family:var(--serif); font-size:clamp(1.12rem,1.55vw,1.3rem); color:rgba(249,245,240,0.92); font-style:italic; font-weight:300; text-align:center; line-height:2.5; margin-bottom:0;">while life asks us to feel.</p>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════
+       WHAT TO EXPECT
+  ══════════════════════════ -->
+  <section class="section s-c2">
+    <div class="inner" style="max-width: 680px;">
+      <h2 class="when-heading rv s1">What to Expect</h2>
+      <p class="rv s2" style="font-family: var(--serif); font-size: clamp(1.12rem, 1.65vw, 1.32rem); color: var(--mid); line-height: 1.9; font-weight: 300; text-align: center; margin-bottom: 32px;">90 minutes, live and online.</p>
+      <p class="rv s3" style="font-family: var(--serif); font-size: clamp(1.05rem, 1.45vw, 1.2rem); color: var(--muted); line-height: 1.9; font-weight: 300; text-align: center; font-style: italic; margin-bottom: 24px;">[Describe the shape: teaching + guided practice? Q&amp;A? A specific exercise she&rsquo;ll leave with?]</p>
+      <p class="rv s4" style="font-family: var(--serif); font-size: clamp(1.05rem, 1.45vw, 1.2rem); color: var(--muted); line-height: 1.9; font-weight: 300; text-align: center; font-style: italic; margin-bottom: 24px;">[Is there a replay if she can&rsquo;t make it live, or is this live-only? Say so plainly.]</p>
+      <p class="rv s5" style="font-family: var(--serif); font-size: clamp(1.05rem, 1.45vw, 1.2rem); color: var(--muted); line-height: 1.9; font-weight: 300; text-align: center; font-style: italic;">[Is anything offered afterward, a program, a next step?]</p>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════
+       TOGETHER, WE WILL EXPLORE  — oval cards
+  ══════════════════════════ -->
+  <section class="section s-c1">
+
+    <div class="inner" style="position:relative; z-index:1;">
+
+      <h2 class="explore-intro rv s1" style="margin-bottom: 88px;">Together, we will explore &hellip;</h2>
+
+      <div class="explore-cards" style="margin-bottom: 0;">
+
+        <div class="explore-card rv s1">
+          <div class="explore-card-photo">
+            <img class="explore-drapes-bg" src="./photos%20that%20can%20be%20used/drapes.png" alt="">
+            <span class="explore-card-num">01</span>
+          </div>
+          <div class="explore-card-body">
+            <h3>Why our attention leaves in the moments we need ourselves most.</h3>
+          </div>
         </div>
+
+        <div class="explore-card rv s2">
+          <div class="explore-card-photo">
+            <img class="explore-drapes-bg" src="./photos%20that%20can%20be%20used/drapes.png" alt="">
+            <span class="explore-card-num">02</span>
+          </div>
+          <div class="explore-card-body">
+            <h3>What we learned about love, connection, and belonging, and why our needs and emotions can feel hard to stay close to.</h3>
+          </div>
+        </div>
+
+        <div class="explore-card rv s3">
+          <div class="explore-card-photo">
+            <img class="explore-drapes-bg" src="./photos%20that%20can%20be%20used/drapes.png" alt="">
+            <span class="explore-card-num">03</span>
+          </div>
+          <div class="explore-card-body">
+            <h3>What it feels like to return, not as self-improvement, but as a felt homecoming to yourself.</h3>
+          </div>
+        </div>
+
       </div>
 
-      <div class="cta-row rv s3">
+      <div class="cta-row rv s3" style="margin-top: 44px;">
         <a href="#register" class="btn btn--dark">Save My Seat</a>
       </div>
 
@@ -1564,15 +2020,30 @@
   </section>
 
 
+
+
   <!-- ══════════════════════════
-       PHOTO MOMENT
+       PERHAPS YOU'LL LEAVE REMEMBERING
   ══════════════════════════ -->
-  <div class="photo-moment">
-    <img class="ri" src="./photos that can be used/THIS INSTEAD.jpeg" alt="">
-    <div class="photo-moment-overlay">
-      <p class="rv">The center of your life gets to include you.</p>
+  <section class="section s-c4 takeaways-section">
+    <div class="inner">
+
+      <h2 class="takeaways-heading rv">Perhaps you&rsquo;ll leave remembering &hellip;</h2>
+
+      <ul class="takeaways-list">
+        <li class="rv">A felt sense of what it means to be with yourself.</li>
+        <li class="rv s1">A simple way to return to yourself in real time &hellip; especially in those moments when you feel pulled into someone else&rsquo;s emotional world.</li>
+        <li class="rv s2">A new relationship with your needs, desires, and emotions. Where they are no longer things to manage, minimize, or explain away &hellip; but places where life is asking to be felt.</li>
+        <li class="rv s2">A gentle communication practice to help you express what is true without leaving yourself in the process.</li>
+        <li class="rv s3">A different experience of how it feels to be you &hellip; magnificently and uniquely, you.</li>
+      </ul>
+
+      <div class="cta-row rv s3">
+        <a href="#register" class="btn btn--dark">Save My Seat</a>
+      </div>
+
     </div>
-  </div>
+  </section>
 
 
   <!-- ══════════════════════════
@@ -1598,12 +2069,9 @@
         <h3 class="about-name rv s1">Nina Rose</h3>
 
         <div class="about-body">
-          <p class="em rv s2">I created this masterclass for the woman who looks like she&rsquo;s holding it all together, but privately knows she has been living from &ldquo;should&rdquo; for too long.</p>
-          <p class="rv s3">For the woman who somewhere along the way learned that being loved meant being useful. Being safe meant being low-maintenance. Being good meant not needing too much.</p>
-          <p class="rv s3">In the past few years, I&rsquo;ve worked with women online and in person, as well as with people in recovery in rehab, around one pattern that sits beneath so much of what keeps us stuck: the habit of leaving ourselves.</p>
-          <p class="rv s4">How do we stay with ourselves when life becomes difficult?</p>
-          <p class="rv s4">My work is grounded in the body, because knowing something isn&rsquo;t the same as feeling ourselves in it. More than anything, what I bring to this work is the practice of staying with ourselves, without rushing to fix, change, or numb.</p>
-          <p class="rv s5">I&rsquo;m originally from Slovenia and now live in Thailand. Choosing a life that felt true, rather than one that only looked right, has shaped everything about the work I do.</p>
+          <p class="em rv s2">I created this for the woman who looks like she has it together, but privately knows she&rsquo;s been living from &lsquo;should&rsquo; for too long.</p>
+          <p class="rv s3">I&rsquo;ve spent years sitting with women, and with people in recovery, around one quiet pattern: how easily we learn to leave ourselves.</p>
+          <p class="rv s4">My work lives in the body, because knowing something isn&rsquo;t the same as feeling it. I care about helping people discover they don&rsquo;t have to leave themselves to love, belong, or live fully.</p>
         </div>
       </div>
 
@@ -1619,7 +2087,7 @@
     <span class="testimonials-heading rv">What they said</span>
 
     <div class="testimonial rv">
-      <p class="testimonial-text">&ldquo;I put away the stuff that isn&rsquo;t mine and refilled myself with light and energy. I&rsquo;m calm, and I&rsquo;m okay.&rdquo;</p>
+      <p class="testimonial-text">&ldquo;I put away what isn&rsquo;t mine and refilled myself with light. I&rsquo;m calm, and I&rsquo;m okay.&rdquo;</p>
       <span class="testimonial-attr">~ M, Croatia</span>
     </div>
 
@@ -1633,14 +2101,7 @@
     <span class="t-heart rv">♡</span>
 
     <div class="testimonial rv">
-      <p class="testimonial-text">&ldquo;Being with Nina is like standing in the sun. It burns everything that isn&rsquo;t yours away and leaves the purest version of you.&rdquo;</p>
-      <span class="testimonial-attr">~ M, Croatia</span>
-    </div>
-
-    <span class="t-heart rv">♡</span>
-
-    <div class="testimonial rv">
-      <p class="testimonial-text">&ldquo;So simple and easy to absorb. The tools gave me more clarity and focus I can actually use in daily life.&rdquo;</p>
+      <p class="testimonial-text">&ldquo;So simple to absorb. The tools gave me clarity I use every day.&rdquo;</p>
       <span class="testimonial-attr">~ K, Myanmar</span>
     </div>
 
@@ -1655,26 +2116,43 @@
   </section>
 
 
+
+
+  <!-- ══════════════════════════
+       HERE'S WHAT NEXT THURSDAY COULD LOOK LIKE
+  ══════════════════════════ -->
+  <section class="section s-c1">
+    <div class="inner" style="max-width: 520px;">
+      <h2 class="when-heading rv s1">Here&rsquo;s What Next Thursday Could Look Like</h2>
+
+      <p class="rv s2" style="font-family:var(--serif); font-size:clamp(1.15rem,1.7vw,1.38rem); color:var(--mid); font-style:italic; font-weight:300; text-align:center; line-height:2.2;">You&rsquo;re in a conversation.</p>
+      <p class="rv s2" style="font-family:var(--serif); font-size:clamp(1.15rem,1.7vw,1.38rem); color:var(--mid); font-style:italic; font-weight:300; text-align:center; line-height:2.2; margin-bottom:56px;">Someone says something that hurts.</p>
+
+      <p class="rv s3" style="font-family:var(--serif); font-size:clamp(1.15rem,1.7vw,1.38rem); color:var(--mid); font-style:italic; font-weight:300; text-align:center; line-height:2.2; margin-bottom:56px;">You feel the pull, to explain, to soften, to make sure they&rsquo;re okay.</p>
+
+      <p class="rv s4" style="font-family:var(--serif); font-size:clamp(1.15rem,1.7vw,1.4rem); color:var(--mid); font-style:italic; font-weight:300; text-align:center; line-height:2.2; margin-bottom:8px;">And then, almost imperceptibly,</p>
+      <p class="rv s4" style="font-family:var(--serif); font-size:clamp(1.5rem,2.2vw,2rem); color:var(--text); font-style:italic; font-weight:300; text-align:center; line-height:1.2; margin-bottom:56px;">you remember yourself.</p>
+
+      <p class="rv s4" style="font-family:var(--serif); font-size:clamp(1.15rem,1.7vw,1.38rem); color:var(--mid); font-style:italic; font-weight:300; text-align:center; line-height:2.2; margin-bottom:56px;">Maybe you speak. Maybe you choose silence.<br>The conversation may change, or it may not.</p>
+
+      <p class="when-close rv s5"><em>But you didn&rsquo;t leave yourself<br>to stay connected to someone else.</em></p>
+    </div>
+  </section>
+
+
   <!-- ══════════════════════════
        INVITATION  — arch dome
   ══════════════════════════ -->
   <div class="invite-section" id="final-form">
 
     <div class="arch-dome">
-      <h2 class="invite-headline rv">You can stop waiting.</h2>
+      <img class="arch-dome-bg" src="./photos that can be used/drapes.png" alt="" aria-hidden="true">
 
-      <div class="invite-body">
-        <p class="rv s2">You don&rsquo;t have to become calmer, thinner, more disciplined, more grateful, more productive, or more &ldquo;high vibe&rdquo; before you&rsquo;re allowed to want more for your life.</p>
-        <p class="rv s3">You&rsquo;re allowed to want a life you don&rsquo;t have to numb yourself away from.</p>
-        <p class="rv s3">You&rsquo;re allowed to have needs. You&rsquo;re allowed to notice what hurts. You&rsquo;re allowed to gently see the places where you&rsquo;ve learned to disappear &hellip; without making yourself wrong for how you survived.</p>
-        <p class="rv s4">Because those places are not proof that you&rsquo;re doing anything wrong, they may just be the places where you stopped including yourself in your own life.</p>
-      </div>
+      <h2 class="richness-headline rv">The richness of your life<br>isn&rsquo;t only shaped by what happens to you.</h2>
+      <p class="richness-sub rv s2">It&rsquo;s shaped by how available you are to the woman living it. There&rsquo;s room for her too.</p>
 
       <p class="invite-closing rv s3" id="register">
-        And this is an invitation to begin again.<br>
-        To listen.<br>
-        Not to everything and everyone else first.<br>
-        <em>To you.</em>
+        This is an invitation to begin. Together.
       </p>
 
       <div class="invite-form-wrap rv s4">
