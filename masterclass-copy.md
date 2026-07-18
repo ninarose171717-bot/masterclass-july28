@@ -226,8 +226,6 @@ There's room for her too.
 
 This is an invitation to begin. Together.
 
-**Eyebrow:** The invitation
-
 (+ form, identical to hero, on dark)
 
 ---
