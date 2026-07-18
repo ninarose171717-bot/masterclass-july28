@@ -55,7 +55,18 @@ Moving because it feels good, not because you should.
 
 ---
 
-## IV · This is for you
+## IV · You're doing what needs to be done
+
+You're doing what needs to be done.
+
+Caring for the people you love. Building the life you once hoped for.
+And yet, something quietly tells you you're not fully here for it.
+It's not that you aren't happy.
+*Somewhere along the way, your attention grew so practiced at tending everyone else's needs that you slowly stopped including yourself in your own life.*
+
+---
+
+## V · This is for you
 
 01 You've built a beautiful life and still feel strangely absent from it.
 02 You're the one everyone comes to, and still feel alone sometimes.
@@ -64,17 +75,6 @@ Moving because it feels good, not because you should.
 05 You're longing to feel more alive, not by needing less, but by being more available to yourself.
 
 CTA: Save my seat
-
----
-
-## V · You're doing what needs to be done
-
-You're doing what needs to be done.
-
-Caring for the people you love. Building the life you once hoped for.
-And yet, something quietly tells you you're not fully here for it.
-Not because you wouldn't be happy.
-*Somewhere along the way, your attention grew so practiced at tending everyone else's needs that you slowly stopped including yourself in your own life.*
 
 ---
 
@@ -145,9 +145,9 @@ CTA: Save my seat
 
 ## X · After 90 minutes together, you'll leave with
 
-01 A deeper sense of peace and steadiness within yourself, even when life feels hard.
-02 Less overwhelm, and more capacity to trust yourself, your feelings, and your inner voice.
-03 A greater ability to say what's on your heart, before going quiet and inward.
+01 A felt sense of what it means to stay with yourself, even when life feels hard.
+02 A simple way to return to yourself in real time, especially in moments when you're pulled into someone else's emotional world.
+03 A gentle way to say what's on your heart, without leaving yourself in the process.
 
 CTA: Save my seat
 
@@ -227,6 +227,9 @@ There's room for her too.
 This is an invitation to begin. Together.
 
 (+ form, identical to hero)
+
+"You show that you always have yourself to come back to."
+B · Thailand (echo beside the form)
 
 ---
 

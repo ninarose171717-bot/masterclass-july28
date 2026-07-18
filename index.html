@@ -1006,6 +1006,26 @@
       color: var(--mid);
       line-height: 1.7;
     }
+    .invite-voice {
+      font-style: italic;
+      font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+      color: var(--mid);
+      line-height: 1.7;
+      margin-top: clamp(40px, 5vh, 56px);
+      max-width: 24em;
+      text-wrap: pretty;
+    }
+    .invite-voice cite {
+      display: block;
+      font-family: var(--sans);
+      font-style: normal;
+      font-size: 0.66rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-top: 12px;
+    }
+
     .invite-begin {
       font-size: clamp(1.3rem, 1.8vw, 1.55rem);
       font-style: italic;
@@ -1185,6 +1205,22 @@
 
 
   <!-- ══════════════════════════
+       DOING WHAT NEEDS TO BE DONE
+  ══════════════════════════ -->
+  <section class="doing">
+    <div class="doing-inner">
+      <h2 class="doing-quote rv">You&rsquo;re doing what needs to be done.</h2>
+      <div class="doing-prose">
+        <p class="rv">Caring for the people you love. Building the life you once hoped for.</p>
+        <p class="rv">And yet, something quietly tells you you&rsquo;re not fully here for it.</p>
+        <p class="rv">It&rsquo;s not that you aren&rsquo;t happy.</p>
+        <p class="rv">Somewhere along the way, your attention grew so practiced at tending everyone else&rsquo;s needs that you slowly stopped including yourself in your <span style="white-space:nowrap">own life.</span></p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════
        VIII · THIS IS FOR YOU
   ══════════════════════════ -->
   <section class="foryou">
@@ -1218,20 +1254,7 @@
   </section>
 
 
-  <!-- ══════════════════════════
-       DOING WHAT NEEDS TO BE DONE
-  ══════════════════════════ -->
-  <section class="doing">
-    <div class="doing-inner">
-      <h2 class="doing-quote rv">You&rsquo;re doing what needs to be done.</h2>
-      <div class="doing-prose">
-        <p class="rv">Caring for the people you love. Building the life you once hoped for.</p>
-        <p class="rv">And yet, something quietly tells you you&rsquo;re not fully here for it.</p>
-        <p class="rv">Not because you wouldn&rsquo;t be happy.</p>
-        <p class="rv">Somewhere along the way, your attention grew so practiced at tending everyone else&rsquo;s needs that you slowly stopped including yourself in your <span style="white-space:nowrap">own life.</span></p>
-      </div>
-    </div>
-  </section>
+  
 
 
   <!-- ══════════════════════════
@@ -1345,9 +1368,9 @@
     <div class="leave-inner">
       <h2 class="display leave-heading rv">After 90 minutes together, you&rsquo;ll leave with</h2>
       <ul class="leave-list">
-        <li class="rv"><span class="n">01</span>A deeper sense of peace and steadiness within yourself, even when life feels hard.</li>
-        <li class="rv"><span class="n">02</span>Less overwhelm, and more capacity to trust yourself, your feelings, and your inner voice.</li>
-        <li class="rv"><span class="n">03</span>A greater ability to say what&rsquo;s on your heart, before going quiet and inward.</li>
+        <li class="rv"><span class="n">01</span>A felt sense of what it means to stay with yourself, even when life feels hard.</li>
+        <li class="rv"><span class="n">02</span>A simple way to return to yourself in real time, especially in moments when you&rsquo;re pulled into someone else&rsquo;s emotional world.</li>
+        <li class="rv"><span class="n">03</span>A gentle way to say what&rsquo;s on your heart, without leaving yourself in <span style="white-space:nowrap">the process.</span></li>
       </ul>
       <div class="leave-cta rv">
         <a href="#register" class="btn">Save my seat</a>
@@ -1472,6 +1495,7 @@
           <button type="submit" class="btn-submit">Save my seat</button>
         </form>
         <span class="form-note">Free Masterclass &nbsp;·&nbsp; 90 min</span>
+        <p class="invite-voice">&ldquo;You show that you always have yourself to come back to.&rdquo;<cite>B &nbsp;·&nbsp; Thailand</cite></p>
       </div>
     </div>
   </section>
