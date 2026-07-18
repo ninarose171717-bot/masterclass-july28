@@ -62,7 +62,7 @@ You're doing what needs to be done.
 Caring for the people you love. Building the life you once hoped for.
 And yet, something quietly tells you you're not fully here for it.
 It's not that you aren't happy.
-*Somewhere along the way, your attention grew so practiced at tending everyone else's needs that you slowly stopped including yourself in your own life.*
+*Somewhere along the way, your attention became so focused on everyone else that you stopped including yourself in your own life.*
 
 ---
 
@@ -198,7 +198,7 @@ B · Thailand
 
 ---
 
-## XIV · Here's what next Thursday looks like (woman photo in background)
+## XIV · Here's what next Thursday looks like (display heading, woman photo in background)
 
 You're in a conversation.
 Someone says something that hurts.
@@ -216,7 +216,7 @@ to stay connected to someone else.*
 
 ---
 
-## XV · The invitation (final CTA)
+## XV · The invitation (final CTA · deep brown ceremonial section)
 
 The richness of your life isn't only shaped by what happens to you.
 
@@ -226,10 +226,9 @@ There's room for her too.
 
 This is an invitation to begin. Together.
 
-(+ form, identical to hero)
+**Eyebrow:** The invitation
 
-"You show that you always have yourself to come back to."
-B · Thailand (echo beside the form)
+(+ form, identical to hero, on dark)
 
 ---
 

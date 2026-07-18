@@ -443,7 +443,7 @@
     ═════════════════════════════════════════ */
     .when {
       background: var(--c1);
-      padding: clamp(120px, 14vh, 200px) var(--pad-x);
+      padding: clamp(120px, 14vh, 200px) var(--pad-x) clamp(90px, 10vh, 140px);
     }
     .when-inner { max-width: 1050px; margin: 0 auto; }
     .when-heading {
@@ -545,7 +545,7 @@
        V · PAUSE · full breath
     ═════════════════════════════════════════ */
     .pause {
-      min-height: 78vh;
+      min-height: 66vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -902,7 +902,7 @@
       margin-top: clamp(32px, 4vh, 48px);
     }
     .voice-shots img {
-      width: 240px;
+      width: min(320px, 100%);
       border-radius: 3px;
       box-shadow: 0 10px 40px rgba(24, 18, 13, 0.10);
     }
@@ -922,12 +922,21 @@
       position: absolute;
       inset: 0;
       background: url('./photos%20that%20can%20be%20used/woman.png') center 22% / cover no-repeat;
-      opacity: 0.13;
+      opacity: 0.19;
       mix-blend-mode: multiply;
       pointer-events: none;
     }
     .thursday > * { position: relative; z-index: 1; }
-    .thursday .label { display: block; margin-bottom: clamp(48px, 6vh, 72px); }
+    .thursday-heading {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 4vw, 3.6rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--text);
+      max-width: 15em;
+      margin: 0 auto clamp(56px, 7vh, 88px);
+      text-wrap: balance;
+    }
     .thursday-line {
       font-size: clamp(1.35rem, 2vw, 1.7rem);
       color: var(--mid);
@@ -960,78 +969,81 @@
     ═════════════════════════════════════════ */
     .invite {
       position: relative;
-      background: var(--c2);
-      padding: clamp(140px, 17vh, 230px) var(--pad-x);
+      background: var(--deep);
+      padding: clamp(150px, 18vh, 250px) var(--pad-x);
       overflow: hidden;
+      text-align: center;
     }
     .invite::before {
       content: '';
       position: absolute;
       inset: 0;
       background: url('./photos%20that%20can%20be%20used/drapes.png') center/cover no-repeat;
-      opacity: 0.15;
-      mix-blend-mode: multiply;
+      opacity: 0.07;
+      mix-blend-mode: screen;
       pointer-events: none;
     }
-    .invite-grid {
+    .invite-inner {
       position: relative;
-      display: grid;
-      grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
-      gap: clamp(64px, 8vw, 130px);
-      max-width: 1100px;
+      max-width: 780px;
       margin: 0 auto;
-      align-items: center;
+    }
+    .invite-label {
+      display: block;
+      color: rgba(243, 237, 229, 0.55);
+      margin-bottom: clamp(44px, 5vh, 64px);
     }
     .invite-small {
       font-size: clamp(1.2rem, 1.7vw, 1.45rem);
-      color: var(--mid);
+      color: rgba(243, 237, 229, 0.7);
       line-height: 1.7;
-      margin-bottom: 26px;
+      margin: 0 auto 28px;
       max-width: 24em;
       text-wrap: pretty;
     }
     .invite-anchor {
       font-family: var(--serif);
-      font-size: clamp(2.2rem, 4vw, 3.6rem);
+      font-size: clamp(2.4rem, 4.6vw, 4.2rem);
       font-weight: 300;
       font-style: italic;
-      line-height: 1.2;
-      color: var(--text);
-      margin-bottom: 26px;
+      line-height: 1.18;
+      color: rgba(243, 237, 229, 0.97);
+      margin-bottom: 30px;
       text-wrap: balance;
     }
     .invite-coda {
       font-size: clamp(1.2rem, 1.7vw, 1.45rem);
       font-style: italic;
-      color: var(--mid);
+      color: rgba(243, 237, 229, 0.7);
       line-height: 1.7;
     }
-    .invite-voice {
-      font-style: italic;
-      font-size: clamp(1.05rem, 1.4vw, 1.2rem);
-      color: var(--mid);
-      line-height: 1.7;
-      margin-top: clamp(40px, 5vh, 56px);
-      max-width: 24em;
-      text-wrap: pretty;
-    }
-    .invite-voice cite {
-      display: block;
-      font-family: var(--sans);
-      font-style: normal;
-      font-size: 0.66rem;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      color: var(--mid);
-      margin-top: 12px;
-    }
-
     .invite-begin {
       font-size: clamp(1.3rem, 1.8vw, 1.55rem);
       font-style: italic;
-      color: var(--text);
-      margin: clamp(48px, 6vh, 72px) 0 0;
+      color: rgba(243, 237, 229, 0.92);
+      margin: clamp(56px, 7vh, 88px) 0 clamp(44px, 5vh, 60px);
     }
+    .invite .form-wrap {
+      margin: 0 auto;
+      text-align: left;
+    }
+    .invite .date-line {
+      color: rgba(243, 237, 229, 0.72);
+      border-bottom-color: rgba(243, 237, 229, 0.22);
+    }
+    .invite .form-input {
+      color: var(--cream);
+      border-bottom-color: rgba(243, 237, 229, 0.28);
+    }
+    .invite .form-input::placeholder { color: rgba(243, 237, 229, 0.6); }
+    .invite .form-input:focus { border-bottom-color: rgba(243, 237, 229, 0.65); }
+    .invite .form-input:-webkit-autofill {
+      -webkit-text-fill-color: var(--cream);
+      transition: background-color 99999s;
+    }
+    .invite .form-toggle-check { border-color: rgba(243, 237, 229, 0.45); }
+    .invite .form-toggle-text { color: rgba(243, 237, 229, 0.75); }
+    .invite .form-note { color: rgba(243, 237, 229, 0.6); }
 
     /* ═════════════════════════════════════════
        FOOTER
@@ -1092,7 +1104,8 @@
 
     @media (max-width: 900px) {
       nav { padding: 18px 24px; }
-      .nav-brand { display: none; }
+      nav > a:first-child { display: none; }
+      .nav-brand { position: static; transform: none; }
 
       .hero { grid-template-columns: 1fr; min-height: unset; }
       .hero-copy { padding: 64px 24px 72px; max-width: unset; }
@@ -1126,7 +1139,6 @@
 
       .voice:nth-of-type(even) { margin-right: 0; }
 
-      .invite-grid { grid-template-columns: 1fr; gap: 72px; }
     }
   </style>
 </head>
@@ -1214,7 +1226,7 @@
         <p class="rv">Caring for the people you love. Building the life you once hoped for.</p>
         <p class="rv">And yet, something quietly tells you you&rsquo;re not fully here for it.</p>
         <p class="rv">It&rsquo;s not that you aren&rsquo;t happy.</p>
-        <p class="rv">Somewhere along the way, your attention grew so practiced at tending everyone else&rsquo;s needs that you slowly stopped including yourself in your <span style="white-space:nowrap">own life.</span></p>
+        <p class="rv">Somewhere along the way, your attention became so focused on everyone else that you stopped including yourself in your <span style="white-space:nowrap">own life.</span></p>
       </div>
     </div>
   </section>
@@ -1451,7 +1463,7 @@
 
       <div class="voice-shots rv">
         <img src="./photos that can be used/opinions/IMG_2384.jpeg" alt="A message from a participant">
-        <img src="./photos that can be used/opinions/IMG_2387.jpeg" alt="A message from a participant">
+        <img src="./photos that can be used/opinions/IMG_2387-cropped.jpeg" alt="A message from a participant">
       </div>
     </div>
   </section>
@@ -1461,7 +1473,7 @@
        XIII · NEXT THURSDAY
   ══════════════════════════ -->
   <section class="thursday">
-    <span class="label rv">Here&rsquo;s what next Thursday looks like</span>
+    <h2 class="thursday-heading rv">Here&rsquo;s what next Thursday <span style="white-space:nowrap">looks like</span></h2>
     <p class="thursday-line rv">You&rsquo;re in a conversation.<br>Someone says something that hurts.</p>
     <p class="thursday-line rv">You feel the pull, to explain, to soften, to make sure they&rsquo;re okay.</p>
     <p class="thursday-line rv">And then, almost imperceptibly,</p>
@@ -1475,15 +1487,14 @@
        XIV · THE INVITATION
   ══════════════════════════ -->
   <section class="invite" id="register">
-    <div class="invite-grid">
-      <div class="invite-copy">
-        <p class="invite-small rv">The richness of your life isn&rsquo;t only shaped by what happens to you.</p>
-        <p class="invite-anchor rv s1">It&rsquo;s shaped by how available you are to the woman <span style="white-space:nowrap">living it.</span></p>
-        <p class="invite-coda rv s2">There&rsquo;s room for her too.</p>
-        <p class="invite-begin rv s2">This is an invitation to begin. Together.</p>
-      </div>
+    <div class="invite-inner">
+      <span class="label invite-label rv">The invitation</span>
+      <p class="invite-small rv">The richness of your life isn&rsquo;t only shaped by what happens to you.</p>
+      <p class="invite-anchor rv s1">It&rsquo;s shaped by how available you are to the woman <span style="white-space:nowrap">living it.</span></p>
+      <p class="invite-coda rv s2">There&rsquo;s room for her too.</p>
+      <p class="invite-begin rv s2">This is an invitation to begin. Together.</p>
 
-      <div class="form-wrap rv s1">
+      <div class="form-wrap rv s2">
         <p class="date-line">28/7 &nbsp;·&nbsp; 2 PM Bangkok &nbsp;·&nbsp; 9 AM Europe</p>
         <form class="nina-form">
           <input type="text" name="fname" class="form-input" placeholder="Your first name" required>
@@ -1495,7 +1506,6 @@
           <button type="submit" class="btn-submit">Save my seat</button>
         </form>
         <span class="form-note">Free Masterclass &nbsp;·&nbsp; 90 min</span>
-        <p class="invite-voice">&ldquo;You show that you always have yourself to come back to.&rdquo;<cite>B &nbsp;·&nbsp; Thailand</cite></p>
       </div>
     </div>
   </section>
