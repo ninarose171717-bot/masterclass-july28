@@ -128,6 +128,70 @@
     /* ── Hairline ── */
     .rule { border: none; border-top: 1px solid var(--border); }
 
+    /* ── Bridge (what this is) ── */
+    .bridge-lead {
+      font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--text);
+      max-width: 19em;
+      margin-bottom: 22px;
+      text-wrap: pretty;
+    }
+    .bridge-sub {
+      font-size: clamp(1.25rem, 1.8vw, 1.55rem);
+      font-style: italic;
+      color: var(--mid);
+      line-height: 1.6;
+      max-width: 22em;
+      margin-bottom: clamp(48px, 5vw, 72px);
+    }
+
+    /* ── Doing what needs to be done ── */
+    .doing {
+      background: var(--c3);
+      padding: clamp(120px, 14vh, 200px) var(--pad-x);
+    }
+    .doing-inner { max-width: 1050px; margin: 0 auto; }
+    .doing-quote {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 4.2vw, 3.8rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--text);
+      max-width: 14em;
+      margin-bottom: clamp(48px, 6vh, 80px);
+      text-wrap: balance;
+    }
+    .doing-prose {
+      max-width: 30em;
+      margin-left: auto;
+      margin-right: clamp(0px, 6vw, 90px);
+    }
+    .doing-prose p {
+      color: var(--mid);
+      line-height: 1.8;
+      margin-bottom: 24px;
+      text-wrap: pretty;
+    }
+    .doing-prose p:last-child {
+      font-style: italic;
+      color: var(--text);
+      margin-bottom: 0;
+    }
+
+    /* ── Dark turn opener ── */
+    .turn-open {
+      font-size: clamp(2rem, 3.8vw, 3.4rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.3;
+      color: rgba(243, 237, 229, 0.96);
+      max-width: 18em;
+      margin-bottom: clamp(80px, 10vh, 130px);
+      text-wrap: balance;
+    }
+
     /* ═════════════════════════════════════════
        NAV
     ═════════════════════════════════════════ */
@@ -378,7 +442,7 @@
        IV · RECOGNITION · when life asks
     ═════════════════════════════════════════ */
     .when {
-      background: var(--c3);
+      background: var(--c1);
       padding: clamp(120px, 14vh, 200px) var(--pad-x);
     }
     .when-inner { max-width: 1050px; margin: 0 auto; }
@@ -485,7 +549,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--c1);
+      background: var(--c2);
       padding: 100px var(--pad-x);
     }
     .pause p {
@@ -515,7 +579,7 @@
       margin-bottom: 28px;
     }
     .turn-big {
-      font-size: clamp(2.1rem, 4vw, 3.6rem);
+      font-size: clamp(1.6rem, 2.6vw, 2.3rem);
       font-weight: 300;
       font-style: italic;
       line-height: 1.25;
@@ -568,7 +632,7 @@
     }
     .explore-row {
       display: grid;
-      grid-template-columns: 80px minmax(0, 5fr) minmax(0, 6fr);
+      grid-template-columns: 80px 1fr;
       gap: clamp(24px, 4vw, 64px);
       padding: clamp(48px, 6vh, 72px) 0;
       border-top: 1px solid var(--border);
@@ -585,9 +649,10 @@
       font-family: var(--serif);
       font-size: clamp(1.5rem, 2.3vw, 2rem);
       font-weight: 400;
-      line-height: 1.35;
+      line-height: 1.45;
       color: var(--text);
-      text-wrap: balance;
+      max-width: 26em;
+      text-wrap: pretty;
     }
     .explore-row p {
       color: var(--mid);
@@ -672,7 +737,7 @@
        X · WHAT TO EXPECT · fact sheet
     ═════════════════════════════════════════ */
     .expect {
-      background: var(--c1);
+      background: var(--c2);
       padding: clamp(120px, 14vh, 200px) var(--pad-x);
     }
     .expect-grid {
@@ -846,10 +911,22 @@
        XIII · NEXT THURSDAY · felt future
     ═════════════════════════════════════════ */
     .thursday {
+      position: relative;
+      overflow: hidden;
       background: var(--c1);
       padding: clamp(140px, 17vh, 230px) var(--pad-x);
       text-align: center;
     }
+    .thursday::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('./photos%20that%20can%20be%20used/woman.png') center 22% / cover no-repeat;
+      opacity: 0.13;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+    .thursday > * { position: relative; z-index: 1; }
     .thursday .label { display: block; margin-bottom: clamp(48px, 6vh, 72px); }
     .thursday-line {
       font-size: clamp(1.35rem, 2vw, 1.7rem);
@@ -1010,7 +1087,7 @@
       .imagine-line:nth-of-type(even) { margin-left: 0; }
 
       .when-deck { margin-left: 0; }
-      .when-prose { margin-right: 0; }
+      .when-prose, .doing-prose { margin-right: 0; }
 
       .turn-close { text-align: left; }
       .turn-cascade p:nth-child(n) { margin-left: 0; }
@@ -1052,10 +1129,10 @@
     <div class="hero-copy">
       <p class="label rv">A free live masterclass for women</p>
       <h1 class="rv s1">Come back to yourself.<br><em>Feel your <span style="white-space:nowrap">life again.</span></em></h1>
-      <p class="hero-lead rv s2">A free 90-minute masterclass about the gap between managing your life and <span style="white-space:nowrap">living it.</span></p>
+      <p class="hero-lead rv s2">This is a free 90-minute masterclass about the gap between managing your life and <span style="white-space:nowrap">living it.</span></p>
 
       <div class="form-wrap rv s3" id="hero-form">
-        <p class="date-line">28 July &nbsp;·&nbsp; 2 PM Bangkok &nbsp;·&nbsp; 9 AM Europe</p>
+        <p class="date-line">28/7 &nbsp;·&nbsp; 2 PM Bangkok &nbsp;·&nbsp; 9 AM Europe</p>
         <form class="nina-form">
           <input type="text" name="fname" class="form-input" placeholder="Your first name" required>
           <input type="email" name="email" class="form-input" placeholder="Your email" required>
@@ -1065,7 +1142,7 @@
           </label>
           <button type="submit" class="btn-submit">Save my seat</button>
         </form>
-        <span class="form-note">Free &nbsp;·&nbsp; Live online &nbsp;·&nbsp; 90 minutes</span>
+        <span class="form-note">Free Masterclass &nbsp;·&nbsp; 90 min</span>
       </div>
     </div>
 
@@ -1092,20 +1169,67 @@
   <section class="imagine">
     <div class="imagine-grid">
       <div class="imagine-text">
-        <p class="label rv">Imagine</p>
-        <p class="imagine-line rv">Tasting your morning tea instead of rushing through it.</p>
-        <p class="imagine-line rv">Feeling your laughter land in your belly.</p>
-        <p class="imagine-line rv">Moving to a great song because it feels good.</p>
-        <p class="imagine-line rv">Seeing your friend&rsquo;s face instead of rehearsing your answer.</p>
-        <p class="imagine-close rv">Becoming fully available to the woman who is living <span style="white-space:nowrap">your life.</span></p>
-        <div class="imagine-prose">
-          <p class="rv">In this masterclass, we&rsquo;ll notice where our attention goes when life turns tender, messy, or overwhelming, and what becomes possible when we begin including ourselves again.</p>
-          <p class="rv">Maybe it&rsquo;s not about building a different life. Maybe it&rsquo;s about letting this one grow richer, through a deeper intimacy with the woman living it.</p>
-        </div>
+        <p class="bridge-lead rv">This masterclass is about learning how to stay with yourself while living the life you already have.</p>
+        <p class="bridge-sub rv s1">So your days don&rsquo;t just pass by &hellip; you get to be <span style="white-space:nowrap">in them.</span></p>
+        <p class="imagine-line rv">Laughing and feeling it in your belly.</p>
+        <p class="imagine-line rv">Enjoying the warmth of a cup of tea instead of rushing through it.</p>
+        <p class="imagine-line rv">Savoring your time with a friend without your mind being somewhere else.</p>
+        <p class="imagine-line rv">Moving because it feels good, not because you should.</p>
+        <p class="imagine-close rv">Coming home at the end of the day feeling like you are there for your <span style="white-space:nowrap">own life.</span></p>
       </div>
       <figure class="imagine-photo rv s1">
         <img src="./photos%20that%20can%20be%20used/hands-flower.png" alt="Cupped hands resting in sunlit water among white flowers">
       </figure>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════
+       VIII · THIS IS FOR YOU
+  ══════════════════════════ -->
+  <section class="foryou">
+    <div class="foryou-inner">
+      <h2 class="display foryou-heading rv">This is for you</h2>
+
+      <div class="foryou-item rv">
+        <span class="n">01</span>
+        <p>You&rsquo;ve built a beautiful life and still feel strangely absent from it.</p>
+      </div>
+      <div class="foryou-item rv">
+        <span class="n">02</span>
+        <p>You&rsquo;re the one everyone comes to, and still feel alone sometimes.</p>
+      </div>
+      <div class="foryou-item rv">
+        <span class="n">03</span>
+        <p>You read a room instantly, but rarely feel yourself in it.</p>
+      </div>
+      <div class="foryou-item rv">
+        <span class="n">04</span>
+        <p>You&rsquo;ve done deep inner work, yet still leave yourself when life gets messy.</p>
+      </div>
+      <div class="foryou-item rv">
+        <span class="n">05</span>
+        <p>You&rsquo;re longing to feel more alive, not by needing less, but by being more available <span style="white-space:nowrap">to yourself.</span></p>
+      </div>
+      <div class="explore-cta rv">
+        <a href="#register" class="btn">Save my seat</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════
+       DOING WHAT NEEDS TO BE DONE
+  ══════════════════════════ -->
+  <section class="doing">
+    <div class="doing-inner">
+      <h2 class="doing-quote rv">You&rsquo;re doing what needs to be done.</h2>
+      <div class="doing-prose">
+        <p class="rv">Caring for the people you love. Building the life you once hoped for.</p>
+        <p class="rv">And yet, something quietly tells you you&rsquo;re not fully here for it.</p>
+        <p class="rv">Not because you wouldn&rsquo;t be happy.</p>
+        <p class="rv">Somewhere along the way, your attention grew so practiced at tending everyone else&rsquo;s needs that you slowly stopped including yourself in your <span style="white-space:nowrap">own life.</span></p>
+      </div>
     </div>
   </section>
 
@@ -1116,7 +1240,7 @@
   <section class="when">
     <div class="when-inner">
       <h2 class="display when-heading rv">When life asks something of us</h2>
-      <p class="when-deck rv s1">We stay close to ourselves, <em>until something meaningful happens.</em></p>
+      <p class="when-deck rv s1">We stay close to ourselves &hellip; <em>until something meaningful happens.</em></p>
 
       <ul class="triggers">
         <li class="rv"><span class="n">01</span>A hard conversation.</li>
@@ -1128,18 +1252,21 @@
       </ul>
 
       <div class="when-prose">
-        <p class="rv">And almost without noticing, our attention leaves us. It moves toward managing the other person. Shrinking ourselves. Explaining. Or getting very good at seeming fine.</p>
-        <p class="rv">This is deeply human. Many of us learned that staying connected to others meant quietly leaving ourselves. Not because anyone asked, but because it helped us belong.</p>
+        <p class="rv">And almost without noticing, our attention leaves us.</p>
+        <p class="rv">Moving toward managing the other person.</p>
+        <p class="rv">Shrinking ourselves. Explaining.</p>
+        <p class="rv">Or getting very good at seeming fine.</p>
       </div>
 
       <div class="when-pull">
         <p class="when-pull-a rv">Over time, life doesn&rsquo;t turn bad.</p>
         <p class="when-pull-b rv s1">It just goes flatter.</p>
-        <p class="when-pull-c rv s2">Less vivid &nbsp;·&nbsp; Less felt</p>
+        <p class="when-pull-c rv s2">Less vivid. &nbsp;&nbsp;&nbsp; Less felt.</p>
       </div>
 
       <div class="when-grace">
-        <p class="rv">But then, a rare afternoon walking home, or swimming in the sea. Colors sharpen. The sun warms your skin. Time slows.</p>
+        <p class="rv">But then &hellip; a rare afternoon walking home, or swimming in the sea &hellip;</p>
+        <p class="rv">Colors sharpen. The sun warms your skin. Time slows.</p>
         <p class="rv">Nothing extraordinary happens.</p>
       </div>
 
@@ -1161,6 +1288,8 @@
   ══════════════════════════ -->
   <section class="turn">
     <div class="turn-inner">
+      <p class="turn-open rv">What if we&rsquo;ve simply become so practiced at leaving &hellip; that we&rsquo;ve forgotten what it feels like <span style="white-space:nowrap">to stay?</span></p>
+
       <p class="turn-small rv">Maybe the question isn&rsquo;t how to get better at self-care.</p>
       <p class="turn-big rv s1">Maybe it&rsquo;s this: how do I stay connected to myself while actually living my life?</p>
 
@@ -1187,19 +1316,16 @@
       <div class="explore-row rv">
         <span class="n">01</span>
         <h3>Why our attention leaves us in the moments we need ourselves most.</h3>
-        <p>We&rsquo;ll begin noticing the subtle moments where we move away from our own experience and toward fixing, explaining, anticipating, or holding everything together.</p>
       </div>
 
       <div class="explore-row rv">
         <span class="n">02</span>
-        <h3>What we learned about love, connection, and belonging.</h3>
-        <p>We&rsquo;ll explore why our needs, desires, and emotions can feel difficult to stay close to, especially when love, conflict, fear, or other people enter the picture.</p>
+        <h3>What we learned about love, connection, and belonging, and why our own feelings became hard to <span style="white-space:nowrap">stay with.</span></h3>
       </div>
 
       <div class="explore-row rv">
         <span class="n">03</span>
-        <h3>What it feels like to return.</h3>
-        <p>Not as another thing to achieve, but as a felt homecoming. Because the woman who is feeling, needing, wanting, and living this life deserves to be met too.</p>
+        <h3>What it feels like to return, not as self-improvement, but as a felt homecoming <span style="white-space:nowrap">to yourself.</span></h3>
       </div>
 
       <div class="explore-cta rv">
@@ -1209,35 +1335,7 @@
   </section>
 
 
-  <!-- ══════════════════════════
-       VIII · THIS IS FOR YOU
-  ══════════════════════════ -->
-  <section class="foryou">
-    <div class="foryou-inner">
-      <h2 class="display foryou-heading rv">This is for you</h2>
-
-      <div class="foryou-item rv">
-        <span class="n">01</span>
-        <p>You&rsquo;ve built a beautiful life and still feel strangely absent from it.</p>
-      </div>
-      <div class="foryou-item rv">
-        <span class="n">02</span>
-        <p>You&rsquo;re the one everyone comes to, and you still feel alone sometimes.</p>
-      </div>
-      <div class="foryou-item rv">
-        <span class="n">03</span>
-        <p>You read a room instantly, but rarely feel yourself in it.</p>
-      </div>
-      <div class="foryou-item rv">
-        <span class="n">04</span>
-        <p>You&rsquo;ve done deep inner work, yet still leave yourself when life gets messy.</p>
-      </div>
-      <div class="foryou-item rv">
-        <span class="n">05</span>
-        <p>You&rsquo;re longing to feel more alive. Not by needing less, but by becoming more available to yourself.</p>
-      </div>
-    </div>
-  </section>
+  
 
 
   <!-- ══════════════════════════
@@ -1247,7 +1345,7 @@
     <div class="leave-inner">
       <h2 class="display leave-heading rv">After 90 minutes together, you&rsquo;ll leave with</h2>
       <ul class="leave-list">
-        <li class="rv"><span class="n">01</span>A deeper sense of steadiness within yourself, even when life feels hard.</li>
+        <li class="rv"><span class="n">01</span>A deeper sense of peace and steadiness within yourself, even when life feels hard.</li>
         <li class="rv"><span class="n">02</span>Less overwhelm, and more capacity to trust yourself, your feelings, and your inner voice.</li>
         <li class="rv"><span class="n">03</span>A greater ability to say what&rsquo;s on your heart, before going quiet and inward.</li>
       </ul>
@@ -1272,8 +1370,8 @@
           <li class="rv"><span class="k">Date</span><span class="v">Tuesday, 28 July</span></li>
           <li class="rv"><span class="k">Time</span><span class="v">2 PM Bangkok &nbsp;·&nbsp; 9 AM Europe</span></li>
           <li class="rv"><span class="k">Length</span><span class="v">90 minutes</span></li>
-          <li class="rv"><span class="k">Format</span><span class="v">Live, online, free</span></li>
-          <li class="rv"><span class="k">Replay</span><span class="v">None. If the date doesn&rsquo;t work, there will be another round.</span></li>
+          <li class="rv"><span class="k">Format</span><span class="v">Live and online</span></li>
+          <li class="rv"><span class="k">Replay</span><span class="v">No replay. If the date doesn&rsquo;t work for you, there will be another round.</span></li>
         </ul>
         <p class="expect-door rv">Near the end, I&rsquo;ll open the door to continue this work together. <em>If it&rsquo;s a yes, the door is yours to walk through.</em></p>
       </div>
@@ -1328,11 +1426,6 @@
         <cite>B &nbsp;·&nbsp; Thailand</cite>
       </div>
 
-      <div class="voice rv">
-        <blockquote>&ldquo;So simple to absorb. The tools gave me clarity I use every day.&rdquo;</blockquote>
-        <cite>K &nbsp;·&nbsp; Myanmar</cite>
-      </div>
-
       <div class="voice-shots rv">
         <img src="./photos that can be used/opinions/IMG_2384.jpeg" alt="A message from a participant">
         <img src="./photos that can be used/opinions/IMG_2387.jpeg" alt="A message from a participant">
@@ -1345,7 +1438,7 @@
        XIII · NEXT THURSDAY
   ══════════════════════════ -->
   <section class="thursday">
-    <span class="label rv">Here&rsquo;s what next Thursday could look like</span>
+    <span class="label rv">Here&rsquo;s what next Thursday looks like</span>
     <p class="thursday-line rv">You&rsquo;re in a conversation.<br>Someone says something that hurts.</p>
     <p class="thursday-line rv">You feel the pull, to explain, to soften, to make sure they&rsquo;re okay.</p>
     <p class="thursday-line rv">And then, almost imperceptibly,</p>
@@ -1368,7 +1461,7 @@
       </div>
 
       <div class="form-wrap rv s1">
-        <p class="date-line">28 July &nbsp;·&nbsp; 2 PM Bangkok &nbsp;·&nbsp; 9 AM Europe</p>
+        <p class="date-line">28/7 &nbsp;·&nbsp; 2 PM Bangkok &nbsp;·&nbsp; 9 AM Europe</p>
         <form class="nina-form">
           <input type="text" name="fname" class="form-input" placeholder="Your first name" required>
           <input type="email" name="email" class="form-input" placeholder="Your email" required>
@@ -1378,7 +1471,7 @@
           </label>
           <button type="submit" class="btn-submit">Save my seat</button>
         </form>
-        <span class="form-note">Free &nbsp;·&nbsp; Live online &nbsp;·&nbsp; 90 minutes</span>
+        <span class="form-note">Free Masterclass &nbsp;·&nbsp; 90 min</span>
       </div>
     </div>
   </section>
