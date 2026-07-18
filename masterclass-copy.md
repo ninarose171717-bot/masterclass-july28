@@ -1,201 +1,231 @@
-# Masterclass Page — Full Copy
-*All text from index.html, in page order*
+# Masterclass Page · Full Copy
+*All text from index.html, in page order · Updated 18 July 2026 (editorial redesign)*
 
 ---
 
 ## Nav
 
 - @iam.ninarose
-- hello@iamninarose.com
 - Free Masterclass · 28 July
-- Save My Seat
+- Save my seat
 
 ---
 
-## Hero
+## I · Arrival (hero)
 
-**Date line:** 28/7 · 2 PM Bangkok · 9 AM Europe
+**Eyebrow:** A free live masterclass for women
 
 **Headline:**
-You haven't lost yourself.
+Come back to yourself.
+*Feel your life again.*
 
-**Subheadline:**
-You've just learned to give your attention to everyone but you.
+**Lead:**
+A free 90-minute masterclass about the gap between managing your life and living it.
 
-**Description:**
-A free masterclass for the woman who looks like she's holding it all together, but privately knows she has been disappearing from the life she built.
-
-**Form:**
+**Form (identical in hero and invitation):**
+- 28 July · 2 PM Bangkok · 9 AM Europe
 - Your first name
-- your@email.com
+- Your email
 - I'd also love to receive your notes on life, staying with ourselves, and everything in between. ♡
 - Save my seat
-
-**Form note:** Free Masterclass · Online · 90 min
-
----
-
-## Resonance
-
-You know how to keep going.
-
-You know how to show up. How to anticipate what other people need. How to keep the peace. How to be useful. How to make things work. You know how to hold it all together.
-
-But somewhere along the way, your attention started living everywhere except here, with you.
-
-Not in your body. Not in your needs. Not in your desire. Not in the signals you keep leaving behind because there is something else that needs you.
-
-*And eventually, something in you starts to speak.*
-
-Through exhaustion after work. Through resentment toward your partner and friends. Through restlessness and constantly planning the next thing. Through numbness in conversations you wish you could feel present for. Through late-night cravings.
-
-Through the ache of knowing your life looks 'okay,' but you don't feel fully here for it.
-
-None of this means you don't love the life you've built.
-It happens because something inside you learned that being loved, needed, safe, and connected meant leaving yourself behind.
+- Free · Live online · 90 minutes
 
 ---
 
-## What's Inside (arch cards)
+## II · The question (exhale)
 
-Inside this masterclass, you'll learn how to see the pattern that has been running your life.
+Have you ever noticed how easy it is to stay connected to everyone else …
 
-**01 — The attention pattern**
-Why your focus keeps moving toward what needs to be done, who needs you, and how others feel, while the woman actually living your life disappears from your attention.
-
-**02 — The hidden association**
-Why paying attention to you may feel selfish, unsafe, inconvenient, indulgent, unfamiliar, or even dangerous.
-
-**03 — The return**
-A simple way to begin staying with yourself in real time, without blowing up your life, becoming a different person, or adding another complicated self-care routine to your list.
-
-**Closing:**
-By the end, you'll understand yourself differently.
-Not as someone who needs to be fixed.
-But as someone who is ready to stop leaving herself in order to be loved, useful, approved, or okay.
+*… while quietly losing connection with yourself?*
 
 ---
 
-## Photo moment
+## III · Imagine
 
-Let that center be you.
+**Eyebrow:** Imagine
 
----
+Tasting your morning tea instead of rushing through it.
+Feeling your laughter land in your belly.
+Moving to a great song because it feels good.
+Seeing your friend's face instead of rehearsing your answer.
 
-## This is for you if …
+*Becoming fully available to the woman who is living your life.*
 
-01 — You are tired of being the one who holds everything together.
+In this masterclass, we'll notice where our attention goes when life turns tender, messy, or overwhelming, and what becomes possible when we begin including ourselves again.
 
-02 — You often know what everyone else needs before you know what you need.
-
-03 — Everyone knows how capable you are, and you know it too, but something still feels missing.
-
-04 — You are done making your exhaustion, cravings, numbness, resentment, or shutdown mean you are doing something wrong.
-
-05 — You are ready to see what happens when you stop being the strongest one, the smartest one, the most capable one, and begin to feel what being alive in your body feels like instead.
+*Maybe it's not about building a different life. Maybe it's about letting this one grow richer, through a deeper intimacy with the woman living it.*
 
 ---
 
-## What you'll walk away with
+## IV · When life asks something of us
 
-*(⚠️ This section needs revision — see notes below)*
+We stay close to ourselves, *until something meaningful happens.*
 
-1. A deeper understanding of why you keep leaving yourself, even when you know better.
-2. Language for the pattern that has kept you over-functioning, people-pleasing, numbing, shrinking, or performing.
-3. A way to recognize the moment you leave yourself, and how to return without shaming yourself for it.
-4. A beginning point for feeling you: the woman who is yearning, longing, needing, this time without turning away from her as easily.
+01 A hard conversation.
+02 Someone pulling away.
+03 A desire we're not sure we're allowed to have.
+04 Grief.
+05 Shame.
+06 Too much feeling, all at once.
 
-**Outro:**
-And this doesn't happen through another self-improvement plan, or dissecting your past, or controlling everything around you.
+And almost without noticing, our attention leaves us. It moves toward managing the other person. Shrinking ourselves. Explaining. Or getting very good at seeming fine.
 
-*It happens through attention.*
+This is deeply human. Many of us learned that staying connected to others meant quietly leaving ourselves. Not because anyone asked, but because it helped us belong.
 
-Where your attention rests becomes the center of your life.
+**Pull quote:**
+Over time, life doesn't turn bad.
+*It just goes flatter.*
+Less vivid · Less felt
 
----
+But then, a rare afternoon walking home, or swimming in the sea. Colors sharpen. The sun warms your skin. Time slows.
+Nothing extraordinary happens.
 
-### ✏️ Revision notes for this section
-
-- Items 1 and 2 overlap — both are cognitive/intellectual. Consider replacing one with a felt-life outcome, e.g.:
-  *"A felt sense of what it means to stay — with yourself, even when life pulls hard."*
-
-- **Direction 1 (your paragraph to write):** After the list, add a short passage painting what life feels like after — not what they'll understand, but what they'll notice. A regular Tuesday. A conversation. A moment alone.
-
-- **Direction 3 (closing sentence to write):** One line before the button. "This isn't more work. This is ___." Describe the feeling of arriving back in yourself — without saying "coming home."
+*Life just feels astonishingly intimate.*
 
 ---
 
-## Your Host
+## V · Pause (full breath)
 
-**Section label:** Your Host
-**Name:** Nina Rose
+*I don't think that's life cooperating.
+I think that's us, finally staying.*
 
-**Quote card:**
+---
+
+## VI · The turn (dark section)
+
+Maybe the question isn't how to get better at self-care.
+
+*Maybe it's this: how do I stay connected to myself while actually living my life?*
+
+Staying with yourself means you don't have to disappear,
+
+*while disappointed,
+while afraid,
+while desiring something,
+while misunderstood,
+while flooded.*
+
+*You get to remain there, too.*
+
+---
+
+## VII · Together, we will explore
+
+**01 · Why our attention leaves us in the moments we need ourselves most.**
+We'll begin noticing the subtle moments where we move away from our own experience and toward fixing, explaining, anticipating, or holding everything together.
+
+**02 · What we learned about love, connection, and belonging.**
+We'll explore why our needs, desires, and emotions can feel difficult to stay close to, especially when love, conflict, fear, or other people enter the picture.
+
+**03 · What it feels like to return.**
+Not as another thing to achieve, but as a felt homecoming. Because the woman who is feeling, needing, wanting, and living this life deserves to be met too.
+
+CTA: Save my seat
+
+---
+
+## VIII · This is for you
+
+01 You've built a beautiful life and still feel strangely absent from it.
+02 You're the one everyone comes to, and you still feel alone sometimes.
+03 You read a room instantly, but rarely feel yourself in it.
+04 You've done deep inner work, yet still leave yourself when life gets messy.
+05 You're longing to feel more alive. Not by needing less, but by becoming more available to yourself.
+
+---
+
+## IX · After 90 minutes together, you'll leave with
+
+01 A deeper sense of steadiness within yourself, even when life feels hard.
+02 Less overwhelm, and more capacity to trust yourself, your feelings, and your inner voice.
+03 A greater ability to say what's on your heart, before going quiet and inward.
+
+CTA: Save my seat
+
+---
+
+## X · What to expect (fact sheet)
+
+**Eyebrow:** The details
+
+- Date · Tuesday, 28 July
+- Time · 2 PM Bangkok · 9 AM Europe
+- Length · 90 minutes
+- Format · Live, online, free
+- Replay · None. If the date doesn't work, there will be another round.
+
+Near the end, I'll open the door to continue this work together. *If it's a yes, the door is yours to walk through.*
+
+---
+
+## XI · Your host · Nina Rose
+
+**Photo caption:**
 "Because you're done being perfect. You want to be honest. And finally exhale."
+(+ signature)
 
 **Bio:**
-I created this masterclass for the woman who looks like she's holding it all together, but privately knows she has been living from "should" for too long.
+I created this for the woman who looks like she has it together, but privately knows she's been living from 'should' for too long.
 
-For the woman who somewhere along the way learned that being loved meant being useful. Being safe meant being low-maintenance. Being good meant not needing too much.
+I've spent years working with women, and in rehab with people in recovery, around one quiet pattern: how easily we learn to leave ourselves.
 
-In the past few years, I've worked with women online and in person, as well as with people in recovery in rehab, around one pattern that sits beneath so much of what keeps us stuck: the habit of leaving ourselves.
+My work lives in the body, because knowing something isn't the same as feeling it. My passion is helping people discover they never have to leave themselves to be loved, to belong, or to feel fully alive.
 
-How do we stay with ourselves when life becomes difficult?
-
-My work is grounded in the body, because knowing something isn't the same as feeling ourselves in it. More than anything, what I bring to this work is the practice of staying with ourselves, without rushing to fix, change, or numb.
-
-I'm originally from Slovenia and now live in Thailand. Choosing a life that felt true, rather than one that only looked right, has shaped everything about the work I do.
+I'm originally from Slovenia and now live in Thailand. Choosing a life that felt true rather than one that looked right has shaped everything about the work I do.
 
 ---
 
-## Testimonials
+## XII · What they said
 
-**Eyebrow:** ~~After our last masterclass~~ → **During and after our last masterclass** *(change pending)*
+**Eyebrow:** After our last masterclass
 
-**Heading:** What they said
-
-"I put away the stuff that isn't mine and refilled myself with light and energy. I'm calm, and I'm okay."
-~ M, Croatia
+"I put away what isn't mine and refilled myself with light. I'm calm, and I'm okay."
+M · Croatia
 
 "You never pretend hard things won't happen. You show that you always have yourself to come back to. I'm feeling braver."
-~ B, Thailand
+B · Thailand
 
-"Being with Nina is like standing in the sun. It burns everything that isn't yours away and leaves the purest version of you."
-~ M, Croatia
+"So simple to absorb. The tools gave me clarity I use every day."
+K · Myanmar
 
-"So simple and easy to absorb. The tools gave me more clarity and focus I can actually use in daily life."
-~ K, Myanmar
-
-*(+ 2 screenshot messages)*
+(+ 2 screenshot messages)
 
 ---
 
-## Invitation / Final CTA
+## XIII · Here's what next Thursday could look like
 
-You can stop waiting.
+You're in a conversation.
+Someone says something that hurts.
 
-You can stop waiting to become calmer, thinner, more disciplined, more grateful, more productive, or more "high vibe" in order to be allowed to want more.
+You feel the pull, to explain, to soften, to make sure they're okay.
 
-You are allowed to want a life that does not require you to numb out from it.
+And then, almost imperceptibly,
+*you remember yourself.*
 
-You are allowed to have needs without apologizing for them.
+Maybe you speak. Maybe you choose silence.
+The conversation may change, or it may not.
 
-You are allowed to notice the places where you have disappeared without calling yourself dramatic or ungrateful. These are the places where you have stopped including yourself in your own life.
+*But you didn't leave yourself
+to stay connected to someone else.*
 
-This masterclass is an invitation to begin listening.
-Not to everything and everyone else first.
-*To you.*
+---
 
-**Form:**
-- Your first name
-- your@email.com
-- I'd also love to receive your notes on life, staying with ourselves, and everything in between. ♡
-- Save my seat
-- Free Masterclass · Online · 90 min
+## XIV · The invitation (final CTA)
+
+The richness of your life isn't only shaped by what happens to you.
+
+*It's shaped by how available you are to the woman living it.*
+
+There's room for her too.
+
+This is an invitation to begin. Together.
+
+(+ form, identical to hero)
 
 ---
 
 ## Footer
 
 Nina Rose
-© 2026 · Free Masterclass · All Rights Reserved
+@iam.ninarose · hello@iamninarose.com
+© 2026 · Free Masterclass
