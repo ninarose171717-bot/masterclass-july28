@@ -13,7 +13,7 @@
 
 ## I · Arrival (hero)
 
-**Eyebrow:** A free live masterclass for women
+**Eyebrow:** A free live masterclass
 
 **Headline:**
 Come back to yourself.
