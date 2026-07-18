@@ -1,5 +1,5 @@
 # Masterclass Page · Full Copy
-*All text from index.html, in page order · Updated 18 July 2026 (editorial redesign)*
+*All text from index.html, in page order · Updated 18 July 2026 evening (current copy restored, sections reordered per Nina)*
 
 ---
 
@@ -20,15 +20,15 @@ Come back to yourself.
 *Feel your life again.*
 
 **Lead:**
-A free 90-minute masterclass about the gap between managing your life and living it.
+This is a free 90-minute masterclass about the gap between managing your life and living it.
 
 **Form (identical in hero and invitation):**
-- 28 July · 2 PM Bangkok · 9 AM Europe
+- 28/7 · 2 PM Bangkok · 9 AM Europe
 - Your first name
 - Your email
 - I'd also love to receive your notes on life, staying with ourselves, and everything in between. ♡
 - Save my seat
-- Free · Live online · 90 minutes
+- Free Masterclass · 90 min
 
 ---
 
@@ -40,26 +40,47 @@ Have you ever noticed how easy it is to stay connected to everyone else …
 
 ---
 
-## III · Imagine
+## III · The bridge (with hands-in-water photo)
 
-**Eyebrow:** Imagine
+This masterclass is about learning how to stay with yourself while living the life you already have.
 
-Tasting your morning tea instead of rushing through it.
-Feeling your laughter land in your belly.
-Moving to a great song because it feels good.
-Seeing your friend's face instead of rehearsing your answer.
+*So your days don't just pass by … you get to be in them.*
 
-*Becoming fully available to the woman who is living your life.*
+Laughing and feeling it in your belly.
+Enjoying the warmth of a cup of tea instead of rushing through it.
+Savoring your time with a friend without your mind being somewhere else.
+Moving because it feels good, not because you should.
 
-In this masterclass, we'll notice where our attention goes when life turns tender, messy, or overwhelming, and what becomes possible when we begin including ourselves again.
-
-*Maybe it's not about building a different life. Maybe it's about letting this one grow richer, through a deeper intimacy with the woman living it.*
+*Coming home at the end of the day feeling like you are there for your own life.*
 
 ---
 
-## IV · When life asks something of us
+## IV · This is for you
 
-We stay close to ourselves, *until something meaningful happens.*
+01 You've built a beautiful life and still feel strangely absent from it.
+02 You're the one everyone comes to, and still feel alone sometimes.
+03 You read a room instantly, but rarely feel yourself in it.
+04 You've done deep inner work, yet still leave yourself when life gets messy.
+05 You're longing to feel more alive, not by needing less, but by being more available to yourself.
+
+CTA: Save my seat
+
+---
+
+## V · You're doing what needs to be done
+
+You're doing what needs to be done.
+
+Caring for the people you love. Building the life you once hoped for.
+And yet, something quietly tells you you're not fully here for it.
+Not because you wouldn't be happy.
+*Somewhere along the way, your attention grew so practiced at tending everyone else's needs that you slowly stopped including yourself in your own life.*
+
+---
+
+## VI · When life asks something of us
+
+We stay close to ourselves … *until something meaningful happens.*
 
 01 A hard conversation.
 02 Someone pulling away.
@@ -68,33 +89,36 @@ We stay close to ourselves, *until something meaningful happens.*
 05 Shame.
 06 Too much feeling, all at once.
 
-And almost without noticing, our attention leaves us. It moves toward managing the other person. Shrinking ourselves. Explaining. Or getting very good at seeming fine.
-
-This is deeply human. Many of us learned that staying connected to others meant quietly leaving ourselves. Not because anyone asked, but because it helped us belong.
+And almost without noticing, our attention leaves us.
+Moving toward managing the other person.
+Shrinking ourselves. Explaining.
+Or getting very good at seeming fine.
 
 **Pull quote:**
 Over time, life doesn't turn bad.
 *It just goes flatter.*
-Less vivid · Less felt
+Less vivid. Less felt.
 
-But then, a rare afternoon walking home, or swimming in the sea. Colors sharpen. The sun warms your skin. Time slows.
+But then … a rare afternoon walking home, or swimming in the sea …
+Colors sharpen. The sun warms your skin. Time slows.
 Nothing extraordinary happens.
 
 *Life just feels astonishingly intimate.*
 
 ---
 
-## V · Pause (full breath)
+## VII · Pause (full breath)
 
 *I don't think that's life cooperating.
 I think that's us, finally staying.*
 
 ---
 
-## VI · The turn (dark section)
+## VIII · The turn (dark section)
+
+*What if we've simply become so practiced at leaving … that we've forgotten what it feels like to stay?*
 
 Maybe the question isn't how to get better at self-care.
-
 *Maybe it's this: how do I stay connected to myself while actually living my life?*
 
 Staying with yourself means you don't have to disappear,
@@ -109,34 +133,19 @@ while flooded.*
 
 ---
 
-## VII · Together, we will explore
+## IX · Together, we will explore
 
-**01 · Why our attention leaves us in the moments we need ourselves most.**
-We'll begin noticing the subtle moments where we move away from our own experience and toward fixing, explaining, anticipating, or holding everything together.
-
-**02 · What we learned about love, connection, and belonging.**
-We'll explore why our needs, desires, and emotions can feel difficult to stay close to, especially when love, conflict, fear, or other people enter the picture.
-
-**03 · What it feels like to return.**
-Not as another thing to achieve, but as a felt homecoming. Because the woman who is feeling, needing, wanting, and living this life deserves to be met too.
+01 Why our attention leaves us in the moments we need ourselves most.
+02 What we learned about love, connection, and belonging, and why our own feelings became hard to stay with.
+03 What it feels like to return, not as self-improvement, but as a felt homecoming to yourself.
 
 CTA: Save my seat
 
 ---
 
-## VIII · This is for you
+## X · After 90 minutes together, you'll leave with
 
-01 You've built a beautiful life and still feel strangely absent from it.
-02 You're the one everyone comes to, and you still feel alone sometimes.
-03 You read a room instantly, but rarely feel yourself in it.
-04 You've done deep inner work, yet still leave yourself when life gets messy.
-05 You're longing to feel more alive. Not by needing less, but by becoming more available to yourself.
-
----
-
-## IX · After 90 minutes together, you'll leave with
-
-01 A deeper sense of steadiness within yourself, even when life feels hard.
+01 A deeper sense of peace and steadiness within yourself, even when life feels hard.
 02 Less overwhelm, and more capacity to trust yourself, your feelings, and your inner voice.
 03 A greater ability to say what's on your heart, before going quiet and inward.
 
@@ -144,21 +153,21 @@ CTA: Save my seat
 
 ---
 
-## X · What to expect (fact sheet)
+## XI · What to expect (fact sheet)
 
 **Eyebrow:** The details
 
 - Date · Tuesday, 28 July
 - Time · 2 PM Bangkok · 9 AM Europe
 - Length · 90 minutes
-- Format · Live, online, free
-- Replay · None. If the date doesn't work, there will be another round.
+- Format · Live and online
+- Replay · No replay. If the date doesn't work for you, there will be another round.
 
 Near the end, I'll open the door to continue this work together. *If it's a yes, the door is yours to walk through.*
 
 ---
 
-## XI · Your host · Nina Rose
+## XII · Your host · Nina Rose
 
 **Photo caption:**
 "Because you're done being perfect. You want to be honest. And finally exhale."
@@ -175,7 +184,7 @@ I'm originally from Slovenia and now live in Thailand. Choosing a life that felt
 
 ---
 
-## XII · What they said
+## XIII · What they said
 
 **Eyebrow:** After our last masterclass
 
@@ -185,14 +194,11 @@ M · Croatia
 "You never pretend hard things won't happen. You show that you always have yourself to come back to. I'm feeling braver."
 B · Thailand
 
-"So simple to absorb. The tools gave me clarity I use every day."
-K · Myanmar
-
 (+ 2 screenshot messages)
 
 ---
 
-## XIII · Here's what next Thursday could look like
+## XIV · Here's what next Thursday looks like (woman photo in background)
 
 You're in a conversation.
 Someone says something that hurts.
@@ -210,7 +216,7 @@ to stay connected to someone else.*
 
 ---
 
-## XIV · The invitation (final CTA)
+## XV · The invitation (final CTA)
 
 The richness of your life isn't only shaped by what happens to you.
 
