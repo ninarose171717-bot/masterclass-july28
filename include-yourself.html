@@ -29,7 +29,8 @@
       --c2:     #EFE3CF;   /* golden sand */
       --c3:     #E8D7BF;   /* amber linen */
       --c4:     #DECBAE;   /* honey stone */
-      --deep:   #3A1B14;   /* wine-dark ember */
+      --deep:   #431B15;   /* deep bordeaux */
+      --rose:   #EFD9C6;   /* blush sand */
       --text:   #1A120B;
       --mid:    #6E4B36;
       --muted:  #A07C5F;
@@ -228,7 +229,7 @@
       font-size: clamp(1.5rem, 2.3vw, 2rem);
       font-style: italic;
       font-weight: 300;
-      color: var(--text);
+      color: var(--bronze);
       line-height: 1.45;
       margin-bottom: 0;
     }
@@ -280,7 +281,7 @@
       font-weight: 300;
       font-style: italic;
       line-height: 1.35;
-      color: var(--text);
+      color: var(--bronze);
       text-align: center;
       max-width: 20em;
       margin: clamp(80px, 10vh, 130px) auto 0;
@@ -398,7 +399,7 @@
        V·V · COME HERE FOR A MOMENT
     ═════════════════════════════════════════ */
     .embody {
-      background: var(--c2);
+      background: var(--rose);
       padding: clamp(130px, 16vh, 220px) var(--pad-x);
     }
     .embody-grid {
@@ -504,34 +505,35 @@
        VII · WHAT I WON'T PROMISE
     ═════════════════════════════════════════ */
     .honest {
-      background: var(--c1);
-      padding: clamp(120px, 14vh, 200px) var(--pad-x);
+      background: var(--deep);
+      padding: clamp(130px, 16vh, 220px) var(--pad-x);
     }
     .honest-inner { max-width: 880px; margin: 0 auto; }
     .honest-heading {
       font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+      color: rgba(245, 237, 224, 0.97);
       margin-bottom: clamp(56px, 7vh, 88px);
     }
     .honest-item {
       max-width: 36em;
       padding: 28px 0;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid rgba(245, 237, 224, 0.18);
     }
-    .honest-item:last-of-type { border-bottom: 1px solid var(--border); }
+    .honest-item:last-of-type { border-bottom: 1px solid rgba(245, 237, 224, 0.18); }
     .honest-item h3 {
       font-family: var(--serif);
       font-size: clamp(1.4rem, 2vw, 1.7rem);
       font-weight: 400;
-      color: var(--text);
+      color: rgba(245, 237, 224, 0.95);
       line-height: 1.4;
       margin-bottom: 10px;
     }
     .honest-item p {
-      color: var(--mid);
+      color: rgba(245, 237, 224, 0.68);
       line-height: 1.8;
       text-wrap: pretty;
     }
-    .honest-item p em { color: var(--text); }
+    .honest-item p em { color: rgba(245, 237, 224, 0.95); }
 
     /* ═════════════════════════════════════════
        VIII · YOUR GUIDE
@@ -603,7 +605,7 @@
        IX · FROM WOMEN I'VE WORKED WITH
     ═════════════════════════════════════════ */
     .voices {
-      background: var(--c3);
+      background: var(--rose);
       padding: clamp(120px, 14vh, 200px) var(--pad-x);
     }
     .voices-inner { max-width: 1050px; margin: 0 auto; }
@@ -644,8 +646,8 @@
        X · THE INVESTMENT
     ═════════════════════════════════════════ */
     .invest {
-      background: var(--c1);
-      padding: clamp(120px, 14vh, 200px) var(--pad-x);
+      background: var(--deep);
+      padding: clamp(130px, 16vh, 220px) var(--pad-x);
     }
     .invest-grid {
       display: grid;
@@ -655,23 +657,27 @@
       margin: 0 auto;
       align-items: center;
     }
-    .invest-text .label { display: block; margin-bottom: clamp(36px, 4vh, 52px); }
+    .invest-text .label {
+      display: block;
+      color: rgba(245, 237, 224, 0.6);
+      margin-bottom: clamp(36px, 4vh, 52px);
+    }
     .invest-price {
       font-family: var(--serif);
       font-size: clamp(4rem, 8vw, 7rem);
       font-weight: 300;
       line-height: 1;
-      color: var(--text);
+      color: rgba(245, 237, 224, 0.97);
       margin-bottom: 14px;
     }
     .invest-sub {
       font-size: clamp(1.2rem, 1.7vw, 1.45rem);
       font-style: italic;
-      color: var(--bronze);
+      color: rgba(245, 237, 224, 0.75);
       margin-bottom: clamp(36px, 4vh, 52px);
     }
     .invest-body {
-      color: var(--mid);
+      color: rgba(245, 237, 224, 0.68);
       line-height: 1.8;
       max-width: 26em;
       margin-bottom: 18px;
@@ -687,7 +693,7 @@
       font-size: 0.66rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--mid);
+      color: rgba(245, 237, 224, 0.6);
       text-align: center;
       margin-top: 16px;
     }
