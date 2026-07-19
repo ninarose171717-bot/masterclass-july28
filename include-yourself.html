@@ -195,7 +195,7 @@
        II · THE MIRROR
     ═════════════════════════════════════════ */
     .mirror {
-      background: var(--c2);
+      background: var(--rose);
       padding: clamp(120px, 14vh, 200px) var(--pad-x);
     }
     .mirror-inner { max-width: 1050px; margin: 0 auto; }
@@ -451,7 +451,7 @@
        VI · HOW IT WORKS
     ═════════════════════════════════════════ */
     .how {
-      background: var(--c3);
+      background: var(--c1);
       padding: clamp(120px, 14vh, 200px) var(--pad-x);
     }
     .how-grid {
@@ -536,10 +536,78 @@
     .honest-item p em { color: rgba(245, 237, 224, 0.95); }
 
     /* ═════════════════════════════════════════
-       VIII · YOUR GUIDE
+       VIII·a · IF SOMETHING ALREADY KNOWS
+    ═════════════════════════════════════════ */
+    .knows {
+      background: var(--rose);
+      padding: clamp(110px, 13vh, 180px) var(--pad-x);
+      text-align: center;
+    }
+    .knows-inner { max-width: 720px; margin: 0 auto; }
+    .knows-line {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.6vw, 3.2rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--bronze);
+      line-height: 1.25;
+      margin-bottom: clamp(28px, 3.5vh, 40px);
+      text-wrap: balance;
+    }
+    .knows-body {
+      color: var(--mid);
+      line-height: 1.8;
+      max-width: 30em;
+      margin: 0 auto clamp(40px, 5vh, 56px);
+      text-wrap: pretty;
+    }
+
+    /* ═════════════════════════════════════════
+       VIII·b · MY STORY
+    ═════════════════════════════════════════ */
+    .story {
+      background: var(--c1);
+      padding: clamp(130px, 16vh, 220px) var(--pad-x);
+    }
+    .story-inner { max-width: 880px; margin: 0 auto; }
+    .story-inner > .label { display: block; margin-bottom: 20px; }
+    .story-heading {
+      font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+      margin-bottom: clamp(56px, 7vh, 88px);
+      max-width: 16em;
+    }
+    .story-body { max-width: 34em; }
+    .story-body p {
+      color: var(--mid);
+      line-height: 1.85;
+      margin-bottom: 26px;
+      text-wrap: pretty;
+    }
+    .story-body .story-pull {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 2.3vw, 2rem);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--bronze);
+      line-height: 1.45;
+      margin: clamp(44px, 5vh, 60px) 0;
+      max-width: 21em;
+      text-wrap: balance;
+    }
+    .story-body .story-close {
+      font-family: var(--serif);
+      font-size: clamp(1.4rem, 2vw, 1.7rem);
+      font-style: italic;
+      color: var(--text);
+      margin-top: clamp(36px, 4vh, 48px);
+      margin-bottom: 0;
+    }
+
+    /* ═════════════════════════════════════════
+       VIII·c · WHY I CREATED THIS
     ═════════════════════════════════════════ */
     .guide {
-      background: var(--c2);
+      background: var(--rose);
       padding: clamp(120px, 14vh, 200px) var(--pad-x);
     }
     .guide-grid {
@@ -594,18 +662,13 @@
       text-wrap: pretty;
     }
     .guide-body p:last-child { margin-bottom: 0; }
-    .guide-body .guide-pull em {
-      font-size: clamp(1.35rem, 1.9vw, 1.6rem);
-      color: var(--bronze);
-      line-height: 1.5;
-    }
     .guide-body p em { color: var(--text); }
 
     /* ═════════════════════════════════════════
        IX · FROM WOMEN I'VE WORKED WITH
     ═════════════════════════════════════════ */
     .voices {
-      background: var(--rose);
+      background: var(--c1);
       padding: clamp(120px, 14vh, 200px) var(--pad-x);
     }
     .voices-inner { max-width: 1050px; margin: 0 auto; }
@@ -618,28 +681,17 @@
       line-height: 1.1;
       text-wrap: balance;
     }
-    .voice {
-      max-width: 560px;
-      margin-bottom: clamp(56px, 7vh, 88px);
+    .shots {
+      columns: 2;
+      column-gap: 28px;
+      max-width: 880px;
     }
-    .voice:nth-of-type(even) { margin-left: auto; margin-right: clamp(0px, 4vw, 60px); }
-    .voice:last-of-type { margin-bottom: 0; }
-    .voice blockquote {
-      font-size: clamp(1.25rem, 1.8vw, 1.55rem);
-      font-weight: 300;
-      font-style: italic;
-      line-height: 1.6;
-      color: var(--text);
-      margin-bottom: 18px;
-      text-wrap: pretty;
-    }
-    .voice cite {
-      font-family: var(--sans);
-      font-style: normal;
-      font-size: 0.7rem;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      color: var(--mid);
+    .shots img {
+      width: 100%;
+      margin-bottom: 28px;
+      border-radius: 4px;
+      box-shadow: 0 10px 40px rgba(26, 18, 11, 0.10);
+      break-inside: avoid;
     }
 
     /* ═════════════════════════════════════════
@@ -683,6 +735,19 @@
       margin-bottom: 18px;
       text-wrap: pretty;
     }
+    .invest-list {
+      list-style: none;
+      margin: 0 0 24px;
+      max-width: 26em;
+    }
+    .invest-list li {
+      font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+      color: rgba(245, 237, 224, 0.8);
+      line-height: 1.7;
+      padding: 10px 0;
+      border-top: 1px solid rgba(245, 237, 224, 0.16);
+    }
+    .invest-list li:last-child { border-bottom: 1px solid rgba(245, 237, 224, 0.16); }
     .invest-photo {
       border-radius: 999px 999px 0 0;
       overflow: hidden;
@@ -702,7 +767,7 @@
        XI · QUESTIONS
     ═════════════════════════════════════════ */
     .qa {
-      background: var(--c2);
+      background: var(--c1);
       padding: clamp(120px, 14vh, 200px) var(--pad-x);
     }
     .qa-inner { max-width: 880px; margin: 0 auto; }
@@ -881,6 +946,8 @@
 
       .invest-grid { grid-template-columns: 1fr; }
       .invest-photo { max-width: 420px; margin: 0 auto; }
+
+      .shots { columns: 1; }
     }
     @media (max-width: 480px) {
       h1 { font-size: 2.6rem; }
@@ -913,7 +980,7 @@
       <span class="label rv">A four-month private journey with Nina Rose</span>
       <h1 class="rv s1">Include yourself <em>in your own life.</em></h1>
       <p class="hero-lead rv s2">A four-month private coaching journey for the woman who is done leaving herself out of the life she built.</p>
-      <p class="hero-facts rv s3">One-to-one &nbsp;·&nbsp; Four months &nbsp;·&nbsp; A small number of spaces</p>
+      <p class="hero-facts rv s3">One-to-one &nbsp;·&nbsp; Four months &nbsp;·&nbsp; Four spaces</p>
       <div class="rv s3">
         <a href="#begin" class="btn">Begin the conversation</a>
       </div>
@@ -1073,11 +1140,11 @@
       <div>
         <ul class="facts">
           <li class="rv"><span class="k">Length</span><span class="v">Four months, one-to-one</span></li>
-          <li class="rv"><span class="k">Rhythm</span><span class="v">One private 75-minute session each week</span></li>
+          <li class="rv"><span class="k">Rhythm</span><span class="v">One private session each week, up to 75 minutes: a 60-minute session with a 15-minute buffer, so the tender parts are never rushed</span></li>
           <li class="rv"><span class="k">Between</span><span class="v">Voice-note support, for when life happens between sessions</span></li>
-          <li class="rv"><span class="k">Practices</span><span class="v">A daily 10-minute practice, recorded just for you</span></li>
+          <li class="rv"><span class="k">Practices</span><span class="v">A weekly 10-minute practice, recorded just for you</span></li>
           <li class="rv"><span class="k">Direction</span><span class="v">A clear four-month arc, co-created around what is alive in you</span></li>
-          <li class="rv"><span class="k">Spaces</span><span class="v">A small number, so the work stays truly personal</span></li>
+          <li class="rv"><span class="k">Spaces</span><span class="v">Four, so the work stays truly personal</span></li>
         </ul>
         <p class="how-note rv">This is not a curriculum, and you won&rsquo;t be handed worksheets. <em>It&rsquo;s a held, private space with a clear direction, shaped around your life.</em></p>
       </div>
@@ -1111,7 +1178,47 @@
 
 
   <!-- ══════════════════════════
-       VIII · YOUR GUIDE
+       VIII·a · IF SOMETHING ALREADY KNOWS
+  ══════════════════════════ -->
+  <section class="knows">
+    <div class="knows-inner">
+      <p class="knows-line rv">And if something in you already knows &hellip;</p>
+      <p class="knows-body rv s1">You don&rsquo;t need to finish this page. The next step is a free private conversation: we meet, we feel into where you are, and we see, honestly and without any pressure, whether this journey <span style="white-space:nowrap">is yours.</span></p>
+      <div class="rv s2">
+        <a class="btn" href="https://calendly.com/iamninarose/claimyourselfconnection" target="_blank" rel="noopener">Book our conversation</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════
+       VIII·b · MY STORY
+  ══════════════════════════ -->
+  <section class="story">
+    <div class="story-inner">
+      <span class="label rv">My story</span>
+      <h2 class="display story-heading rv s1">I know this terrain, because I <span style="white-space:nowrap">lived it.</span></h2>
+
+      <div class="story-body">
+        <p class="rv">It was a Friday afternoon, and from the outside, I had it all handled. The nine-to-five. The constant dating. The strong woman who didn&rsquo;t need anyone&rsquo;s help.</p>
+        <p class="rv">If you had looked closer, you would have found the wine bottles I used to quiet my nights, and a restless, vibrating anxiety living in my chest. I was performing my life instead of living it. I was the emotional glue for everyone around me, and I felt completely unexpressed. Like shouting underwater.</p>
+        <p class="rv">Then my mother died. A sudden accident. The main pillar of my world, gone in an instant.</p>
+        <p class="rv">I remember standing in the quiet of my home, understanding for the first time that without a partner to claim me and without a mother to approve of me, I didn&rsquo;t actually know who I was. And that if I died tomorrow, I couldn&rsquo;t honestly say I <span style="white-space:nowrap">had lived.</span></p>
+        <p class="rv">A new, desperate desire was born that day: I wanted to feel full inside. A richness that didn&rsquo;t depend on who loved me or what my bank account <span style="white-space:nowrap">looked like.</span></p>
+        <p class="rv">The fear arrived immediately. I felt stupid for wanting more. Too much. Certain that if I started making decisions for myself, I&rsquo;d make some catastrophic mistake and my whole life would collapse.</p>
+        <p class="rv">But my mother&rsquo;s life was gone in a heartbeat, and that became my catalyst: life is too fast to spend it joyless. I moved countries, for six months. I never <span style="white-space:nowrap">moved back.</span></p>
+        <p class="rv">A mentor introduced me to the language of the nervous system, and I threw myself into the healing world. I tried everything the industry told me to try. I spent thousands. I became a self-help junkie with all the intellectual knowledge in the world, and I was still standing in the pantry at midnight, lonely and exhausted.</p>
+        <p class="story-pull rv">Until it landed: as long as I was trying to fix myself, I was abandoning myself. Again.</p>
+        <p class="rv">So I stopped seeking to be claimed, and I began accompanying myself. I stopped trying to control my life and started noticing my body. I stayed with myself through discomfort instead of running back to comfort. I began saying true things without a twenty-minute internal apology first.</p>
+        <p class="rv">Today, I have the audacity to only do things that make me feel alive. My decisions are mine. Good or bad doesn&rsquo;t matter; I stand by my own side when I make them. Fear and doubt still visit, because I&rsquo;m human. But they&rsquo;re tolerable now, because this version of me finally has my <span style="white-space:nowrap">own back.</span></p>
+        <p class="story-close rv">I&rsquo;m no longer a utility for the world. I&rsquo;m the owner of <span style="white-space:nowrap">my life.</span></p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════
+       VIII·c · WHY I CREATED THIS
   ══════════════════════════ -->
   <section class="guide">
     <div class="guide-grid">
@@ -1123,16 +1230,13 @@
       </div>
 
       <div class="guide-text">
-        <span class="label rv">Walking beside you</span>
+        <span class="label rv">Why I created this</span>
         <h2 class="guide-name rv s1">Nina Rose</h2>
         <div class="guide-body">
-          <p class="em-lead rv">From the outside, I looked like I had it handled.</p>
-          <p class="rv">A nine-to-five, constant dating, the strong woman who didn&rsquo;t need anyone. And underneath: wine bottles in the trash to quiet the nights, anxiety humming in my chest, a life I was performing instead of living. I was the one holding everyone else together, and I felt completely unexpressed. Like shouting underwater.</p>
-          <p class="rv">Then my mother died in a sudden accident. Standing in the quiet of my home, I realized that without a partner to claim me or a mother to approve of me, I didn&rsquo;t know who I was. And that if I had died tomorrow, I wouldn&rsquo;t have felt like I <span style="white-space:nowrap">had lived.</span></p>
-          <p class="rv">So I went looking for the fix. I moved countries, for six months that never ended. I found the nervous system, trauma work, teachers, modalities. I spent thousands. I could explain myself perfectly, and I was still standing in the pantry at midnight, lonely and exhausted.</p>
-          <p class="rv guide-pull"><em>Then one day it landed: as long as I was trying to fix myself, I was still abandoning myself.</em></p>
-          <p class="rv">So I stopped seeking to be claimed, and began accompanying myself. Noticing my body instead of managing my life. Staying through discomfort. Saying the true thing without a twenty-minute internal apology first. Slowly, my life started to <span style="white-space:nowrap">include me.</span></p>
-          <p class="rv">The fear and doubt still visit. They&rsquo;re just tolerable now, because this version of me has my own back. In the years since, I&rsquo;ve held other people through this same terrain, in recovery spaces and in private one-to-one work.</p>
+          <p class="em-lead rv">Include Yourself is the program I needed and couldn&rsquo;t find. Not another place to be analyzed or optimized. A place to be accompanied, while you learn to accompany yourself.</p>
+          <p class="rv">I&rsquo;m Slovenian, living in Thailand. I&rsquo;ve spent years holding people through tender, honest inner work: in recovery spaces, in private one-to-one coaching, and in my own lived process.</p>
+          <p class="rv">What I&rsquo;ve seen, again and again, is this: most women don&rsquo;t need to become someone else. They need to stop abandoning the woman who is already there.</p>
+          <p class="rv">My work lives in the body, because knowing something isn&rsquo;t the same as feeling it. Inside these four months there is parts work, embodiment, movement, pleasure, self-talk, and a lot of honest conversation. Underneath all of it, one practice: <em>staying in relationship with yourself.</em></p>
           <p class="rv">This is the most personal thing I offer. It&rsquo;s just us: your life, my full attention, and four months of coming back <span style="white-space:nowrap">to you.</span></p>
         </div>
       </div>
@@ -1141,33 +1245,21 @@
 
 
   <!-- ══════════════════════════
-       IX · FROM WOMEN I'VE WORKED WITH
+       IX · WHAT WOMEN SAY
   ══════════════════════════ -->
   <section class="voices">
     <div class="voices-inner">
       <div class="voices-head">
         <span class="label rv">From private sessions</span>
-        <h2 class="rv s1">What it&rsquo;s like to be <span style="white-space:nowrap">held here</span></h2>
+        <h2 class="rv s1">What women say about <span style="white-space:nowrap">this work</span></h2>
       </div>
-
-      <div class="voice rv">
-        <blockquote>&ldquo;I had intellectual knowledge, the things I should or shouldn&rsquo;t do, but was struggling to connect with my body without getting overwhelmed and shutting down. Working with Nina, I&rsquo;m learning to work with my body instead of against it. I have an innate wisdom and strength that she&rsquo;s helped me step into and love.&rdquo;</blockquote>
-        <cite>A private client</cite>
-      </div>
-
-      <div class="voice rv">
-        <blockquote>&ldquo;For a guarded person like me, feeling safe was very important. There&rsquo;s so much love, empathy and understanding in Nina. After the session, it feels like I shed two kilos of heaviness off my shoulders. I feel more at ease in my own body, like I could connect with it again.&rdquo;</blockquote>
-        <cite>Alex &nbsp;·&nbsp; Vietnam</cite>
-      </div>
-
-      <div class="voice rv">
-        <blockquote>&ldquo;With your encouraging, calm and warm words, I felt at every step that I am accepted and safe. That feeling that everything I feel is truly okay, I don&rsquo;t always give it to myself.&rdquo;</blockquote>
-        <cite>From Slovenia, in her language</cite>
-      </div>
-
-      <div class="voice rv">
-        <blockquote>&ldquo;My biggest takeaway is that I can trust my intuition. My body is wise and knows what it needs. I&rsquo;m learning to listen to it, and not shame myself for when I don&rsquo;t.&rdquo;</blockquote>
-        <cite>A private client</cite>
+      <div class="shots rv">
+        <img src="./photos%20that%20can%20be%20used/what-women-say/IMG_0632.jpeg" alt="A message from a client about learning to work with her body instead of against it">
+        <img src="./photos%20that%20can%20be%20used/what-women-say/IMG_0746.jpeg" alt="A message from a client about work her body had always needed">
+        <img src="./photos%20that%20can%20be%20used/what-women-say/IMG_0633.jpeg" alt="A message from a client about trusting her intuition">
+        <img src="./photos%20that%20can%20be%20used/what-women-say/IMG_0625.jpeg" alt="A message from a client in Slovenian about feeling accepted and safe">
+        <img src="./photos%20that%20can%20be%20used/what-women-say/IMG_0748.jpeg" alt="A message from a client about being calmer in everyday life">
+        <img src="./photos%20that%20can%20be%20used/what-women-say/IMG_0628.jpeg" alt="A message from a client about feeling more connected to her inner world">
       </div>
     </div>
   </section>
@@ -1182,7 +1274,13 @@
         <span class="label rv">The investment</span>
         <p class="invest-price rv s1">$2,500</p>
         <p class="invest-sub rv s1">for the four months, everything included</p>
-        <p class="invest-body rv s2">Payment plans are available. We&rsquo;ll find the rhythm that works for you in our conversation, without any awkwardness.</p>
+        <p class="invest-body rv s2">Paid in full, or in four monthly payments of $625. We&rsquo;ll set up what works for you in our conversation, without any awkwardness.</p>
+        <ul class="invest-list rv s2">
+          <li>Four months, one-to-one</li>
+          <li>A weekly private session, up to 75 minutes</li>
+          <li>A weekly 10-minute practice, recorded just for you</li>
+          <li>Voice-note support between sessions</li>
+        </ul>
         <p class="invest-body rv s2">And you&rsquo;ll know early whether this is yours: there&rsquo;s a first-week guarantee, honest and simple, just below.</p>
       </div>
       <figure class="invest-photo rv s1">
@@ -1212,7 +1310,7 @@
 
       <div class="qa-item rv">
         <h3>How much time do I need each week?</h3>
-        <p>One 75-minute session per week, plus a daily 10-minute practice I record specifically for you. That practice isn&rsquo;t optional. It&rsquo;s the thread that carries the work between our sessions. Outside of that, this isn&rsquo;t homework-heavy. It&rsquo;s presence-heavy. You bring yourself. I&rsquo;ll take care of <span style="white-space:nowrap">the rest.</span></p>
+        <p>One session per week, up to 75 minutes: 60 minutes together, with a 15-minute buffer so we never have to rush what&rsquo;s tender. Plus a weekly 10-minute practice I record specifically for you. That practice isn&rsquo;t optional. It&rsquo;s the thread that carries the work between our sessions. Outside of that, this isn&rsquo;t homework-heavy. It&rsquo;s presence-heavy. You bring yourself. I&rsquo;ll take care of <span style="white-space:nowrap">the rest.</span></p>
       </div>
 
       <div class="qa-item rv">
@@ -1237,16 +1335,16 @@
       <p class="invite-anchor rv s1">You don&rsquo;t have to walk this next part alone.</p>
 
       <div class="invite-how">
-        <p class="rv">The next step isn&rsquo;t a checkout page. It&rsquo;s a conversation.</p>
-        <p class="rv">Write to me. Tell me a little about where you are and what&rsquo;s stirring. We&rsquo;ll feel out, together and without pressure, whether this journey <span style="white-space:nowrap">is yours.</span></p>
+        <p class="rv">The next step isn&rsquo;t a checkout page. It&rsquo;s a free private conversation.</p>
+        <p class="rv">We&rsquo;ll meet, you&rsquo;ll tell me where you are and what&rsquo;s stirring, and we&rsquo;ll feel out, together and without pressure, whether this journey <span style="white-space:nowrap">is yours.</span></p>
       </div>
 
       <div class="rv s2">
-        <a class="btn" href="mailto:hello@iamninarose.com?subject=Include%20Yourself%20%C2%B7%20A%20conversation">Begin the conversation</a>
+        <a class="btn" href="https://calendly.com/iamninarose/claimyourselfconnection" target="_blank" rel="noopener">Book our conversation</a>
         <span class="invite-alt">or a message on Instagram &nbsp;·&nbsp; <a href="https://instagram.com/iam.ninarose" target="_blank" rel="noopener">@iam.ninarose</a></span>
       </div>
 
-      <p class="invite-meta rv">Private 1:1 &nbsp;·&nbsp; Four months &nbsp;·&nbsp; A small number of spaces</p>
+      <p class="invite-meta rv">Private 1:1 &nbsp;·&nbsp; Four months &nbsp;·&nbsp; Four spaces</p>
     </div>
   </section>
 
