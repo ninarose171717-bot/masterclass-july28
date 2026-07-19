@@ -224,7 +224,7 @@ The richness of your life isn't only shaped by what happens to you.
 
 There's room for her too.
 
-This is an invitation to begin. Together.
+This is an invitation to meet her again. Together.
 
 (+ form, identical to hero, on dark)
 
