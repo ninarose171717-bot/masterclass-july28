@@ -448,6 +448,67 @@
     .embody-photo img { width: 100%; height: auto; }
 
     /* ═════════════════════════════════════════
+       V·VI · AN HOUR WITH ME
+    ═════════════════════════════════════════ */
+    .hour {
+      background: var(--c1);
+      padding: clamp(120px, 14vh, 200px) var(--pad-x);
+    }
+    .hour-inner { max-width: 880px; margin: 0 auto; }
+    .hour-inner .label { display: block; margin-bottom: 20px; }
+    .hour-heading {
+      font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+      margin-bottom: clamp(48px, 6vh, 72px);
+    }
+    .hour-body p {
+      font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+      color: var(--mid);
+      line-height: 1.8;
+      margin-bottom: 28px;
+      max-width: 28em;
+      text-wrap: pretty;
+    }
+    .hour-body p:nth-child(even) { margin-left: clamp(0px, 5vw, 80px); }
+    .hour-body p em { color: var(--text); }
+    .hour-close {
+      font-style: italic;
+      color: var(--bronze) !important;
+      font-size: clamp(1.4rem, 2.1vw, 1.75rem) !important;
+    }
+
+    .alt-line {
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.74rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: var(--mid);
+      margin-top: 20px;
+      line-height: 1.7;
+    }
+    .alt-line a { color: var(--bronze); text-decoration: underline; text-underline-offset: 3px; }
+    .invest .alt-line { color: rgba(245, 237, 224, 0.66); }
+    .invest .alt-line a { color: rgba(245, 237, 224, 0.9); }
+
+    /* ── Draft flags for Nina · remove before launch ── */
+    .flag {
+      font-family: var(--sans) !important;
+      font-size: 0.82rem !important;
+      font-style: normal !important;
+      font-weight: 400 !important;
+      line-height: 1.7 !important;
+      color: #8A3324 !important;
+      background: rgba(150, 69, 58, 0.09);
+      border-left: 3px solid var(--accent);
+      padding: 14px 18px !important;
+      margin: 0 0 24px !important;
+      max-width: 34em !important;
+      letter-spacing: 0.01em;
+    }
+
+    .story-still em { color: var(--bronze); }
+
+    /* ═════════════════════════════════════════
        VI · HOW IT WORKS
     ═════════════════════════════════════════ */
     .how {
@@ -944,6 +1005,7 @@
 
       .voice:nth-of-type(even) { margin-right: 0; }
 
+      .hour-body p:nth-child(even) { margin-left: 0; }
       .invest-grid { grid-template-columns: 1fr; }
       .invest-photo { max-width: 420px; margin: 0 auto; }
 
@@ -965,7 +1027,7 @@
   <nav>
     <a class="label" href="https://instagram.com/iam.ninarose" target="_blank" rel="noopener">@iam.ninarose</a>
     <a class="label nav-brand" href="#">Include Yourself<span class="nav-sub"> &nbsp;·&nbsp; A Private Journey</span></a>
-    <a class="label" href="#begin">Begin the conversation</a>
+    <a class="label" href="#join">Join Include Yourself</a>
   </nav>
 
 
@@ -978,11 +1040,12 @@
     </div>
     <div class="hero-copy">
       <span class="label rv">A four-month private journey with Nina Rose</span>
-      <h1 class="rv s1">Include yourself <em>in your own life.</em></h1>
-      <p class="hero-lead rv s2">A four-month private coaching journey for the woman who is done leaving herself out of the life she built.</p>
+      <h1 class="rv s1">You say yes before you&rsquo;ve checked <em>with yourself.</em></h1>
+      <p class="hero-lead rv s2">You can explain the pattern perfectly. You&rsquo;ve read the books, done the therapy, named it out loud. And you still do it.</p>
+      <p class="hero-lead rv s2" style="margin-bottom: clamp(36px, 4vw, 52px);">This is four months of private work on the one thing insight never fixed: <em>staying with yourself while you live your life.</em></p>
       <p class="hero-facts rv s3">One-to-one &nbsp;·&nbsp; Four months &nbsp;·&nbsp; Four spaces</p>
       <div class="rv s3">
-        <a href="#begin" class="btn">Begin the conversation</a>
+        <a href="#join" class="btn">Join Include Yourself</a>
       </div>
     </div>
   </header>
@@ -1012,7 +1075,7 @@
       </div>
 
       <div class="mirror-close">
-        <p class="rv">None of this is random. And none of it means something is wrong with you.</p>
+        <p class="rv">None of this is random.</p>
         <p class="big rv">Your life has been faithfully following an old map. One you never chose <span style="white-space:nowrap">on purpose.</span></p>
       </div>
     </div>
@@ -1079,7 +1142,7 @@
         <div class="arc-row rv">
           <span class="n">Month one</span>
           <h3>Meeting yourself</h3>
-          <p>Not fixing yourself. Not healing yourself. <em>Meeting</em> yourself. We look at who you are and what your life has quietly been organized around, with honesty, and with kindness for how it got <span style="white-space:nowrap">this way.</span></p>
+          <p>Not fixing. <em>Meeting.</em> We look at what your life has quietly been organized around, and at how reasonable it was to organize it that way in <span style="white-space:nowrap">the first place.</span></p>
         </div>
 
         <div class="arc-row rv">
@@ -1129,6 +1192,27 @@
 
 
   <!-- ══════════════════════════
+       V·VI · AN HOUR WITH ME  ⚑ NEEDS NINA'S WORDS
+  ══════════════════════════ -->
+  <section class="hour">
+    <div class="hour-inner">
+      <span class="label rv">One hour</span>
+      <h2 class="display hour-heading rv s1">What a session actually <span style="white-space:nowrap">looks like</span></h2>
+
+      <p class="flag rv">⚑ NINA · this section needs your words. Describe one real hour, the way it actually goes. The most important part: what you do when she arrives with a hard week and nothing to report. Replace every line below.</p>
+
+      <div class="hour-body">
+        <p class="rv">You arrive on a Wednesday, having had a week. Nothing dramatic. You just feel far away <span style="white-space:nowrap">from yourself.</span></p>
+        <p class="rv">I don&rsquo;t ask you to explain it. <em>⚑ what you actually do first</em></p>
+        <p class="rv">⚑ the middle of the hour: what happens in her body, what you notice, what you ask</p>
+        <p class="rv">⚑ what she leaves with: the one small thing to practice, and how it lands in her week</p>
+        <p class="rv hour-close">And nothing about your week has changed. <em>⚑ your true closing line here</em></p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════
        VI · HOW IT WORKS
   ══════════════════════════ -->
   <section class="how">
@@ -1144,10 +1228,9 @@
           <li class="rv"><span class="k">Between</span><span class="v">Voice-note support, for when life happens between sessions</span></li>
           <li class="rv"><span class="k">Practices</span><span class="v">A weekly 10-minute practice, recorded just for you</span></li>
           <li class="rv"><span class="k">Direction</span><span class="v">A clear four-month arc, co-created around what is alive in you</span></li>
-          <li class="rv"><span class="k">Begins</span><span class="v">August, after our conversation</span></li>
+          <li class="rv"><span class="k">Begins</span><span class="v">August, at a rhythm we set together</span></li>
           <li class="rv"><span class="k">Spaces</span><span class="v">Four, so the work stays truly personal</span></li>
         </ul>
-        <p class="how-note rv">This is not a curriculum, and you won&rsquo;t be handed worksheets. <em>It&rsquo;s a held, private space with a clear direction, shaped around your life.</em></p>
       </div>
     </div>
   </section>
@@ -1184,9 +1267,10 @@
   <section class="knows">
     <div class="knows-inner">
       <p class="knows-line rv">And if something in you already knows &hellip;</p>
-      <p class="knows-body rv s1">You don&rsquo;t need to finish this page. The next step is a free private conversation: we meet, we feel into where you are, and we see, honestly and without any pressure, whether this journey <span style="white-space:nowrap">is yours.</span></p>
+      <p class="knows-body rv s1">You don&rsquo;t need to finish this page. You can take your place now, and we&rsquo;ll begin.</p>
       <div class="rv s2">
-        <a class="btn" href="https://calendly.com/iamninarose/claimyourselfconnection" target="_blank" rel="noopener">Book our conversation</a>
+        <a class="btn" href="#join-flag">Take my place</a>
+        <span class="alt-line">Rather talk it through first? <a href="https://calendly.com/iamninarose/claimyourselfconnection" target="_blank" rel="noopener">Book a conversation with me</a></span>
       </div>
     </div>
   </section>
@@ -1213,6 +1297,8 @@
         <p class="rv">So I stopped seeking to be claimed, and I began accompanying myself. I stopped trying to control my life and started noticing my body. I stayed with myself through discomfort instead of running back to comfort. I began saying true things without a twenty-minute internal apology first.</p>
         <p class="rv">Today, I have the audacity to only do things that make me feel alive. My decisions are mine. Good or bad doesn&rsquo;t matter; I stand by my own side when I make them. Fear and doubt still visit, because I&rsquo;m human. But they&rsquo;re tolerable now, because this version of me finally has my <span style="white-space:nowrap">own back.</span></p>
         <p class="story-close rv">I&rsquo;m no longer a utility for the world. I&rsquo;m the owner of <span style="white-space:nowrap">my life.</span></p>
+          <p class="flag rv">⚑ NINA · one true sentence about how you still leave yourself, present tense, with a real recent example. This is the line that stops the story sounding finished, and it may be the most important sentence in this section.</p>
+          <p class="rv story-still"><em>And I still leave myself. ⚑ when, how recently, what it looks like now. The difference is that I notice, and I know the way back.</em></p>
       </div>
     </div>
   </section>
@@ -1272,17 +1358,16 @@
   <section class="invest">
     <div class="invest-grid">
       <div class="invest-text">
+        <p class="flag rv" id="join-flag">⚑ NINA · every &ldquo;Take my place&rdquo; button needs your real payment link (Revolut checkout, Stripe, whatever you use), one for pay-in-full and ideally one for the 4 &times; $625 plan. Send them to me and I&rsquo;ll wire them in. Until then the buttons land here.</p>
         <span class="label rv">The investment</span>
         <p class="invest-price rv s1">$2,500</p>
         <p class="invest-sub rv s1">USD, for the four months, everything included</p>
-        <p class="invest-body rv s2">Paid in full, or in four monthly payments of $625. And if you need a different rhythm than that, we&rsquo;ll find it together in our conversation.</p>
-        <ul class="invest-list rv s2">
-          <li>Four months, one-to-one</li>
-          <li>A weekly private session, up to 75 minutes</li>
-          <li>A weekly 10-minute practice, recorded just for you</li>
-          <li>Voice-note support between sessions</li>
-        </ul>
-        <p class="invest-body rv s2">And you&rsquo;ll know early whether this is yours: there&rsquo;s a first-week guarantee, honest and simple, just below.</p>
+        <p class="invest-body rv s2">Paid in full, or in four monthly payments of $625. If you need a different rhythm, write to me and we&rsquo;ll find one.</p>
+        <p class="invest-body rv s2">And you&rsquo;ll know early whether this is yours: there&rsquo;s a first-week guarantee, honest and simple, <span style="white-space:nowrap">just below.</span></p>
+        <div class="rv s2" style="margin-top: clamp(36px, 4vh, 52px);">
+          <a class="btn" href="#join-flag">Take my place</a>
+          <span class="alt-line">Rather talk it through first? <a href="https://calendly.com/iamninarose/claimyourselfconnection" target="_blank" rel="noopener">Book a conversation with me</a></span>
+        </div>
       </div>
       <figure class="invest-photo rv s1">
         <img src="./photos%20that%20can%20be%20used/B41D525A-4AF2-4DCC-B76C-1D35E320E1A3.png" alt="A warm bedroom opening onto a balcony above the sea at golden hour">
@@ -1311,12 +1396,24 @@
 
       <div class="qa-item rv">
         <h3>How much time do I need each week?</h3>
-        <p>One session per week, up to 75 minutes: 60 minutes together, with a 15-minute buffer so we never have to rush what&rsquo;s tender. Plus a weekly 10-minute practice I record specifically for you. That practice isn&rsquo;t optional. It&rsquo;s the thread that carries the work between our sessions. Outside of that, this isn&rsquo;t homework-heavy. It&rsquo;s presence-heavy. You bring yourself. I&rsquo;ll take care of <span style="white-space:nowrap">the rest.</span></p>
+        <p>One session per week, up to 75 minutes: 60 minutes together, with a 15-minute buffer so we never have to rush what&rsquo;s tender. Plus a weekly 10-minute practice I record specifically for you. That practice isn&rsquo;t optional. It&rsquo;s the thread that carries the work between our sessions.</p>
       </div>
 
       <div class="qa-item rv">
         <h3>What if I fall behind or miss a session?</h3>
-        <p>Life happens. We&rsquo;ll handle it. Sessions are one-to-one, so if something comes up, we&rsquo;ll find another time. What I&rsquo;ll ask of you is honesty, with me and with yourself, about what&rsquo;s actually getting in the way. Sometimes what looks like a schedule conflict is the first thing we work on <span style="white-space:nowrap">together.</span></p>
+        <p>Sessions are one-to-one, so if something comes up, we&rsquo;ll find another time. What I&rsquo;ll ask of you is honesty, with me and with yourself, about what&rsquo;s actually getting in the way. Sometimes what looks like a schedule conflict is the first thing we work on <span style="white-space:nowrap">together.</span></p>
+      </div>
+
+      <div class="qa-item rv">
+        <h3>Is one session a week really enough?</h3>
+        <p class="flag">⚑ NINA · your answer here, my draft below.</p>
+        <p>The session isn&rsquo;t where the change happens. It&rsquo;s where we look at what happened, and where I give you something to carry into the week. The change happens on the Tuesday you notice yourself leaving, and come back. That&rsquo;s why the weekly practice <span style="white-space:nowrap">isn&rsquo;t optional.</span></p>
+      </div>
+
+      <div class="qa-item rv">
+        <h3>What if I don&rsquo;t feel anything in my body?</h3>
+        <p class="flag">⚑ NINA · your answer here. This is the real gatekeeper for somatic work and yours will be better than mine. Include what happens if she cries, or goes blank.</p>
+        <p>Then we start there, gently. Numbness isn&rsquo;t a failure of the work. It&rsquo;s something that once kept you safe, and we don&rsquo;t force our way past it. You don&rsquo;t need to be good at feeling to begin. And if you cry, or go blank, or laugh at the wrong moment, none of that is a problem <span style="white-space:nowrap">here.</span></p>
       </div>
 
       <div class="qa-item rv">
@@ -1330,19 +1427,19 @@
   <!-- ══════════════════════════
        XII · THE INVITATION
   ══════════════════════════ -->
-  <section class="invite" id="begin">
+  <section class="invite" id="join">
     <div class="invite-inner">
       <p class="invite-small rv">If something in you has been quietly saying yes while you read &hellip;</p>
       <p class="invite-anchor rv s1">You don&rsquo;t have to walk this next part alone.</p>
 
       <div class="invite-how">
-        <p class="rv">The next step isn&rsquo;t a checkout page. It&rsquo;s a free private conversation.</p>
-        <p class="rv">We&rsquo;ll meet, you&rsquo;ll tell me where you are and what&rsquo;s stirring, and we&rsquo;ll feel out, together and without pressure, whether this journey <span style="white-space:nowrap">is yours.</span></p>
+        <p class="rv">Four months, one-to-one. $2,500 USD, or four payments of $625.</p>
+        <p class="rv">Take your place, and I&rsquo;ll write to you within a day to set our first session. If you&rsquo;d rather hear my voice before you decide, that door is open <span style="white-space:nowrap">too.</span></p>
       </div>
 
       <div class="rv s2">
-        <a class="btn" href="https://calendly.com/iamninarose/claimyourselfconnection" target="_blank" rel="noopener">Book our conversation</a>
-        <span class="invite-alt">or a message on Instagram &nbsp;·&nbsp; <a href="https://instagram.com/iam.ninarose" target="_blank" rel="noopener">@iam.ninarose</a></span>
+        <a class="btn" href="#join-flag">Take my place</a>
+        <span class="invite-alt">Rather talk first? &nbsp;<a href="https://calendly.com/iamninarose/claimyourselfconnection" target="_blank" rel="noopener">Book a conversation</a> &nbsp;·&nbsp; or find me on <a href="https://instagram.com/iam.ninarose" target="_blank" rel="noopener">Instagram</a></span>
       </div>
 
       <p class="invite-meta rv">We begin in August &nbsp;·&nbsp; Four spaces &nbsp;·&nbsp; Private 1:1</p>
