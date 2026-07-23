@@ -7,7 +7,7 @@
   <title>Claiming Myself · A Four-Month Private Journey · Nina Rose</title>
   <meta name="description" content="A four-month private journey for the woman who is ready to feel alive in her own life, fully expressed and at home in her body. One to one, with Nina Rose.">
   <meta property="og:title" content="Claiming Myself">
-  <meta property="og:description" content="A four-month private, one to one journey for the woman who is done leaving herself behind, and ready to be fully expressed, fully wanting, and finally here for her own life. With Nina Rose.">
+  <meta property="og:description" content="A four-month private, 1:1 journey for the woman who is done leaving herself behind, and ready to be fully expressed, fully wanting, and finally here for her own life. With Nina Rose.">
   <meta property="og:image" content="https://masterclass-july28.vercel.app/og-include.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://masterclass-july28.vercel.app/claiming-myself.html">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Claiming Myself">
-  <meta name="twitter:description" content="A four-month private, one to one journey for the woman who is done leaving herself behind. With Nina Rose.">
+  <meta name="twitter:description" content="A four-month private, 1:1 journey for the woman who is done leaving herself behind. With Nina Rose.">
   <meta name="twitter:image" content="https://masterclass-july28.vercel.app/og-include.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,28 +115,43 @@
     em { font-style: italic; }
 
     /* key-phrase highlight, the eye catches these while skimming */
-    .hi { color: var(--wine-ink); font-weight: 500; }   /* on light grounds */
-    .hi-d { color: #E9C9A6; font-weight: 500; }         /* on wine grounds */
+    .hi {
+      color: var(--wine-ink);
+      font-weight: 600;
+      text-underline-offset: 4px;
+      text-decoration: underline;
+      text-decoration-color: rgba(124, 42, 51, 0.35);
+      text-decoration-thickness: 1.5px;
+    }   /* on light grounds */
+    .hi-d {
+      color: #F4C77A;
+      font-weight: 600;
+      text-underline-offset: 4px;
+      text-decoration: underline;
+      text-decoration-color: rgba(244, 199, 122, 0.4);
+      text-decoration-thickness: 1.5px;
+    }   /* on wine grounds */
     .hi em, em.hi { font-style: italic; }
 
     /* ── buttons: one presentation, everywhere ── */
     .btn {
       display: inline-block;
-      padding: 20px 56px;
+      padding: 22px 58px;
       background: var(--claret);
       color: var(--cream);
       border: 1px solid var(--claret);
       font-family: var(--sans);
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       font-weight: 400;
-      letter-spacing: 0.24em;
+      letter-spacing: 0.3em;
       text-transform: uppercase;
       text-decoration: none;
       cursor: pointer;
-      border-radius: 1px;
-      transition: background 0.45s var(--ease), border-color 0.45s var(--ease), transform 0.45s var(--ease);
+      border-radius: 4px;
+      box-shadow: 0 10px 30px rgba(89, 22, 32, 0.22);
+      transition: background 0.5s var(--ease), border-color 0.5s var(--ease), transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
     }
-    .btn:hover { background: var(--wine-deep); border-color: var(--wine-deep); transform: translateY(-2px); }
+    .btn:hover { background: var(--wine-deep); border-color: var(--wine-deep); transform: translateY(-2px); box-shadow: 0 16px 40px rgba(55, 13, 20, 0.3); }
     .btn-ghost {
       background: transparent;
       color: var(--on-wine);
@@ -231,18 +246,19 @@
     .hero-copy {
       position: relative;
       padding: 0 var(--pad-x) clamp(64px, 9vh, 120px);
-      max-width: 1000px;
+      max-width: 1200px;
     }
     .hero-label { display: inline-block; color: var(--on-wine-soft); margin-bottom: clamp(22px, 3vh, 32px); }
     .hero h1 {
       font-family: var(--serif);
       font-weight: 300;
-      font-size: clamp(2.9rem, 7vw, 6.2rem);
-      line-height: 1.04;
+      font-size: clamp(2.6rem, 5.6vw, 4.9rem);
+      line-height: 1.12;
       color: var(--on-wine);
       letter-spacing: -0.005em;
-      max-width: 15em;
+      max-width: 20em;
       margin-bottom: clamp(28px, 4vh, 40px);
+      white-space: nowrap;
     }
     .hero h1 em { color: #E9C9A6; font-style: italic; }
     /* line reveal */
@@ -316,10 +332,11 @@
       font-weight: 400;
       line-height: 1.65;
       color: var(--text);
-      margin-bottom: clamp(38px, 6vh, 64px);
+      margin-bottom: clamp(44px, 7vh, 76px);
       text-wrap: balance;
     }
-    .vision-lines p:nth-child(even) { margin-left: clamp(0px, 4vw, 64px); }
+    .vision-lines p:nth-child(odd) { text-align: left; margin-right: clamp(0px, 8vw, 120px); }
+    .vision-lines p:nth-child(even) { text-align: right; margin-left: clamp(0px, 8vw, 120px); }
     .vision-lines em { color: var(--wine-ink); font-style: italic; }
     .vision-close {
       font-family: var(--serif);
@@ -485,9 +502,11 @@
     .turn-body p {
       color: var(--mid);
       line-height: 1.9;
-      margin-bottom: clamp(34px, 5vh, 54px);
+      margin-bottom: clamp(30px, 4vh, 42px);
       text-wrap: balance;
     }
+    .turn-body p:nth-child(1) { margin-bottom: clamp(68px, 9vh, 110px); }
+    .turn-body p:nth-child(2) { margin-bottom: clamp(80px, 11vh, 130px); }
     .turn-body p em { color: var(--text); font-style: italic; }
     .turn-close {
       font-family: var(--serif) !important;
@@ -503,38 +522,46 @@
        V · PHILOSOPHY
     ═════════════════════════════════════════ */
     .phil {
+      position: relative;
       background: var(--wine);
-      padding: clamp(150px, 20vh, 260px) var(--pad-x);
-      text-align: center;
+      padding: clamp(130px, 18vh, 220px) var(--pad-x) clamp(160px, 22vh, 280px);
+      overflow: hidden;
     }
-    .phil-inner { max-width: 900px; margin: 0 auto; }
+    .phil::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(60% 50% at 82% 15%, rgba(233,201,166,0.10) 0%, rgba(233,201,166,0) 60%),
+                  radial-gradient(70% 60% at 10% 90%, rgba(28,7,11,0.35) 0%, rgba(28,7,11,0) 65%);
+      pointer-events: none;
+    }
+    .phil-inner { position: relative; max-width: 640px; margin: 0 clamp(0px, 4vw, 60px) 0 auto; text-align: left; }
     .phil-small {
-      font-size: clamp(1.25rem, 1.9vw, 1.55rem);
-      color: var(--on-wine-soft);
+      font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+      color: var(--on-wine-faint);
       line-height: 1.7;
-      max-width: 26em;
-      margin: 0 auto clamp(40px, 5vh, 60px);
+      max-width: 20em;
+      margin: 0 0 clamp(22px, 3vh, 32px);
       text-wrap: balance;
     }
     .phil-mid {
       font-family: var(--serif);
       font-style: italic;
       font-weight: 300;
-      font-size: clamp(1.6rem, 2.6vw, 2.3rem);
+      font-size: clamp(1.5rem, 2.3vw, 2rem);
       color: #E9C9A6;
       line-height: 1.4;
-      max-width: 22em;
-      margin: 0 auto clamp(56px, 8vh, 100px);
+      max-width: 18em;
+      margin: 0 0 clamp(84px, 12vh, 150px);
       text-wrap: balance;
     }
     .phil-big {
       font-family: var(--serif);
       font-weight: 300;
       font-size: clamp(2.4rem, 5.6vw, 5rem);
-      line-height: 1.12;
+      line-height: 1.1;
       color: var(--on-wine);
-      max-width: 14em;
-      margin: 0 auto 28px;
+      max-width: 11em;
+      margin: 0 0 20px;
       text-wrap: balance;
     }
     .phil-coda {
@@ -701,11 +728,15 @@
       font-size: clamp(1.2rem, 1.7vw, 1.45rem);
       color: var(--on-wine-soft);
       line-height: 1.9;
-      margin-bottom: clamp(38px, 5.5vh, 60px);
-      max-width: 30em;
+      margin-bottom: clamp(32px, 4vh, 44px);
+      max-width: 28em;
       text-wrap: balance;
     }
-    .session-body p:nth-child(even) { margin-left: clamp(0px, 5vw, 80px); }
+    .session-body p:nth-child(1) { margin-bottom: clamp(56px, 9vh, 108px); max-width: 20em; }
+    .session-body p:nth-child(2) { margin-bottom: clamp(64px, 10vh, 128px); }
+    .session-body p:nth-child(3) { margin-bottom: clamp(28px, 3.5vh, 40px); }
+    .session-body p:nth-child(4) { margin-bottom: clamp(72px, 11vh, 140px); }
+    .session-body p:nth-child(even) { margin-left: clamp(0px, 9vw, 130px); }
     .session-body p em { color: var(--on-wine); font-style: italic; }
     .session-close {
       font-family: var(--serif) !important;
@@ -809,7 +840,10 @@
       text-wrap: balance;
     }
     .story-body { max-width: 33em; }
-    .story-body p { color: var(--mid); line-height: 1.9; margin-bottom: clamp(32px, 5vh, 52px); text-wrap: pretty; }
+    .story-body p { color: var(--mid); line-height: 1.9; margin-bottom: clamp(26px, 3.4vh, 38px); text-wrap: pretty; }
+    .story-body > p:nth-child(3) { margin-bottom: clamp(56px, 7vh, 84px); }
+    .story-body > p:nth-child(6) { margin-bottom: clamp(56px, 7vh, 84px); }
+    .story-body > p:nth-child(even) { margin-left: clamp(0px, 5vw, 64px); }
     .story-pull {
       font-family: var(--serif) !important;
       font-size: clamp(1.5rem, 2.3vw, 2rem) !important;
@@ -1050,6 +1084,67 @@
     .invest-body { color: var(--mid); line-height: 1.75; max-width: 26em; margin: 0 auto; text-wrap: balance; }
 
     /* ═════════════════════════════════════════
+       XV·b · WHAT YOU RECEIVE · velvet, toggles
+    ═════════════════════════════════════════ */
+    .receive {
+      position: relative;
+      background:
+        radial-gradient(140% 100% at 50% 0%, rgba(124,42,51,0.35) 0%, rgba(28,7,11,0) 55%),
+        radial-gradient(120% 90% at 50% 100%, rgba(89,22,32,0.4) 0%, rgba(28,7,11,0) 60%),
+        var(--wine-deep);
+      padding: clamp(130px, 18vh, 220px) var(--pad-x) clamp(150px, 20vh, 240px);
+    }
+    .receive-inner { max-width: 700px; margin: 0 auto; }
+    .receive-inner .label { display: block; color: var(--on-wine-faint); margin-bottom: 22px; }
+    .receive-inner h2 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      color: var(--on-wine);
+      line-height: 1.15;
+      max-width: 11em;
+      margin-bottom: clamp(72px, 10vh, 130px);
+      text-wrap: balance;
+    }
+    .tglist { text-align: left; }
+    .tgl {
+      border-top: 1px solid var(--on-wine-line);
+      padding: clamp(24px, 3vh, 34px) 0;
+    }
+    .tgl:last-child { border-bottom: 1px solid var(--on-wine-line); }
+    .tgl summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 20px;
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(1.25rem, 2vw, 1.6rem);
+      color: var(--on-wine);
+      line-height: 1.4;
+    }
+    .tgl summary::-webkit-details-marker { display: none; }
+    .tgl summary::marker { content: ''; }
+    .tgl .plus {
+      flex-shrink: 0;
+      font-family: var(--sans);
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--gold);
+      transition: transform 0.4s var(--ease);
+    }
+    .tgl[open] .plus { transform: rotate(45deg); }
+    .tgl p {
+      color: var(--on-wine-soft);
+      line-height: 1.75;
+      margin-top: 16px;
+      max-width: 34em;
+      text-wrap: pretty;
+    }
+
+    /* ═════════════════════════════════════════
        XVI · QUESTIONS
     ═════════════════════════════════════════ */
     .qa {
@@ -1117,42 +1212,43 @@
     .apply-how p { color: var(--on-wine-soft); line-height: 1.8; margin-bottom: 14px; text-wrap: balance; }
     .apply-how p em { color: var(--on-wine); font-style: italic; }
 
-    /* form */
+    /* form, generous and quiet, an invitation, not a form */
     .apply-form {
       display: grid;
-      gap: 18px;
+      gap: 30px;
       max-width: 30em;
       margin: 0 auto;
       text-align: left;
     }
     .apply-form label {
       font-family: var(--sans);
-      font-size: 0.64rem;
-      letter-spacing: 0.2em;
+      font-size: 0.62rem;
+      letter-spacing: 0.24em;
       text-transform: uppercase;
       color: var(--on-wine-faint);
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
     .apply-form input, .apply-form textarea {
       width: 100%;
       font-family: var(--serif);
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       color: var(--on-wine);
-      background: rgba(248, 240, 228, 0.05);
-      border: 1px solid var(--on-wine-line);
-      border-radius: 2px;
-      padding: 15px 18px;
-      transition: border-color 0.4s, background 0.4s;
+      background: rgba(248, 240, 228, 0.04);
+      border: none;
+      border-bottom: 1px solid var(--on-wine-line);
+      border-radius: 0;
+      padding: 12px 4px 16px;
+      transition: border-color 0.5s var(--ease), background 0.5s var(--ease);
     }
-    .apply-form input::placeholder, .apply-form textarea::placeholder { color: var(--on-wine-faint); }
+    .apply-form input::placeholder, .apply-form textarea::placeholder { color: var(--on-wine-faint); font-style: italic; }
     .apply-form input:focus, .apply-form textarea:focus {
       outline: none;
       border-color: var(--gold);
-      background: rgba(248, 240, 228, 0.09);
+      background: rgba(248, 240, 228, 0.06);
     }
-    .apply-form textarea { resize: vertical; min-height: 120px; line-height: 1.6; }
-    .apply-form .btn { width: 100%; margin-top: 8px; border: none; }
+    .apply-form textarea { resize: vertical; min-height: 110px; line-height: 1.7; }
+    .apply-form .btn { width: 100%; margin-top: 14px; border: none; }
     .apply-form .btn:hover { background: var(--claret); }
     .apply-alt {
       display: block;
@@ -1227,9 +1323,9 @@
       .scroll-cue { display: none; }
 
       .hero { min-height: 92svh; }
-      .hero h1 { font-size: clamp(2.6rem, 11vw, 4rem); }
+      .hero h1 { font-size: clamp(2.2rem, 9vw, 3.4rem); white-space: normal; }
 
-      .vision-lines p:nth-child(even) { margin-left: 0; }
+      .vision-lines p:nth-child(odd), .vision-lines p:nth-child(even) { margin-left: 0; margin-right: 0; text-align: left; }
       .vision-lines { margin-left: 0; }
 
       .arc-grid { grid-template-columns: 1fr; }
@@ -1240,6 +1336,7 @@
       .embody-line:nth-of-type(even) { margin-left: 0; }
 
       .session-body p:nth-child(even) { margin-left: 0; }
+      .story-body > p:nth-child(even) { margin-left: 0; }
 
       .how-grid { grid-template-columns: 1fr; gap: 40px; }
       .facts li { grid-template-columns: 108px 1fr; gap: 16px; }
@@ -1281,9 +1378,9 @@
     <div class="hero-copy">
       <span class="label hero-label">A four-month private journey, just the two of us</span>
       <h1>
-        <span class="hl"><span>You stop leaving</span></span>
-        <span class="hl"><span>yourself. Not when it's</span></span>
-        <span class="hl"><span>falling apart, and not</span></span>
+        <span class="hl"><span>You stop leaving yourself</span></span>
+        <span class="hl"><span>when it falls apart.</span></span>
+        <span class="hl"><span>You stop leaving yourself</span></span>
         <span class="hl"><span><em>when it's finally good.</em></span></span>
       </h1>
       <p class="hero-lead">Not when a hard week knocks you flat, and not when something good is finally happening and part of you wants to run from it. You ask for what you want, and say when something isn't working, whatever the reply, instead of leaving yourself behind.</p>
@@ -1493,7 +1590,7 @@
       </div>
       <div>
         <ul class="facts">
-          <li class="rv"><span class="k">Length</span><span class="v">Four months, one to one.</span></li>
+          <li class="rv"><span class="k">Length</span><span class="v">Four months, 1:1.</span></li>
           <li class="rv"><span class="k">Rhythm</span><span class="v">One private session each week, up to 75 minutes. Sixty minutes together, with a fifteen-minute buffer, so nothing that surfaces ever gets rushed.</span></li>
           <li class="rv"><span class="k">Between</span><span class="v">Voice-note support, for when life happens between sessions.</span></li>
           <li class="rv"><span class="k">Practices</span><span class="v">A weekly ten-minute practice, recorded just for you. The thread that carries the work through your week.</span></li>
@@ -1565,7 +1662,7 @@
         <h2 class="guide-name rv s1">Nina Rose</h2>
         <div class="guide-body">
           <p class="em-lead rv">I didn't build this from a theory. I built it because I needed it. I was the woman leaving herself, and I found my way back, and this is everything that worked.</p>
-          <p class="rv">I'm Slovenian. I live in Thailand. I'm a somatic coach and breathwork facilitator, and I've worked closely with women one to one, and supported people through recovery, for years.</p>
+          <p class="rv">I'm Slovenian. I live in Thailand. I'm a somatic coach and breathwork facilitator, and I've worked closely with women 1:1, and supported people through recovery, for years.</p>
           <p class="rv">This isn't something I studied once and now teach at you from a distance. I live it. Every single day. I'm still doing it, still following it, still choosing myself in the small moments. That is why I can walk you through it, because I know the ground with my own feet.</p>
           <p class="rv">And here is what I see again and again. Most women aren't missing a strategy. They know exactly what to do. They've just spent so long taking care of everyone else that they lost the thread to their own life. My whole work is helping you become <em>available to yourself</em> again.</p>
           <p class="rv">You can know, in your head, that you deserve to rest, and still feel guilty every time you actually lie down. That gap between knowing and feeling is exactly where we work. Parts work, shadow work, somatic work, movement, pleasure, honest talking. Under all of it, one thing: you, staying with you.</p>
@@ -1608,16 +1705,6 @@
       <span class="label">The investment</span>
       <p class="invest-open rv s1">Four months of my full attention, and the most personal work I do.</p>
 
-      <div class="invest-includes rv s1">
-        <p class="invest-inc-label">Here is everything you receive</p>
-        <ul class="invest-list">
-          <li><span class="m">&#10003;</span> Sixteen private one-to-one sessions with me, one every week for four months</li>
-          <li><span class="m">&#10003;</span> Voice-note support between sessions, so you are never holding it alone</li>
-          <li><span class="m">&#10003;</span> A ten-minute practice recorded just for you, every week</li>
-          <li><span class="m">&#10003;</span> Four months shaped entirely around your life, not a set curriculum</li>
-        </ul>
-      </div>
-
       <p class="invest-price-label rv s2">Your investment</p>
       <div class="pay-options rv s2">
         <div class="pay">
@@ -1636,6 +1723,38 @@
       <div class="rv s3" style="margin-top: clamp(34px, 4vh, 50px); text-align:center;">
         <a class="btn" href="#apply">Apply for your place</a>
         <span class="alt-line">Want to hear my voice first? <a href="https://calendly.com/iamninarose/claimyourselfconnection" target="_blank" rel="noopener">Book a conversation with me</a></span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════ XV·b · WHAT YOU RECEIVE (velvet, toggles) ══════════════ -->
+  <section class="receive">
+    <div class="receive-inner">
+      <span class="label rv">Everything is included</span>
+      <h2 class="rv s1">What you actually receive</h2>
+
+      <div class="tglist rv s2">
+        <details class="tgl" open>
+          <summary>Sixteen private 1:1 sessions<span class="plus" aria-hidden="true">+</span></summary>
+          <p>One every week for four months. Sixty minutes together, with a fifteen-minute buffer, so nothing tender ever gets rushed.</p>
+        </details>
+        <details class="tgl">
+          <summary>Voice-note support between sessions<span class="plus" aria-hidden="true">+</span></summary>
+          <p>So a hard Tuesday doesn't have to wait until our next call. You send a voice note, and you're not holding it alone.</p>
+        </details>
+        <details class="tgl">
+          <summary>A ten-minute practice, recorded just for you<span class="plus" aria-hidden="true">+</span></summary>
+          <p>Every week, built around exactly what came up in your session, not a generic recording everyone gets.</p>
+        </details>
+        <details class="tgl">
+          <summary>Four months shaped around your actual life<span class="plus" aria-hidden="true">+</span></summary>
+          <p>Not a fixed curriculum. We follow what's really alive in you, week to week.</p>
+        </details>
+      </div>
+
+      <div class="rv s3" style="text-align:center; margin-top: clamp(40px, 5vh, 60px);">
+        <a class="btn" href="#apply">Apply for your place</a>
       </div>
     </div>
   </section>
@@ -1707,7 +1826,7 @@
 
       <span class="apply-alt">Rather hear my voice first? &nbsp;<a href="https://calendly.com/iamninarose/claimyourselfconnection" target="_blank" rel="noopener">Book a conversation</a> &nbsp;·&nbsp; or find me on <a href="https://instagram.com/iam.ninarose" target="_blank" rel="noopener">Instagram</a></span>
 
-      <p class="apply-meta rv">We begin in August &nbsp;·&nbsp; A small group &nbsp;·&nbsp; Held privately, one to one</p>
+      <p class="apply-meta rv">We begin in August &nbsp;·&nbsp; A small group &nbsp;·&nbsp; Held privately, 1:1</p>
     </div>
   </section>
 
