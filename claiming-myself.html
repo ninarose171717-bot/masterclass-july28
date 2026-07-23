@@ -115,8 +115,8 @@
     em { font-style: italic; }
 
     /* key-phrase highlight, the eye catches these while skimming */
-    .hi { color: var(--wine-ink); }              /* on light grounds */
-    .hi-d { color: #E9C9A6; }                    /* on wine grounds */
+    .hi { color: var(--wine-ink); font-weight: 500; }   /* on light grounds */
+    .hi-d { color: #E9C9A6; font-weight: 500; }         /* on wine grounds */
     .hi em, em.hi { font-style: italic; }
 
     /* ── buttons: one presentation, everywhere ── */
@@ -764,41 +764,6 @@
     .facts .v { font-size: clamp(1.2rem, 1.6vw, 1.42rem); color: var(--text); line-height: 1.6; }
 
     /* ═════════════════════════════════════════
-       X · WHAT I WON'T PROMISE
-    ═════════════════════════════════════════ */
-    .honest {
-      background: var(--wine);
-      padding: clamp(140px, 17vh, 230px) var(--pad-x);
-    }
-    .honest-inner { max-width: 900px; margin: 0 auto; }
-    .honest-inner .label { display: block; color: var(--on-wine-faint); margin-bottom: 22px; }
-    .honest-heading {
-      font-family: var(--serif);
-      font-weight: 300;
-      font-size: clamp(2.3rem, 4vw, 3.6rem);
-      color: var(--on-wine);
-      line-height: 1.1;
-      margin-bottom: clamp(56px, 7vh, 90px);
-      text-wrap: balance;
-    }
-    .honest-item {
-      max-width: 36em;
-      padding: 30px 0;
-      border-top: 1px solid var(--on-wine-line);
-    }
-    .honest-item:last-of-type { border-bottom: 1px solid var(--on-wine-line); }
-    .honest-item h3 {
-      font-family: var(--serif);
-      font-weight: 400;
-      font-size: clamp(1.4rem, 2vw, 1.75rem);
-      color: var(--on-wine);
-      line-height: 1.4;
-      margin-bottom: 12px;
-    }
-    .honest-item p { color: var(--on-wine-soft); line-height: 1.8; text-wrap: pretty; }
-    .honest-item p em { color: #E9C9A6; font-style: italic; }
-
-    /* ═════════════════════════════════════════
        XI · SOFT CTA (if something knows)
     ═════════════════════════════════════════ */
     .knows {
@@ -945,118 +910,119 @@
     }
 
     /* ═════════════════════════════════════════
-       XV · INVESTMENT
+       XV · INVESTMENT · editorial card on texture
     ═════════════════════════════════════════ */
     .invest {
+      position: relative;
       background: var(--wine-deep);
-      padding: clamp(140px, 17vh, 230px) var(--pad-x);
+      padding: clamp(140px, 18vh, 230px) var(--pad-x);
+      overflow: hidden;
     }
-    .invest-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
-      gap: clamp(56px, 7vw, 120px);
-      max-width: 1120px;
+    .invest-bg { position: absolute; inset: 0; z-index: 0; }
+    .invest-bg img { width: 100%; height: 100%; object-fit: cover; }
+    .invest-bg::after { content: none; }
+    .invest::before {
+      content: '';
+      position: absolute; inset: 0; z-index: 1;
+      background: radial-gradient(120% 90% at 50% 50%, rgba(55,13,20,0.08) 0%, rgba(28,7,11,0.62) 78%);
+    }
+    .invest-card {
+      position: relative;
+      z-index: 2;
+      max-width: 620px;
       margin: 0 auto;
-      align-items: center;
-    }
-    .invest-text .label { display: block; color: var(--on-wine-faint); margin-bottom: clamp(32px, 4vh, 48px); }
-    .invest-price {
-      font-family: var(--serif);
-      font-weight: 300;
-      font-size: clamp(4rem, 8vw, 7rem);
-      line-height: 1;
-      color: var(--on-wine);
-      margin-bottom: 14px;
-    }
-    .invest-sub {
-      font-size: clamp(1.2rem, 1.7vw, 1.45rem);
-      font-style: italic;
-      color: var(--on-wine-soft);
-      margin-bottom: clamp(34px, 4vh, 50px);
-    }
-    .invest-body { color: var(--on-wine-soft); line-height: 1.8; max-width: 26em; margin-bottom: 18px; text-wrap: pretty; }
-    .invest-list { list-style: none; margin: 0 0 24px; max-width: 27em; }
-    .invest-list li {
-      font-size: clamp(1.02rem, 1.35vw, 1.18rem);
-      color: var(--on-wine-soft);
-      line-height: 1.7;
-      padding: 12px 0;
-      border-top: 1px solid var(--on-wine-line);
-      display: grid;
-      grid-template-columns: 22px 1fr;
-      gap: 8px;
-    }
-    .invest-list li:last-child { border-bottom: 1px solid var(--on-wine-line); }
-    .invest-list .m { color: var(--gold); }
-    .invest-photo { border-radius: 300px 300px 0 0; overflow: hidden; aspect-ratio: 4 / 5; }
-    .invest-photo img { width: 100%; height: 100%; object-fit: cover; }
-    .invest-cap {
-      font-family: var(--sans);
-      font-size: 0.64rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--on-wine-faint);
+      background: var(--cream);
+      border-radius: 28px;
+      padding: clamp(64px, 8vw, 92px) clamp(36px, 6vw, 64px) clamp(48px, 6vw, 68px);
+      box-shadow: 0 50px 110px rgba(15, 4, 6, 0.5);
       text-align: center;
-      margin-top: 16px;
     }
+    .invest-medallion {
+      width: clamp(96px, 14vw, 132px);
+      height: clamp(96px, 14vw, 132px);
+      border-radius: 999px;
+      overflow: hidden;
+      border: 5px solid var(--cream);
+      box-shadow: 0 14px 34px rgba(15, 4, 6, 0.35);
+      position: absolute;
+      top: clamp(-48px, -6vw, -66px);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .invest-medallion img { width: 100%; height: 100%; object-fit: cover; }
+    .invest-card .label { display: block; color: var(--mid); margin-bottom: clamp(24px, 3vh, 36px); }
     .invest-open {
       font-size: clamp(1.2rem, 1.7vw, 1.45rem);
       font-style: italic;
-      color: var(--on-wine-soft);
+      color: var(--mid);
       line-height: 1.6;
       max-width: 24em;
-      margin-bottom: clamp(28px, 4vh, 44px);
+      margin: 0 auto clamp(32px, 4vh, 48px);
     }
     .pay-options {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(14px, 1.6vw, 22px);
-      max-width: 30em;
-      margin-bottom: clamp(36px, 5vh, 56px);
+      gap: clamp(12px, 1.6vw, 20px);
+      max-width: 28em;
+      margin: 0 auto clamp(36px, 5vh, 56px);
     }
     .pay {
-      border: 1px solid var(--on-wine-line);
-      border-radius: 3px;
-      padding: clamp(24px, 2.6vw, 34px);
-      background: rgba(248, 240, 228, 0.035);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: clamp(22px, 2.6vw, 30px);
+      background: var(--ivory);
     }
     .pay-name {
       font-family: var(--sans);
-      font-size: 0.62rem;
+      font-size: 0.6rem;
       letter-spacing: 0.24em;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--bronze);
       display: block;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
     .pay-num {
       font-family: var(--serif);
       font-weight: 300;
-      font-size: clamp(2.8rem, 4.6vw, 4.2rem);
+      font-size: clamp(2.5rem, 4.2vw, 3.6rem);
       line-height: 0.95;
-      color: var(--on-wine);
+      color: var(--text);
     }
     .pay-num .cur {
       font-size: 0.44em;
       vertical-align: 0.5em;
-      color: var(--on-wine-soft);
+      color: var(--mid);
       margin-right: 3px;
     }
     .pay-note {
-      font-size: 1.02rem;
+      font-size: 0.96rem;
       font-style: italic;
-      color: var(--on-wine-soft);
-      margin-top: 12px;
-      line-height: 1.45;
+      color: var(--mid);
+      margin-top: 10px;
+      line-height: 1.4;
     }
     .invest-inc-label {
       font-family: var(--sans);
-      font-size: 0.64rem;
+      font-size: 0.62rem;
       letter-spacing: 0.24em;
       text-transform: uppercase;
-      color: var(--on-wine-faint);
-      margin-bottom: 16px;
+      color: var(--bronze);
+      margin-bottom: 14px;
     }
+    .invest-list { list-style: none; margin: 0 auto 24px; max-width: 27em; text-align: left; }
+    .invest-list li {
+      font-size: clamp(0.98rem, 1.3vw, 1.1rem);
+      color: var(--mid);
+      line-height: 1.6;
+      padding: 11px 0;
+      border-top: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 8px;
+    }
+    .invest-list li:last-child { border-bottom: 1px solid var(--border); }
+    .invest-list .m { color: var(--wine-ink); }
+    .invest-body { color: var(--mid); line-height: 1.75; max-width: 26em; margin: 0 auto; text-wrap: pretty; }
 
     /* ═════════════════════════════════════════
        XVI · QUESTIONS
@@ -1256,8 +1222,7 @@
       .guide-grid { grid-template-columns: 1fr; }
       .guide-photo { position: static; max-width: 380px; margin: 0 auto; }
 
-      .invest-grid { grid-template-columns: 1fr; }
-      .invest-photo { max-width: 420px; margin: 0 auto; order: -1; }
+      .invest-card { padding-left: 24px; padding-right: 24px; }
       .pay-options { grid-template-columns: 1fr 1fr; max-width: none; }
 
       .turn-body { margin-left: 0; }
@@ -1291,14 +1256,14 @@
     <div class="hero-copy">
       <span class="label hero-label">A four-month private journey, just the two of us</span>
       <h1>
-        <span class="hl"><span>A life that feels</span></span>
-        <span class="hl"><span>like yours.</span></span>
-        <span class="hl"><span>And a body that feels</span></span>
-        <span class="hl"><span><em>safe holding it.</em></span></span>
+        <span class="hl"><span>You stop leaving</span></span>
+        <span class="hl"><span>yourself. Not when it's</span></span>
+        <span class="hl"><span>falling apart, and not</span></span>
+        <span class="hl"><span><em>when it's finally good.</em></span></span>
       </h1>
-      <p class="hero-lead">To feel your own life in your body, not watch it happen to someone who looks like you. To take up the room you keep shrinking out of. To want out loud, and stop leaving yourself behind the second it gets real.</p>
+      <p class="hero-lead">Not when a hard week knocks you flat, and not when something good is finally happening and part of you wants to run from it. You ask for what you want, and say when something isn't working, whatever the reply, instead of leaving yourself behind.</p>
       <div class="hero-cta">
-        <a href="#apply" class="btn">This was made for me</a>
+        <a href="#apply" class="btn">This is for me</a>
         <span class="hero-meta">A small group of women &nbsp;·&nbsp; Four months &nbsp;·&nbsp; Held privately</span>
       </div>
     </div>
@@ -1318,8 +1283,8 @@
         <p class="rv">A song comes on and <span class="hi">pleasure moves through you</span> before your head has decided whether you're allowed to feel it. In the kitchen. In your hips. In the middle of a Tuesday.</p>
         <p class="rv">You post the thing. You don't spiral for forty minutes, screenshot it to three friends, or hover over delete. <span class="hi">You said what was true, and you let it be seen.</span></p>
         <p class="rv">Someone asks for your time and <span class="hi">you feel your own no before you feel their disappointment.</span> And it comes out of your mouth, warm and clear, with no apology stapled to it.</p>
-        <p class="rv">You want something, out loud, <span class="hi">in your own name.</span> And you don't talk yourself out of it by the time you've made the bed.</p>
-        <p class="vision-close rv">This is what it feels like to be available to yourself. To be wanted by your own life, and actually here to receive it.</p>
+        <p class="rv">You want something, and you actually say it, plainly, <span class="hi">in your own name.</span> And you don't talk yourself out of it by the time you've made the bed.</p>
+        <p class="vision-close rv">This is what it feels like to be available to yourself. Not performing your life for everyone watching. Actually living it.</p>
       </div>
     </div>
   </section>
@@ -1396,8 +1361,8 @@
       <p class="turn-lead rv">You already know how to want this. You've wanted it for years. <em>The wanting was never the problem.</em></p>
       <div class="turn-body">
         <p class="rv">Here's the part nobody says out loud. You can read every book, name every pattern, do every breathwork class on the internet, and <span class="hi">still walk into a room and feel yourself vanish.</span> Still say yes when your whole body meant no. Still make yourself smaller so no one has to feel how much you actually are.</p>
-        <p class="rv">Somewhere early, your body did the math. Being fully yourself, wanting out loud, taking up the space, it cost you something once. Love. Safety. Belonging. <span class="hi">So your body made itself a promise to keep you small,</span> and it has kept that promise ever since. Faithfully. Even now, when small is the last thing you want.</p>
-        <p class="turn-close rv">You don't need more information. You need your body to feel safe being all of you. That is the whole thing. And that is the thing we do together.</p>
+        <p class="rv">Somewhere early, being fully yourself cost you something. Maybe you asked for something and got laughed at. Maybe you took up space and someone made you feel it. Love. Safety. Belonging. <span class="hi">So you made yourself a promise to stay small,</span> and you've kept that promise ever since. Faithfully. Even now, when small is the last thing you want.</p>
+        <p class="turn-close rv">You don't need another book. You need to feel, in real moments, that it's safe to laugh too loud, want too much, and take up more room than you're used to. That is the whole thing. And that is the thing we do together.</p>
       </div>
     </div>
   </section>
@@ -1433,7 +1398,7 @@
         <div class="arc-row rv">
           <span class="n">Phase one</span>
           <h3>Noticing yourself</h3>
-          <p>The clothes in your closet you never let yourself wear. The relationship you call fine. The way you answer <em>I'm good</em> before you've even checked in with yourself. <span class="hi">We find the places you left, and when, and what leaving kept you safe from.</span> Just the strange relief of being seen, finally, even by <span style="white-space:nowrap">your own eyes.</span></p>
+          <p>We start gently. What do you actually love wearing, and what do you reach for out of habit. What lights you up, what drains you, what you crave more of in an ordinary week. <span class="hi">We get curious about you, on purpose, maybe for the first time in a long while.</span> And just being looked at that closely, with warmth, starts to feel like coming up for <span style="white-space:nowrap">air.</span></p>
         </div>
 
         <div class="arc-row rv">
@@ -1446,14 +1411,14 @@
         <div class="arc-row rv">
           <span class="n">Phase three</span>
           <h3>Expressing yourself</h3>
-          <p>Now it comes out of you. <span class="hi">You say the true thing while your voice is still shaking.</span> You want out loud. You let someone be disappointed and you don't collapse or chase them down to smooth it over.</p>
+          <p>Now it comes out of you. <span class="hi">You say the true thing while your voice is still shaking.</span> When you want something, you say so. When something isn't working for you, you say that too, whatever the other person does with it. Not to protect yourself from them. To stop leaving yourself behind. You get so much more comfortable just <span style="white-space:nowrap">saying it.</span></p>
           <p><em>You stop auditioning for love and start choosing it.</em></p>
         </div>
 
         <div class="arc-row rv">
           <span class="n">Phase four</span>
           <h3>Including yourself</h3>
-          <p>Not a project you're working on. A woman who is finally in the room for her own life. You include yourself while you're dating, working, resting, arguing, celebrating, falling apart. <span class="hi">You feel your life from the inside of it.</span></p>
+          <p>Not a project you're working on. You, actually present, while you're dating, working, resting, arguing, celebrating, falling apart. <span class="hi">Not watching your own life happen from a few steps outside it. Living it, as it happens.</span></p>
         </div>
       </div>
     </div>
@@ -1485,9 +1450,9 @@
       <div class="session-body">
         <p class="rv">We build it together, every time, around what is actually alive in you that <span style="white-space:nowrap">day.</span></p>
         <p class="rv">Some of it is teaching, maybe ten minutes, at the start or the end, wherever the hour wants it. Your body feels it first, and your mind gets to put words to it after, so the shift makes sense to you and <span style="white-space:nowrap">actually stays.</span></p>
-        <p class="rv">The rest, I follow you. We look at which parts of you were loud this week, and which ones are asking for more love, so <span class="hi-d">they can be held and loved back instead of throwing tantrums from the basement.</span> We find where the tension is living in your body, and where the expansion is, and we tend to one honestly and lean all the way into the <span style="white-space:nowrap">other.</span></p>
-        <p class="rv">It's parts work, shadow work, somatic work, movement, dancing. It might sound like a lot. It never feels like a lot, because overwhelm is not the point. <span class="hi-d">The point is for your body to gather proof, in real time, that this much life is safe.</span></p>
-        <p class="rv session-close">So that one day, holding everything you want stops feeling like a risk, and starts feeling safe, and cradled, inside you.</p>
+        <p class="rv">The rest, I follow you. We look at which parts of you were loud this week, and which ones are asking for more love, so <span class="hi-d">they can be held and loved back instead of throwing tantrums from the basement.</span> Maybe it's the knot in your throat every time you swallow the true thing. Maybe it's the flutter in your chest when something good is actually happening. We find it, and instead of moving around it, <span style="white-space:nowrap">we lean in.</span></p>
+        <p class="rv">It's parts work, shadow work, somatic work, movement, dancing. It might sound like a lot. It never feels like a lot, because overwhelm is not the point. <span class="hi-d">The point is that next time someone compliments you, or pays you well, or really sees you, your body doesn't flinch.</span> It just lets it in.</p>
+        <p class="rv session-close">So that one day, someone loves you well, or life hands you more than you're used to, and instead of shrinking, you just take it in.</p>
       </div>
     </div>
   </section>
@@ -1510,28 +1475,6 @@
           <li class="rv"><span class="k">Direction</span><span class="v">A clear four-month arc, co-created around your patterns, your parts, your desires.</span></li>
           <li class="rv"><span class="k">Spaces</span><span class="v">A small group of women. This work is sacred, so I keep it small.</span></li>
         </ul>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ══════════════ X · WHAT I WON'T PROMISE ══════════════ -->
-  <section class="honest">
-    <div class="honest-inner">
-      <span class="label rv">Let me be straight with you</span>
-      <h2 class="honest-heading rv s1">What I won't promise you</h2>
-
-      <div class="honest-item rv">
-        <h3>That you'll wake up confident one morning.</h3>
-        <p>Confidence isn't a thing I hand you. It grows every time you do the brave thing and feel yourself live through it. What you'll have is so much of yourself that <em>reaching for what you want feels good, and having it feels even better.</em></p>
-      </div>
-      <div class="honest-item rv">
-        <h3>That your life will look different from the outside.</h3>
-        <p>Maybe it looks exactly the same. Same job, same city, same people. What changes is that you're finally living inside it, instead of watching it through glass. <em>And the way you start treating yourself teaches everyone around you how to treat you too.</em></p>
-      </div>
-      <div class="honest-item rv">
-        <h3>That you'll never leave yourself again.</h3>
-        <p>You will. Everyone does. The difference is you'll catch it in an hour instead of a month, and <em>you'll know your own way back.</em></p>
       </div>
     </div>
   </section>
@@ -1600,7 +1543,7 @@
           <p class="rv">I'm Slovenian. I live in Thailand. I'm a somatic coach and breathwork facilitator, and I've worked closely with women one to one, and supported people through recovery, for <span style="white-space:nowrap">years.</span></p>
           <p class="rv">This isn't something I studied once and now teach at you from a distance. I live it. Every single day. I'm still doing it, still following it, still choosing myself in the small moments. That is why I can walk you through it, because I know the ground with my <span style="white-space:nowrap">own feet.</span></p>
           <p class="rv">And here is what I see again and again. Most women aren't missing a strategy. They know exactly what to do. They've just spent so long taking care of everyone else that they lost the thread to their own life. My whole work is helping you become <em>available to yourself</em> again.</p>
-          <p class="rv">It lives in the body, because knowing something has never been the same as feeling it. Parts work, shadow work, somatic work, movement, pleasure, honest talking. Under all of it, one thing: you, staying with <span style="white-space:nowrap">you.</span></p>
+          <p class="rv">You can know, in your head, that you deserve to rest, and still feel guilty every time you actually lie down. That gap between knowing and feeling is exactly where we work. Parts work, shadow work, somatic work, movement, pleasure, honest talking. Under all of it, one thing: you, staying with <span style="white-space:nowrap">you.</span></p>
           <p class="rv">This is the most personal work I do. No group to hide in, no module to skip. Just your life, my full attention, and four months of me not letting you <span style="white-space:nowrap">disappear.</span></p>
           <p class="note rv">Nina, check that middle line about your background says exactly what's true (coach, facilitator, who you've worked with). I kept it simple and clear, but the facts should be yours.</p>
         </div>
@@ -1630,39 +1573,39 @@
 
   <!-- ══════════════ XV · INVESTMENT ══════════════ -->
   <section class="invest">
-    <div class="invest-grid">
-      <div class="invest-text">
-        <span class="label rv">The investment</span>
-        <p class="invest-open rv s1">Four months of my full attention, and the most personal work I do. Here is how it's held.</p>
-        <div class="pay-options rv s1">
-          <div class="pay">
-            <span class="pay-name">In full</span>
-            <p class="pay-num"><span class="cur">$</span>2,500</p>
-            <p class="pay-note">one payment, USD</p>
-          </div>
-          <div class="pay">
-            <span class="pay-name">Monthly</span>
-            <p class="pay-num"><span class="cur">$</span>625</p>
-            <p class="pay-note">a month, across four months</p>
-          </div>
+    <div class="invest-bg" aria-hidden="true">
+      <img src="./photos%20that%20can%20be%20used/money/PHOTO-2026-07-23-18-59-49.jpg" alt="">
+    </div>
+    <div class="invest-card rv">
+      <figure class="invest-medallion">
+        <img src="./photos%20that%20can%20be%20used/money/PHOTO-2026-07-23-18-59-48.jpg" alt="Sunlit water, gold light on the surface">
+      </figure>
+      <span class="label">The investment</span>
+      <p class="invest-open rv s1">Four months of my full attention, and the most personal work I do. Here is how it's held.</p>
+      <div class="pay-options rv s1">
+        <div class="pay">
+          <span class="pay-name">In full</span>
+          <p class="pay-num"><span class="cur">$</span>2,500</p>
+          <p class="pay-note">one payment, USD</p>
         </div>
-        <p class="invest-inc-label rv s2">Everything is included</p>
-        <ul class="invest-list rv s2">
-          <li><span class="m">&middot;</span> Sixteen private weekly sessions, one to one</li>
-          <li><span class="m">&middot;</span> Voice-note support between our sessions</li>
-          <li><span class="m">&middot;</span> A weekly practice, recorded just for you</li>
-          <li><span class="m">&middot;</span> Four months, co-created around your life</li>
-        </ul>
-        <p class="invest-body rv s2">And you have two full weeks. If it isn't right for you after our first sessions together, tell me and I'll return your money. Simple <span style="white-space:nowrap">as that.</span></p>
-        <div class="rv s3" style="margin-top: clamp(34px, 4vh, 50px);">
-          <a class="btn" href="#apply">Apply for your place</a>
-          <span class="alt-line">Want to hear my voice first? <a href="https://calendly.com/iamninarose/claimyourselfconnection" target="_blank" rel="noopener">Book a conversation with me</a></span>
+        <div class="pay">
+          <span class="pay-name">Monthly</span>
+          <p class="pay-num"><span class="cur">$</span>625</p>
+          <p class="pay-note">a month, across four months</p>
         </div>
       </div>
-      <figure class="invest-photo rv s1">
-        <img src="./photos%20that%20can%20be%20used/B41D525A-4AF2-4DCC-B76C-1D35E320E1A3.png" alt="A warm room opening onto a balcony above the sea at golden hour">
-        <figcaption class="invest-cap">A life with room in it, for you</figcaption>
-      </figure>
+      <p class="invest-inc-label rv s2">Everything is included</p>
+      <ul class="invest-list rv s2">
+        <li><span class="m">&middot;</span> Sixteen private weekly sessions, one to one</li>
+        <li><span class="m">&middot;</span> Voice-note support between our sessions</li>
+        <li><span class="m">&middot;</span> A weekly practice, recorded just for you</li>
+        <li><span class="m">&middot;</span> Four months, co-created around your life</li>
+      </ul>
+      <p class="invest-body rv s2">And you have two full weeks. If it isn't right for you after our first sessions together, tell me and I'll return your money. Simple <span style="white-space:nowrap">as that.</span></p>
+      <div class="rv s3" style="margin-top: clamp(34px, 4vh, 50px); text-align:center;">
+        <a class="btn" href="#apply">Apply for your place</a>
+        <span class="alt-line">Want to hear my voice first? <a href="https://calendly.com/iamninarose/claimyourselfconnection" target="_blank" rel="noopener">Book a conversation with me</a></span>
+      </div>
     </div>
   </section>
 
