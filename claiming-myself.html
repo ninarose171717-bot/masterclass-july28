@@ -265,7 +265,7 @@
       line-height: 1.55;
       max-width: 30em;
       margin-bottom: clamp(34px, 4.5vh, 48px);
-      text-wrap: pretty;
+      text-wrap: balance;
     }
     .hero-lead em { color: var(--on-wine); font-style: italic; }
     .hero-cta { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
@@ -317,7 +317,7 @@
       line-height: 1.65;
       color: var(--text);
       margin-bottom: clamp(38px, 6vh, 64px);
-      text-wrap: pretty;
+      text-wrap: balance;
     }
     .vision-lines p:nth-child(even) { margin-left: clamp(0px, 4vw, 64px); }
     .vision-lines em { color: var(--wine-ink); font-style: italic; }
@@ -404,7 +404,7 @@
       font-size: clamp(1.2rem, 1.7vw, 1.5rem);
       color: var(--text);
       line-height: 1.6;
-      text-wrap: pretty;
+      text-wrap: balance;
     }
     .relate-item p em { color: var(--wine-ink); font-style: italic; }
     .relate-close {
@@ -486,7 +486,7 @@
       color: var(--mid);
       line-height: 1.9;
       margin-bottom: clamp(34px, 5vh, 54px);
-      text-wrap: pretty;
+      text-wrap: balance;
     }
     .turn-body p em { color: var(--text); font-style: italic; }
     .turn-close {
@@ -514,7 +514,7 @@
       line-height: 1.7;
       max-width: 26em;
       margin: 0 auto clamp(40px, 5vh, 60px);
-      text-wrap: pretty;
+      text-wrap: balance;
     }
     .phil-mid {
       font-family: var(--serif);
@@ -611,7 +611,7 @@
       line-height: 1.85;
       max-width: 30em;
       margin-bottom: clamp(18px, 2.4vh, 26px);
-      text-wrap: pretty;
+      text-wrap: balance;
     }
     .arc-row p:last-child { margin-bottom: 0; }
     .arc-row p em { color: var(--wine-ink); font-style: italic; }
@@ -703,7 +703,7 @@
       line-height: 1.9;
       margin-bottom: clamp(38px, 5.5vh, 60px);
       max-width: 30em;
-      text-wrap: pretty;
+      text-wrap: balance;
     }
     .session-body p:nth-child(even) { margin-left: clamp(0px, 5vw, 80px); }
     .session-body p em { color: var(--on-wine); font-style: italic; }
@@ -742,7 +742,7 @@
       line-height: 1.7;
       margin-top: 28px;
       max-width: 22em;
-      text-wrap: pretty;
+      text-wrap: balance;
     }
     .facts { list-style: none; }
     .facts li {
@@ -787,7 +787,7 @@
       line-height: 1.8;
       max-width: 28em;
       margin: 0 auto clamp(40px, 5vh, 56px);
-      text-wrap: pretty;
+      text-wrap: balance;
     }
 
     /* ═════════════════════════════════════════
@@ -877,7 +877,7 @@
       line-height: 1.55;
       margin-bottom: 36px;
       max-width: 24em;
-      text-wrap: pretty;
+      text-wrap: balance;
     }
     .guide-body p { color: var(--mid); line-height: 1.85; margin-bottom: clamp(32px, 5vh, 52px); max-width: 30em; text-wrap: pretty; }
     .guide-body p:last-child { margin-bottom: 0; }
@@ -919,7 +919,13 @@
       overflow: hidden;
     }
     .invest-bg { position: absolute; inset: 0; z-index: 0; }
-    .invest-bg img { width: 100%; height: 100%; object-fit: cover; }
+    .invest-bg img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: 50% 22%;
+      transform: scale(2.1);
+      transform-origin: 50% 22%;
+    }
     .invest-bg::after { content: none; }
     .invest::before {
       content: '';
@@ -1001,28 +1007,47 @@
       margin-top: 10px;
       line-height: 1.4;
     }
+    .invest-includes {
+      max-width: 30em;
+      margin: 0 auto clamp(40px, 5vh, 60px);
+      padding: clamp(28px, 3.4vw, 42px) clamp(24px, 3vw, 40px);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--ivory);
+    }
     .invest-inc-label {
       font-family: var(--sans);
-      font-size: 0.62rem;
+      font-size: 0.66rem;
       letter-spacing: 0.24em;
       text-transform: uppercase;
       color: var(--bronze);
-      margin-bottom: 14px;
+      margin-bottom: clamp(18px, 2.4vh, 26px);
+      text-align: center;
     }
-    .invest-list { list-style: none; margin: 0 auto 24px; max-width: 27em; text-align: left; }
+    .invest-list { list-style: none; margin: 0; text-align: left; }
     .invest-list li {
-      font-size: clamp(0.98rem, 1.3vw, 1.1rem);
-      color: var(--mid);
-      line-height: 1.6;
-      padding: 11px 0;
+      font-size: clamp(1.05rem, 1.45vw, 1.22rem);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 15px 0;
       border-top: 1px solid var(--border);
       display: grid;
-      grid-template-columns: 18px 1fr;
-      gap: 8px;
+      grid-template-columns: 26px 1fr;
+      gap: 12px;
+      align-items: start;
     }
-    .invest-list li:last-child { border-bottom: 1px solid var(--border); }
-    .invest-list .m { color: var(--wine-ink); }
-    .invest-body { color: var(--mid); line-height: 1.75; max-width: 26em; margin: 0 auto; text-wrap: pretty; }
+    .invest-list li:first-child { border-top: none; padding-top: 0; }
+    .invest-list li:last-child { padding-bottom: 0; }
+    .invest-list .m { color: var(--wine-ink); font-weight: 500; font-size: 1.1em; line-height: 1.4; }
+    .invest-price-label {
+      font-family: var(--sans);
+      font-size: 0.66rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--bronze);
+      margin-bottom: clamp(16px, 2vh, 22px);
+    }
+    .invest-body { color: var(--mid); line-height: 1.75; max-width: 26em; margin: 0 auto; text-wrap: balance; }
 
     /* ═════════════════════════════════════════
        XVI · QUESTIONS
@@ -1051,7 +1076,7 @@
       line-height: 1.4;
       margin-bottom: 14px;
     }
-    .qa-item p { color: var(--mid); line-height: 1.8; text-wrap: pretty; }
+    .qa-item p { color: var(--mid); line-height: 1.8; text-wrap: balance; }
 
     /* ═════════════════════════════════════════
        XVII · APPLICATION FINALE
@@ -1076,7 +1101,7 @@
       line-height: 1.7;
       margin: 0 auto 26px;
       max-width: 24em;
-      text-wrap: pretty;
+      text-wrap: balance;
     }
     .apply-anchor {
       font-family: var(--serif);
@@ -1089,7 +1114,7 @@
       text-wrap: balance;
     }
     .apply-how { max-width: 30em; margin: 0 auto clamp(44px, 5vh, 62px); }
-    .apply-how p { color: var(--on-wine-soft); line-height: 1.8; margin-bottom: 14px; text-wrap: pretty; }
+    .apply-how p { color: var(--on-wine-soft); line-height: 1.8; margin-bottom: 14px; text-wrap: balance; }
     .apply-how p em { color: var(--on-wine); font-style: italic; }
 
     /* form */
@@ -1392,13 +1417,13 @@
       <div class="arc-text">
         <div class="arc-head">
           <span class="label rv">Where we go together</span>
-          <h2 class="rv s1">Four months. <span style="white-space:nowrap">Four phases.</span></h2>
+          <h2 class="rv s1">Four months. Four phases.</h2>
         </div>
 
         <div class="arc-row rv">
           <span class="n">Phase one</span>
           <h3>Noticing yourself</h3>
-          <p>We start gently. What do you actually love wearing, and what do you reach for out of habit. What lights you up, what drains you, what you crave more of in an ordinary week. <span class="hi">We get curious about you, on purpose, maybe for the first time in a long while.</span> And just being looked at that closely, with warmth, starts to feel like coming up for <span style="white-space:nowrap">air.</span></p>
+          <p>We start gently. What do you actually love wearing, and what do you reach for out of habit. What lights you up, what drains you, what you crave more of in an ordinary week. <span class="hi">We get curious about you, on purpose, maybe for the first time in a long while.</span> And just being looked at that closely, with warmth, starts to feel like coming up for air.</p>
         </div>
 
         <div class="arc-row rv">
@@ -1411,7 +1436,7 @@
         <div class="arc-row rv">
           <span class="n">Phase three</span>
           <h3>Expressing yourself</h3>
-          <p>Now it comes out of you. <span class="hi">You say the true thing while your voice is still shaking.</span> When you want something, you say so. When something isn't working for you, you say that too, whatever the other person does with it. Not to protect yourself from them. To stop leaving yourself behind. You get so much more comfortable just <span style="white-space:nowrap">saying it.</span></p>
+          <p>Now it comes out of you. <span class="hi">You say the true thing while your voice is still shaking.</span> When you want something, you say so. When something isn't working for you, you say that too, whatever the other person does with it. Not to protect yourself from them. To stop leaving yourself behind. You get so much more comfortable just saying it.</p>
           <p><em>You stop auditioning for love and start choosing it.</em></p>
         </div>
 
@@ -1446,13 +1471,13 @@
   <section class="session">
     <div class="session-inner">
       <span class="label rv">One hour</span>
-      <h2 class="session-heading rv s1">What an hour together <span style="white-space:nowrap">feels like</span></h2>
+      <h2 class="session-heading rv s1">What an hour together feels like</h2>
       <div class="session-body">
-        <p class="rv">We build it together, every time, around what is actually alive in you that <span style="white-space:nowrap">day.</span></p>
-        <p class="rv">Some of it is teaching, maybe ten minutes, at the start or the end, wherever the hour wants it. Your body feels it first, and your mind gets to put words to it after, so the shift makes sense to you and <span style="white-space:nowrap">actually stays.</span></p>
-        <p class="rv">The rest, I follow you. We look at which parts of you were loud this week, and which ones are asking for more love, so <span class="hi-d">they can be held and loved back instead of throwing tantrums from the basement.</span> Maybe it's the knot in your throat every time you swallow the true thing. Maybe it's the flutter in your chest when something good is actually happening. We find it, and instead of moving around it, <span style="white-space:nowrap">we lean in.</span></p>
-        <p class="rv">It's parts work, shadow work, somatic work, movement, dancing. It might sound like a lot. It never feels like a lot, because overwhelm is not the point. <span class="hi-d">The point is that next time someone compliments you, or pays you well, or really sees you, your body doesn't flinch.</span> It just lets it in.</p>
-        <p class="rv session-close">So that one day, someone loves you well, or life hands you more than you're used to, and instead of shrinking, you just take it in.</p>
+        <p class="rv">We build it together, every time, around what is actually alive in you that day.</p>
+        <p class="rv">Some of it is teaching, maybe ten minutes, at the start or the end, wherever the hour wants it. Your body feels it first, and your mind gets to put words to it after, so the shift makes sense to you and actually stays.</p>
+        <p class="rv">The rest, I follow you. We look at which parts of you were loud this week, and which ones are asking for more love, so <span class="hi-d">they can be held and loved back instead of throwing tantrums from the basement.</span> Maybe it's the knot in your throat every time you swallow the true thing. Maybe it's the flutter in your chest when something good is actually happening. We find it, and instead of moving around it, we lean in.</p>
+        <p class="rv">It's parts work, shadow work, somatic work, movement, dancing. It might sound like a lot. It never feels like a lot, because overwhelm is not the point. <span class="hi-d">The point is that next time someone compliments you, or pays you well, or really sees you, you feel whatever rises, and you stay.</span> The old urge to deflect it might still be there. You just don't have to follow it anymore.</p>
+        <p class="rv session-close">So that when life hands you more than you're used to, you notice what moves in you, and you choose from your steadiest place, instead of leaving yourself to keep things small.</p>
       </div>
     </div>
   </section>
@@ -1497,14 +1522,14 @@
   <section class="story">
     <div class="story-inner">
       <span class="label rv">My story</span>
-      <h2 class="story-heading rv s1">I built this out of my <span style="white-space:nowrap">own life.</span></h2>
+      <h2 class="story-heading rv s1">I built this out of my own life.</h2>
 
       <div class="story-body">
-        <p class="rv">It was a Friday afternoon, and from the outside I had it all handled. The nine to five, the constant dating, the strong woman who didn't need anyone's <span style="white-space:nowrap">help.</span></p>
-        <p class="rv">Up close it was different. Empty wine bottles in the bin to get through the nights. A restless anxiety in my chest that never switched off. I was an empty shell, performing my life instead of living it. I was the emotional glue for everyone else, and I was completely unexpressed, like I was shouting underwater and no one could <span style="white-space:nowrap">hear me.</span></p>
-        <p class="rv">Then my mum died. A sudden accident. The main pillar of my whole world, <span style="white-space:nowrap">gone.</span></p>
-        <p class="rv">I stood in my apartment afterward and it hit me like a punch in the gut. Without a man to claim me, without my mother to approve of me, I had no idea who I was. And if I died the next day, I couldn't honestly say I had ever <span style="white-space:nowrap">lived.</span></p>
-        <p class="rv">Something desperate woke up in me. I wanted to feel full on the inside. An abundance that didn't depend on who was loving me or what my bank account <span style="white-space:nowrap">said.</span></p>
+        <p class="rv">It was a Friday afternoon, and from the outside I had it all handled. The nine to five, the constant dating, the strong woman who didn't need anyone's help.</p>
+        <p class="rv">Up close it was different. Empty wine bottles in the bin to get through the nights. A restless anxiety in my chest that never switched off. I was an empty shell, performing my life instead of living it. I was the emotional glue for everyone else, and I was completely unexpressed, like I was shouting underwater and no one could hear me.</p>
+        <p class="rv">Then my mum died. A sudden accident. The main pillar of my whole world, gone.</p>
+        <p class="rv">I stood in my apartment afterward and it hit me like a punch in the gut. Without a man to claim me, without my mother to approve of me, I had no idea who I was. And if I died the next day, I couldn't honestly say I had ever lived.</p>
+        <p class="rv">Something desperate woke up in me. I wanted to feel full on the inside. An abundance that didn't depend on who was loving me or what my bank account said.</p>
         <p class="rv">And the fear came straight after.</p>
         <div class="story-confess rv">
           <p>I felt stupid for wanting more.</p>
@@ -1512,12 +1537,12 @@
           <p>I was so sure I was being too much.</p>
           <p>I was terrified that if I started choosing for myself, I'd get it horribly wrong and my whole life would fall apart.</p>
         </div>
-        <p class="rv">But my mum's life ended in a heartbeat, and I couldn't unknow that. Life is too fast to spend it joyless. I moved to the other side of the world, supposedly for six months. I'm still <span style="white-space:nowrap">here.</span></p>
-        <p class="rv">A mentor taught me the language of the nervous system, and I threw myself into the healing world. Every course, every modality, thousands spent on shiny promises. I became a self-help junkie. I could explain in perfect detail why I was the way I was, and I was still standing in the pantry at midnight, lonely and <span style="white-space:nowrap">exhausted.</span></p>
+        <p class="rv">But my mum's life ended in a heartbeat, and I couldn't unknow that. Life is too fast to spend it joyless. I moved to the other side of the world, supposedly for six months. I'm still here.</p>
+        <p class="rv">A mentor taught me the language of the nervous system, and I threw myself into the healing world. Every course, every modality, thousands spent on shiny promises. I became a self-help junkie. I could explain in perfect detail why I was the way I was, and I was still standing in the pantry at midnight, lonely and exhausted.</p>
         <p class="story-pull rv">Then it hit me. As long as I was trying to fix myself, I was just leaving myself all over again.</p>
-        <p class="rv">So I stopped trying to fix, and I started staying. I stopped waiting to be claimed and started accompanying myself. I stopped controlling my life and started feeling my own body. I stayed through the discomfort instead of running from it, and I said true things without a twenty minute apology <span style="white-space:nowrap">first.</span></p>
-        <p class="rv">Today I have the audacity to only do what makes me feel alive. I live on purpose. My choices are mine, and I stand by my own side when I make them. I quit the busy-ness Olympics. The fear still shows up, I'm human, but it's bearable now, because this version of me finally has my <span style="white-space:nowrap">own back.</span></p>
-        <p class="story-close rv">I stopped being useful to the world and became the owner of my life. That is what I want <span style="white-space:nowrap">for you.</span></p>
+        <p class="rv">So I stopped trying to fix, and I started staying. I stopped waiting to be claimed and started accompanying myself. I stopped controlling my life and started feeling my own body. I stayed through the discomfort instead of running from it, and I said true things without a twenty minute apology first.</p>
+        <p class="rv">Today I have the audacity to only do what makes me feel alive. I live on purpose. My choices are mine, and I stand by my own side when I make them. I quit the busy-ness Olympics. The fear still shows up, I'm human, but it's bearable now, because this version of me finally has my own back.</p>
+        <p class="story-close rv">I stopped being useful to the world and became the owner of my life. That is what I want for you.</p>
         <p class="note rv">Nina, this is my draft pulled straight from your story doc, kept simple and in your words. Change anything that isn't quite you, especially the line below, present tense, with a real recent moment.</p>
         <p class="rv story-still"><em>And I still leave myself sometimes. Last week I said yes to something I didn't want and felt it the second I put the phone down. The difference now is that I catch it fast, and I know the way home.</em></p>
       </div>
@@ -1540,11 +1565,11 @@
         <h2 class="guide-name rv s1">Nina Rose</h2>
         <div class="guide-body">
           <p class="em-lead rv">I didn't build this from a theory. I built it because I needed it. I was the woman leaving herself, and I found my way back, and this is everything that worked.</p>
-          <p class="rv">I'm Slovenian. I live in Thailand. I'm a somatic coach and breathwork facilitator, and I've worked closely with women one to one, and supported people through recovery, for <span style="white-space:nowrap">years.</span></p>
-          <p class="rv">This isn't something I studied once and now teach at you from a distance. I live it. Every single day. I'm still doing it, still following it, still choosing myself in the small moments. That is why I can walk you through it, because I know the ground with my <span style="white-space:nowrap">own feet.</span></p>
+          <p class="rv">I'm Slovenian. I live in Thailand. I'm a somatic coach and breathwork facilitator, and I've worked closely with women one to one, and supported people through recovery, for years.</p>
+          <p class="rv">This isn't something I studied once and now teach at you from a distance. I live it. Every single day. I'm still doing it, still following it, still choosing myself in the small moments. That is why I can walk you through it, because I know the ground with my own feet.</p>
           <p class="rv">And here is what I see again and again. Most women aren't missing a strategy. They know exactly what to do. They've just spent so long taking care of everyone else that they lost the thread to their own life. My whole work is helping you become <em>available to yourself</em> again.</p>
-          <p class="rv">You can know, in your head, that you deserve to rest, and still feel guilty every time you actually lie down. That gap between knowing and feeling is exactly where we work. Parts work, shadow work, somatic work, movement, pleasure, honest talking. Under all of it, one thing: you, staying with <span style="white-space:nowrap">you.</span></p>
-          <p class="rv">This is the most personal work I do. No group to hide in, no module to skip. Just your life, my full attention, and four months of me not letting you <span style="white-space:nowrap">disappear.</span></p>
+          <p class="rv">You can know, in your head, that you deserve to rest, and still feel guilty every time you actually lie down. That gap between knowing and feeling is exactly where we work. Parts work, shadow work, somatic work, movement, pleasure, honest talking. Under all of it, one thing: you, staying with you.</p>
+          <p class="rv">This is the most personal work I do. No group to hide in, no module to skip. Just your life, my full attention, and four months of me not letting you disappear.</p>
           <p class="note rv">Nina, check that middle line about your background says exactly what's true (coach, facilitator, who you've worked with). I kept it simple and clear, but the facts should be yours.</p>
         </div>
       </div>
@@ -1557,7 +1582,7 @@
     <div class="voices-inner">
       <div class="voices-head">
         <span class="label rv">From private sessions</span>
-        <h2 class="rv s1">What women say about <span style="white-space:nowrap">this work</span></h2>
+        <h2 class="rv s1">What women say about this work</h2>
       </div>
       <div class="shots rv">
         <img src="./photos%20that%20can%20be%20used/what-women-say/IMG_0632.jpeg" alt="A message from a client about learning to work with her body instead of against it">
@@ -1574,34 +1599,40 @@
   <!-- ══════════════ XV · INVESTMENT ══════════════ -->
   <section class="invest">
     <div class="invest-bg" aria-hidden="true">
-      <img src="./photos%20that%20can%20be%20used/money/PHOTO-2026-07-23-18-59-49.jpg" alt="">
+      <img src="./photos%20that%20can%20be%20used/money/PHOTO-2026-07-23-18-59-48.jpg" alt="">
     </div>
     <div class="invest-card rv">
       <figure class="invest-medallion">
-        <img src="./photos%20that%20can%20be%20used/money/PHOTO-2026-07-23-18-59-48.jpg" alt="Sunlit water, gold light on the surface">
+        <img src="./photos%20that%20can%20be%20used/money/PHOTO-2026-07-23-18-59-49.jpg" alt="Warm gold light on silk">
       </figure>
       <span class="label">The investment</span>
-      <p class="invest-open rv s1">Four months of my full attention, and the most personal work I do. Here is how it's held.</p>
-      <div class="pay-options rv s1">
+      <p class="invest-open rv s1">Four months of my full attention, and the most personal work I do.</p>
+
+      <div class="invest-includes rv s1">
+        <p class="invest-inc-label">Here is everything you receive</p>
+        <ul class="invest-list">
+          <li><span class="m">&#10003;</span> Sixteen private one-to-one sessions with me, one every week for four months</li>
+          <li><span class="m">&#10003;</span> Voice-note support between sessions, so you are never holding it alone</li>
+          <li><span class="m">&#10003;</span> A ten-minute practice recorded just for you, every week</li>
+          <li><span class="m">&#10003;</span> Four months shaped entirely around your life, not a set curriculum</li>
+        </ul>
+      </div>
+
+      <p class="invest-price-label rv s2">Your investment</p>
+      <div class="pay-options rv s2">
         <div class="pay">
-          <span class="pay-name">In full</span>
+          <span class="pay-name">Pay in full</span>
           <p class="pay-num"><span class="cur">$</span>2,500</p>
           <p class="pay-note">one payment, USD</p>
         </div>
         <div class="pay">
-          <span class="pay-name">Monthly</span>
+          <span class="pay-name">Or monthly</span>
           <p class="pay-num"><span class="cur">$</span>625</p>
-          <p class="pay-note">a month, across four months</p>
+          <p class="pay-note">&times; 4 months</p>
         </div>
       </div>
-      <p class="invest-inc-label rv s2">Everything is included</p>
-      <ul class="invest-list rv s2">
-        <li><span class="m">&middot;</span> Sixteen private weekly sessions, one to one</li>
-        <li><span class="m">&middot;</span> Voice-note support between our sessions</li>
-        <li><span class="m">&middot;</span> A weekly practice, recorded just for you</li>
-        <li><span class="m">&middot;</span> Four months, co-created around your life</li>
-      </ul>
-      <p class="invest-body rv s2">And you have two full weeks. If it isn't right for you after our first sessions together, tell me and I'll return your money. Simple <span style="white-space:nowrap">as that.</span></p>
+
+      <p class="invest-body rv s2">And you have two full weeks. If it isn't right for you after our first sessions together, tell me and I'll return your money. Simple as that.</p>
       <div class="rv s3" style="margin-top: clamp(34px, 4vh, 50px); text-align:center;">
         <a class="btn" href="#apply">Apply for your place</a>
         <span class="alt-line">Want to hear my voice first? <a href="https://calendly.com/iamninarose/claimyourselfconnection" target="_blank" rel="noopener">Book a conversation with me</a></span>
@@ -1613,15 +1644,15 @@
   <!-- ══════════════ XVI · QUESTIONS ══════════════ -->
   <section class="qa">
     <div class="qa-inner">
-      <h2 class="qa-heading rv">Questions you might <span style="white-space:nowrap">be asking</span></h2>
+      <h2 class="qa-heading rv">Questions you might be asking</h2>
 
       <div class="qa-item rv">
         <h3>How is this different from everything else I've done?</h3>
-        <p>Most of what you've done has worked on one layer at a time. The insight, or the practice, or the identity work. What we're doing here runs all of it together: the somatic work, the parts work, the identity work, all at the same time, in the same room. That's why the things you understood long ago finally get <span style="white-space:nowrap">to land in your body.</span></p>
+        <p>Most of what you've done has worked on one layer at a time. The insight, or the practice, or the identity work. What we're doing here runs all of it together: the somatic work, the parts work, the identity work, all at the same time, in the same room. That's why the things you understood long ago finally get to land in your body.</p>
       </div>
       <div class="qa-item rv">
         <h3>I'm already in therapy. Can I do both?</h3>
-        <p>Yes, and I'd encourage it. This work isn't therapy and it doesn't replace it. It runs alongside good therapeutic support, because we're working at a different layer: the body, the breath, the parts of you that talk therapy doesn't always reach. Women often find this work helps the therapy <span style="white-space:nowrap">go deeper.</span></p>
+        <p>Yes, and I'd encourage it. This work isn't therapy and it doesn't replace it. It runs alongside good therapeutic support, because we're working at a different layer: the body, the breath, the parts of you that talk therapy doesn't always reach. Women often find this work helps the therapy go deeper.</p>
       </div>
       <div class="qa-item rv">
         <h3>How much time do I need each week?</h3>
@@ -1629,15 +1660,15 @@
       </div>
       <div class="qa-item rv">
         <h3>Is one session a week really enough?</h3>
-        <p>The session isn't where the change happens. It's where we look at what happened, and where I give you something to carry into the week. The change happens on the Tuesday you notice yourself leaving, and come back. That's why the weekly practice <span style="white-space:nowrap">isn't optional.</span></p>
+        <p>The session isn't where the change happens. It's where we look at what happened, and where I give you something to carry into the week. The change happens on the Tuesday you notice yourself leaving, and come back. That's why the weekly practice isn't optional.</p>
       </div>
       <div class="qa-item rv">
         <h3>What if I don't feel anything in my body?</h3>
-        <p>Then we start there, gently. Numbness isn't a failure of the work. It's something that once kept you safe, and we don't force our way past it. You don't need to be good at feeling to begin. And if you cry, or go blank, or laugh at the wrong moment, none of that is a problem <span style="white-space:nowrap">here.</span></p>
+        <p>Then we start there, gently. Numbness isn't a failure of the work. It's something that once kept you safe, and we don't force our way past it. You don't need to be good at feeling to begin. And if you cry, or go blank, or laugh at the wrong moment, none of that is a problem here.</p>
       </div>
       <div class="qa-item rv">
         <h3>What if it doesn't feel like the right fit?</h3>
-        <p>You have two full weeks. If after our first sessions your body tells you this isn't right for you, tell me and I'll refund you completely. No awkwardness. I only want you here if you truly want to be. After those two weeks, we are both all <span style="white-space:nowrap">the way in.</span></p>
+        <p>You have two full weeks. If after our first sessions your body tells you this isn't right for you, tell me and I'll refund you completely. No awkwardness. I only want you here if you truly want to be. After those two weeks, we are both all the way in.</p>
       </div>
     </div>
   </section>
@@ -1650,10 +1681,10 @@
     </div>
     <div class="apply-inner">
       <p class="apply-small rv">If a yes has been rising in you as you read &hellip;</p>
-      <p class="apply-anchor rv s1">Let's begin, just <span style="white-space:nowrap">the two of us.</span></p>
+      <p class="apply-anchor rv s1">Let's begin, just the two of us.</p>
 
       <div class="apply-how">
-        <p class="rv">Tell me where you really are right now. I read every word myself, and I write back within a day, to set up our first session or to feel into it together <span style="white-space:nowrap">first.</span></p>
+        <p class="rv">Tell me where you really are right now. I read every word myself, and I write back within a day, to set up our first session or to feel into it together first.</p>
       </div>
 
       <p class="note rv" style="text-align:left;">Nina, this form opens the woman's own email to you with her answers filled in, so it works today. When you're ready, we can wire it to Tally, Typeform, or MailerLite so applications land straight in your inbox or a spreadsheet.</p>
