@@ -114,22 +114,22 @@
     }
     em { font-style: italic; }
 
-    /* key-phrase highlight, the eye catches these while skimming */
+    /* key-phrase highlight: a second typeface, not just a color, so it truly breaks from body text */
     .hi {
+      font-family: var(--sans);
+      font-style: normal;
+      font-size: 0.72em;
+      letter-spacing: 0.02em;
       color: var(--wine-ink);
-      font-weight: 600;
-      text-underline-offset: 4px;
-      text-decoration: underline;
-      text-decoration-color: rgba(124, 42, 51, 0.35);
-      text-decoration-thickness: 1.5px;
+      font-weight: 500;
     }   /* on light grounds */
     .hi-d {
+      font-family: var(--sans);
+      font-style: normal;
+      font-size: 0.72em;
+      letter-spacing: 0.02em;
       color: #F4C77A;
-      font-weight: 600;
-      text-underline-offset: 4px;
-      text-decoration: underline;
-      text-decoration-color: rgba(244, 199, 122, 0.4);
-      text-decoration-thickness: 1.5px;
+      font-weight: 500;
     }   /* on wine grounds */
     .hi em, em.hi { font-style: italic; }
 
@@ -476,7 +476,6 @@
       margin: clamp(48px, 6vh, 84px) auto 0;
       text-wrap: balance;
     }
-    .intro-desc .hi-d { font-style: italic; }
 
     /* ═════════════════════════════════════════
        IV · THE TURN (the one thing)
@@ -485,35 +484,67 @@
       background: var(--blush);
       padding: clamp(130px, 16vh, 220px) var(--pad-x);
     }
-    .turn-inner { max-width: 940px; margin: 0 auto; }
-    .turn-lead {
+    .turn-inner { max-width: 880px; margin: 0 auto; }
+    .turn-open {
       font-family: var(--serif);
       font-weight: 300;
-      font-size: clamp(2rem, 3.8vw, 3.3rem);
-      line-height: 1.2;
-      max-width: 15em;
-      margin-bottom: clamp(74px, 6vh, 117px);
+      font-style: italic;
+      font-size: clamp(1.7rem, 3vw, 2.5rem);
+      line-height: 1.35;
+      color: var(--text);
+      max-width: 18em;
+      margin-bottom: clamp(80px, 10vh, 130px);
       text-wrap: balance;
     }
-    .turn-lead em { color: var(--wine-ink); font-style: italic; }
-    .turn-body { max-width: 32em; margin-left: auto; }
-    .turn-body p {
+    .turn-small {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+      font-weight: 400;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 26px;
+    }
+    .turn-big {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-style: italic;
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+      line-height: 1.3;
+      color: var(--wine-ink);
+      max-width: 16em;
+      margin-bottom: clamp(80px, 10vh, 120px);
+      text-wrap: balance;
+    }
+    .turn-lead2 {
+      font-family: var(--serif);
+      font-size: clamp(1.25rem, 1.9vw, 1.55rem);
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.6;
+      margin-bottom: 40px;
+      max-width: 24em;
+    }
+    .turn-cascade { margin-bottom: clamp(72px, 9vh, 110px); }
+    .turn-cascade p {
+      font-family: var(--serif);
+      font-size: clamp(1.25rem, 1.9vw, 1.55rem);
+      font-weight: 300;
+      font-style: italic;
       color: var(--mid);
-      line-height: 1.9;
-      margin-bottom: clamp(46px, 4vh, 65px);
-      text-wrap: balance;
+      line-height: 2.1;
     }
-    .turn-body p:nth-child(1) { margin-bottom: clamp(105px, 9vh, 170px); }
-    .turn-body p:nth-child(2) { margin-bottom: clamp(124px, 11vh, 201px); }
-    .turn-body p em { color: var(--text); font-style: italic; }
+    .turn-cascade p:nth-child(2) { margin-left: clamp(20px, 3vw, 48px); }
+    .turn-cascade p:nth-child(3) { margin-left: clamp(40px, 6vw, 96px); }
+    .turn-cascade p:nth-child(4) { margin-left: clamp(60px, 9vw, 144px); }
     .turn-close {
       font-family: var(--serif) !important;
-      font-size: clamp(1.4rem, 2.1vw, 1.85rem) !important;
+      font-weight: 300;
       font-style: italic;
+      font-size: clamp(1.9rem, 3vw, 2.7rem) !important;
       color: var(--wine-ink) !important;
-      line-height: 1.5 !important;
-      margin-top: clamp(32px, 4vh, 48px) !important;
-      max-width: 22em;
+      line-height: 1.4 !important;
+      text-align: right;
+      max-width: none;
     }
 
     /* ═════════════════════════════════════════
@@ -1373,7 +1404,9 @@
       .invest-card { padding-left: 24px; padding-right: 24px; }
       .pay-options { grid-template-columns: 1fr 1fr; max-width: none; }
 
-      .turn-body { margin-left: 0; }
+      .turn-close { text-align: left; }
+      .turn-cascade p:nth-child(n) { margin-left: 0; }
+      .turn-cascade p { line-height: 1.9; margin-bottom: 14px; }
       .shots { columns: 1; }
     }
     @media (max-width: 480px) {
@@ -1424,14 +1457,14 @@
     <div class="vision-inner">
       <div class="vision-head rv">
         <span class="label">Close your eyes for a second</span>
-        <h2>Let me show you <em>her.</em> The woman who stopped leaving herself behind.</h2>
+        <h2>Let me show you <em>her.</em></h2>
       </div>
       <div class="vision-lines">
-        <p class="rv">A man reaches for you and you don't brace. You don't hold your stomach in, or leave your body to check whether he still wants you. You let yourself be touched. <span class="hi">You surrender, and it feels like the safest thing in the world.</span></p>
         <p class="rv">A song comes on and <span class="hi">pleasure moves through you</span> before your head has decided whether you're allowed to feel it. In the kitchen. In your hips. In the middle of a Tuesday.</p>
         <p class="rv">You post the thing. You don't spiral for forty minutes, screenshot it to three friends, or hover over delete. <span class="hi">You said what was true, and you let it be seen.</span></p>
         <p class="rv">Someone asks for your time and <span class="hi">you feel your own no before you feel their disappointment.</span> And it comes out of your mouth, warm and clear, with no apology stapled to it.</p>
         <p class="rv">You want something, and you actually say it, plainly, <span class="hi">in your own name.</span> And you don't talk yourself out of it by the time you've made the bed.</p>
+        <p class="rv">Someone reaches for you and you don't brace, or check whether they still want you. You let yourself be touched. <span class="hi">You surrender, and it feels like the safest thing in the world.</span></p>
         <p class="vision-close rv">This is what it feels like to be available to yourself. Not performing your life for everyone watching. Actually living it.</p>
       </div>
     </div>
@@ -1506,12 +1539,19 @@
   <!-- ══════════════ IV · THE TURN ══════════════ -->
   <section class="turn">
     <div class="turn-inner">
-      <p class="turn-lead rv">You already know how to want this. You've wanted it for years. <em>The wanting was never the problem.</em></p>
-      <div class="turn-body">
-        <p class="rv">Here's the part nobody says out loud. You can read every book, name every pattern, do every breathwork class on the internet, and <span class="hi">still walk into a room and feel yourself vanish.</span> Still say yes when your whole body meant no. Still make yourself smaller so no one has to feel how much you actually are.</p>
-        <p class="rv">Somewhere early, being fully yourself cost you something. Maybe you asked for something and got laughed at. Maybe you took up space and someone made you feel it. Love. Safety. Belonging. <span class="hi">So you made yourself a promise to stay small,</span> and you've kept that promise ever since. Faithfully. Even now, when small is the last thing you want.</p>
-        <p class="turn-close rv">You don't need another book. You need to feel, in real moments, that it's safe to laugh too loud, want too much, and take up more room than you're used to. That is the whole thing. And that is the thing we do together.</p>
+      <p class="turn-open rv">You've read every book, named every pattern, done every breathwork class on the internet, and <em>still walked into a room and felt yourself vanish.</em></p>
+
+      <p class="turn-small rv">Maybe the problem was never the wanting.</p>
+      <p class="turn-big rv s1">Maybe it's this: being fully yourself cost you something, once.</p>
+
+      <p class="turn-lead2 rv">So you made yourself a promise to stay small,</p>
+      <div class="turn-cascade">
+        <p class="rv">while wanting more,</p>
+        <p class="rv">while taking up space,</p>
+        <p class="rv">while something good was happening,</p>
+        <p class="rv">while it was finally safe.</p>
       </div>
+      <p class="turn-close rv">You don't need another book. You need to feel it's safe.</p>
     </div>
   </section>
 
