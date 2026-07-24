@@ -170,8 +170,6 @@
       line-height: 1.7;
     }
     .alt-line a { color: var(--wine-ink); text-decoration: underline; text-underline-offset: 3px; }
-    .on-dark .alt-line { color: var(--on-wine-faint); }
-    .on-dark .alt-line a { color: var(--on-wine); }
 
     /* a small, tasteful note to Nina; remove before launch */
     .note {
@@ -1094,47 +1092,46 @@
         var(--wine-deep);
       padding: clamp(130px, 18vh, 220px) var(--pad-x) clamp(150px, 20vh, 240px);
     }
-    .receive-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-      gap: clamp(56px, 7vw, 120px);
-      max-width: 1150px;
-      margin: 0 auto;
-      align-items: start;
-    }
-    .receive-photo {
-      position: sticky;
-      top: 8vh;
-      border-radius: 260px 260px 0 0;
-      overflow: hidden;
-      aspect-ratio: 3 / 4;
-    }
-    .receive-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; }
-    .receive-inner .label { display: block; color: var(--on-wine-faint); margin-bottom: 34px; }
+    .receive-inner { max-width: 780px; margin: 0 auto; }
+    .receive-inner .label { display: block; color: var(--on-wine-faint); margin-bottom: 34px; text-align: center; }
     .receive-inner h2 {
       font-family: var(--serif);
       font-weight: 300;
-      font-size: clamp(2.1rem, 3.8vw, 3.2rem);
+      font-size: clamp(2.3rem, 4.2vw, 3.6rem);
       color: var(--on-wine);
       line-height: 1.18;
-      max-width: 12em;
-      margin-bottom: 20px;
+      max-width: 11em;
+      margin: 0 auto 20px;
+      text-align: center;
       text-wrap: balance;
     }
     .receive-sub {
       font-size: clamp(1.1rem, 1.5vw, 1.3rem);
       font-style: italic;
       color: var(--on-wine-soft);
-      max-width: 26em;
+      max-width: 24em;
       line-height: 1.6;
-      margin-bottom: clamp(60px, 8vh, 100px);
+      margin: 0 auto clamp(90px, 11vh, 150px);
+      text-align: center;
     }
     .tglist { text-align: left; }
     .tgl {
+      position: relative;
       border-top: 1px solid var(--on-wine-line);
-      padding: clamp(24px, 3vh, 34px) 0;
+      padding: clamp(30px, 4vh, 46px) 0 clamp(30px, 4vh, 46px) clamp(56px, 8vw, 96px);
     }
     .tgl:last-child { border-bottom: 1px solid var(--on-wine-line); }
+    .tgl .num {
+      position: absolute;
+      left: 0; top: clamp(24px, 3.4vh, 38px);
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      color: rgba(233, 201, 166, 0.28);
+      line-height: 1;
+      user-select: none;
+    }
     .tgl summary {
       cursor: pointer;
       list-style: none;
@@ -1144,12 +1141,15 @@
       gap: 20px;
       font-family: var(--serif);
       font-weight: 400;
-      font-size: clamp(1.25rem, 2vw, 1.6rem);
       color: var(--on-wine);
-      line-height: 1.4;
+      line-height: 1.35;
     }
     .tgl summary::-webkit-details-marker { display: none; }
     .tgl summary::marker { content: ''; }
+    .tgl:nth-of-type(1) summary { font-size: clamp(1.7rem, 3vw, 2.5rem); }
+    .tgl:nth-of-type(2) summary { font-size: clamp(1.15rem, 1.8vw, 1.4rem); }
+    .tgl:nth-of-type(3) summary { font-size: clamp(1.4rem, 2.3vw, 1.9rem); }
+    .tgl:nth-of-type(4) summary { font-size: clamp(1.15rem, 1.8vw, 1.4rem); }
     .tgl .plus {
       flex-shrink: 0;
       font-family: var(--sans);
@@ -1162,8 +1162,8 @@
     .tgl p {
       color: var(--on-wine-soft);
       line-height: 1.75;
-      margin-top: 16px;
-      max-width: 34em;
+      margin-top: clamp(20px, 2.6vh, 28px);
+      max-width: 32em;
       text-wrap: pretty;
     }
 
@@ -1367,8 +1367,8 @@
       .guide-grid { grid-template-columns: 1fr; }
       .guide-photo { position: static; max-width: 380px; margin: 0 auto; }
 
-      .receive-grid { grid-template-columns: 1fr; }
-      .receive-photo { position: static; max-width: 320px; margin: 0 auto clamp(48px, 6vh, 72px); }
+      .tgl { padding-left: clamp(40px, 12vw, 56px); }
+      .tgl .num { font-size: clamp(1.6rem, 6vw, 2.2rem); }
 
       .invest-card { padding-left: 24px; padding-right: 24px; }
       .pay-options { grid-template-columns: 1fr 1fr; max-width: none; }
@@ -1756,37 +1756,36 @@
 
   <!-- ══════════════ XV·b · WHAT YOU RECEIVE (velvet, toggles) ══════════════ -->
   <section class="receive">
-    <div class="receive-grid">
-      <figure class="receive-photo rv">
-        <img src="./photos%20that%20can%20be%20used/PHOTO-2026-07-19-15-58-15.jpg" alt="A woman with closed eyes holding an armful of white flowers in the sun">
-      </figure>
-      <div class="receive-inner">
-        <span class="label rv">What actually holds you</span>
-        <h2 class="rv s1">You are never doing this from memory, or alone.</h2>
-        <p class="receive-sub rv s1">Here is exactly what four months with me looks like, in practice.</p>
+    <div class="receive-inner">
+      <span class="label rv">What actually holds you</span>
+      <h2 class="rv s1">Nothing here is theory.</h2>
+      <p class="receive-sub rv s1">This is the actual shape of four months.</p>
 
-        <div class="tglist rv s2">
-          <details class="tgl" open>
-            <summary>A standing hour that is only yours<span class="plus" aria-hidden="true">+</span></summary>
-            <p>Sixteen private sessions, one every week for four months. Sixty minutes together, with a fifteen-minute buffer, so nothing tender ever gets rushed to make room for the next person.</p>
-          </details>
-          <details class="tgl">
-            <summary>Someone in your corner between sessions<span class="plus" aria-hidden="true">+</span></summary>
-            <p>A hard Tuesday doesn't have to wait until our next call. You send a voice note, I hear it, and you are not holding it alone until Thursday.</p>
-          </details>
-          <details class="tgl">
-            <summary>A practice made for exactly what you're moving through<span class="plus" aria-hidden="true">+</span></summary>
-            <p>Ten minutes, recorded just for you every week, built around what actually came up in your session. Not a generic track everyone in the program gets.</p>
-          </details>
-          <details class="tgl">
-            <summary>Four months that bend around your real life<span class="plus" aria-hidden="true">+</span></summary>
-            <p>Not a fixed curriculum you fall behind on. We follow what's really alive in you, week to week, so the work fits your life instead of the other way around.</p>
-          </details>
-        </div>
+      <div class="tglist rv s2">
+        <details class="tgl" open>
+          <span class="num">01</span>
+          <summary>A standing hour that is only yours<span class="plus" aria-hidden="true">+</span></summary>
+          <p>Sixteen private sessions, one every week for four months. Sixty minutes together, with a fifteen-minute buffer, so nothing tender ever gets rushed to make room for the next person.</p>
+        </details>
+        <details class="tgl">
+          <span class="num">02</span>
+          <summary>Someone in your corner between sessions<span class="plus" aria-hidden="true">+</span></summary>
+          <p>A hard Tuesday doesn't have to wait until our next call. You send a voice note, I hear it, and you are not holding it alone until Thursday.</p>
+        </details>
+        <details class="tgl">
+          <span class="num">03</span>
+          <summary>A practice made for exactly what you're moving through<span class="plus" aria-hidden="true">+</span></summary>
+          <p>Ten minutes, recorded just for you every week, built around what actually came up in your session. Not a generic track everyone in the program gets.</p>
+        </details>
+        <details class="tgl">
+          <span class="num">04</span>
+          <summary>Four months that bend around your real life<span class="plus" aria-hidden="true">+</span></summary>
+          <p>Not a fixed curriculum you fall behind on. We follow what's really alive in you, week to week, so the work fits your life instead of the other way around.</p>
+        </details>
+      </div>
 
-        <div class="rv s3" style="margin-top: clamp(48px, 6vh, 72px);">
-          <a class="btn" href="#apply">Apply for your place</a>
-        </div>
+      <div class="rv s3" style="text-align:center; margin-top: clamp(56px, 7vh, 84px);">
+        <a class="btn" href="#apply">Apply for your place</a>
       </div>
     </div>
   </section>
