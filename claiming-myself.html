@@ -44,10 +44,10 @@
       --gold:   #C6A15B;    /* gold hairline */
       --border: #D9C7AE;
       /* type on wine */
-      --on-wine:      rgba(248, 240, 228, 0.96);
-      --on-wine-soft: rgba(248, 240, 228, 0.72);
-      --on-wine-faint:rgba(248, 240, 228, 0.52);
-      --on-wine-line: rgba(248, 240, 228, 0.18);
+      --on-wine:      rgba(248, 240, 228, 0.98);
+      --on-wine-soft: rgba(248, 240, 228, 0.86);
+      --on-wine-faint:rgba(248, 240, 228, 0.74);
+      --on-wine-line: rgba(248, 240, 228, 0.3);
 
       --serif:  'Cormorant Garamond', Georgia, serif;
       --sans:   'Jost', system-ui, sans-serif;
@@ -61,7 +61,7 @@
 
     body {
       font-family: var(--serif);
-      font-weight: 400;
+      font-weight: 500;
       font-size: clamp(1.15rem, 1.4vw, 1.3rem);
       background: var(--ivory);
       color: var(--text);
@@ -198,13 +198,14 @@
       justify-content: space-between;
       padding: 30px var(--pad-x);
     }
-    nav .label, nav a { color: var(--on-wine-soft); text-decoration: none; text-shadow: 0 1px 24px rgba(45, 10, 16, 0.55); }
+    nav .label, nav a { color: var(--on-wine-soft); text-decoration: none; text-shadow: 0 1px 24px rgba(45, 10, 16, 0.55); font-size: 0.8rem; font-weight: 500; }
     .nav-brand {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
       color: var(--on-wine) !important;
-      letter-spacing: 0.34em;
+      letter-spacing: 0.28em;
+      font-size: 0.86rem;
     }
     .nav-sub { color: var(--on-wine-faint); }
     nav a.nav-cta:hover, nav a:hover { color: var(--cream); }
@@ -237,15 +238,15 @@
       content: '';
       position: absolute; inset: 0; z-index: -1;
       background:
-        linear-gradient(180deg, rgba(45,10,16,0.72) 0%, rgba(55,13,20,0.14) 22%, rgba(45,10,16,0.62) 46%, rgba(35,8,12,0.88) 68%, rgba(30,7,11,0.97) 100%),
-        radial-gradient(120% 80% at 15% 90%, rgba(89,22,32,0.5) 0%, rgba(89,22,32,0) 60%);
+        linear-gradient(180deg, rgba(45,10,16,0.55) 0%, rgba(55,13,20,0.06) 20%, rgba(55,13,20,0.18) 42%, rgba(45,10,16,0.72) 66%, rgba(35,8,12,0.92) 100%),
+        radial-gradient(120% 80% at 15% 90%, rgba(89,22,32,0.4) 0%, rgba(89,22,32,0) 60%);
     }
     .hero-copy {
       position: relative;
       padding: 0 var(--pad-x) clamp(64px, 9vh, 120px);
       max-width: 1200px;
     }
-    .hero-label { display: inline-block; color: var(--on-wine-soft); margin-bottom: clamp(34px, 3vh, 49px); }
+    .hero-label { display: inline-block; color: var(--on-wine-soft); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.24em; margin-bottom: clamp(34px, 3vh, 49px); }
     .hero h1 {
       font-family: var(--serif);
       font-weight: 400;
@@ -546,7 +547,7 @@
     ═════════════════════════════════════════ */
     .phil {
       position: relative;
-      background: var(--wine-deep);
+      background: var(--claret);
       padding: clamp(130px, 18vh, 220px) var(--pad-x) clamp(160px, 22vh, 280px);
       overflow: hidden;
     }
@@ -580,19 +581,19 @@
     .phil-big {
       font-family: var(--serif);
       font-weight: 400;
-      font-size: clamp(2rem, 4.4vw, 3.6rem);
-      line-height: 1.15;
+      font-size: clamp(1.7rem, 3.2vw, 2.7rem);
+      line-height: 1.25;
       color: var(--on-wine);
-      max-width: 13em;
+      max-width: 22em;
       margin: 0 0 clamp(44px, 6vh, 68px);
       text-wrap: balance;
     }
     .phil-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px 26px;
+      gap: 14px 28px;
       margin: 0 0 clamp(56px, 7vh, 88px);
-      max-width: 26em;
+      max-width: 34em;
     }
     .phil-tags span {
       font-family: var(--sans);
@@ -740,11 +741,11 @@
     .differ-eyebrow {
       display: block;
       font-family: var(--serif);
-      font-weight: 400;
+      font-weight: 500;
       font-style: italic;
-      font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+      font-size: clamp(1.6rem, 2.6vw, 2.1rem);
       color: var(--wine-ink);
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
     .differ-inner h2 {
       font-family: var(--serif);
@@ -1203,10 +1204,11 @@
     }
     .apply-form label {
       font-family: var(--sans);
-      font-size: 0.62rem;
-      letter-spacing: 0.24em;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--on-wine-faint);
+      color: var(--on-wine-soft);
       display: block;
       margin-bottom: 18px;
     }
@@ -1440,7 +1442,7 @@
         <p class="rv">while it was finally safe.</p>
       </div>
 
-      <p class="turn-close rv">Understanding it isn't enough. Your body has to feel it too.</p>
+      <p class="turn-close rv">Understanding it isn't enough. Your body has to feel it&nbsp;too.</p>
     </div>
   </section>
 
@@ -1554,10 +1556,10 @@
     <div class="differ-inner">
       <span class="differ-eyebrow rv">Why this is different</span>
       <h2 class="rv s1">We do not stop at understanding.</h2>
-      <p class="rv">Most women I work with are not starting from zero. They have done a fair share of inner work. They have done the practices, had the insights, maybe even sat in therapy for years. They can tell you exactly why they are the way they are.</p>
-      <p class="rv">And still, in the moment that matters, they go quiet, over-give, brace, disconnect, or leave themselves behind.</p>
-      <p class="rv">We work with what actually takes over in real time, so your patterns do not just make sense to you, they begin to loosen their grip.</p>
-      <p class="rv">You notice yourself responding differently. Saying yes and no with more ease. Feeling what is true sooner. And slowly stepping into the life you always meant to live.</p>
+      <p class="rv">Most women I work with are not starting from zero. They have done a fair share of inner work. They have done the practices, had the insights, maybe even sat in therapy for years. <span class="hi">They can tell you exactly why they are the way they are.</span></p>
+      <p class="rv">And still, in the moment that matters, <span class="hi">they go quiet, over-give, brace, disconnect, or leave themselves behind.</span></p>
+      <p class="rv">We work with what actually takes over in real time, so your patterns do not just make sense to you, <span class="hi">they begin to loosen their grip.</span></p>
+      <p class="rv">You notice yourself responding differently. <span class="hi">Saying yes and no with more ease. Feeling what is true sooner.</span> And slowly stepping into the life you always meant to live.</p>
       <p class="differ-close rv">That is the difference between insight you admire and change you can actually feel.</p>
     </div>
   </section>
