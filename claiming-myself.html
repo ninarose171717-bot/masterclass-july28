@@ -19,7 +19,7 @@
   <meta name="twitter:image" content="https://masterclass-july28.vercel.app/og-include.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* ═════════════════════════════════════════
@@ -61,7 +61,7 @@
 
     body {
       font-family: var(--serif);
-      font-weight: 500;
+      font-weight: 600;
       font-size: clamp(1.15rem, 1.4vw, 1.3rem);
       background: var(--ivory);
       color: var(--text);
@@ -100,7 +100,7 @@
     .label {
       font-family: var(--sans);
       font-size: 0.68rem;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--mid);
@@ -118,12 +118,12 @@
     .hi {
       font-style: italic;
       color: var(--wine-ink);
-      font-weight: 500;
+      font-weight: 600;
     }   /* on light grounds, same serif and size as the sentence around it, so reading doesn't stumble */
     .hi-d {
       font-style: italic;
       color: #E3A091;
-      font-weight: 500;
+      font-weight: 600;
     }   /* on wine grounds */
     .hi em, em.hi { font-style: normal; }
 
@@ -157,7 +157,7 @@
       display: block;
       font-family: var(--sans);
       font-size: 0.95rem;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 0.02em;
       color: var(--text);
       margin-top: 26px;
@@ -198,7 +198,7 @@
       justify-content: space-between;
       padding: 30px var(--pad-x);
     }
-    nav .label, nav a { color: var(--on-wine-soft); text-decoration: none; text-shadow: 0 1px 24px rgba(45, 10, 16, 0.55); font-size: 0.8rem; font-weight: 500; }
+    nav .label, nav a { color: var(--on-wine-soft); text-decoration: none; text-shadow: 0 1px 24px rgba(45, 10, 16, 0.55); font-size: 0.8rem; font-weight: 400; }
     .nav-brand {
       position: absolute;
       left: 50%;
@@ -246,7 +246,7 @@
       padding: 0 var(--pad-x) clamp(64px, 9vh, 120px);
       max-width: 1200px;
     }
-    .hero-label { display: inline-block; color: var(--on-wine-soft); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.24em; margin-bottom: clamp(34px, 3vh, 49px); text-shadow: 0 2px 18px rgba(20,4,7,0.65), 0 1px 3px rgba(20,4,7,0.6); }
+    .hero-label { display: inline-block; color: var(--on-wine-soft); font-size: 0.82rem; font-weight: 400; letter-spacing: 0.24em; margin-bottom: clamp(34px, 3vh, 49px); text-shadow: 0 2px 18px rgba(20,4,7,0.65), 0 1px 3px rgba(20,4,7,0.6); }
     .hero h1 {
       font-family: var(--serif);
       font-weight: 400;
@@ -308,7 +308,7 @@
     .hero-meta {
       font-family: var(--sans);
       font-size: 0.85rem;
-      font-weight: 500;
+      font-weight: 400;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--on-wine-soft);
@@ -564,8 +564,16 @@
                   radial-gradient(70% 60% at 10% 90%, rgba(28,7,11,0.35) 0%, rgba(28,7,11,0) 65%);
       pointer-events: none;
     }
-    .phil-frame { max-width: 1320px; margin: 0 auto; }
-    .phil-inner { position: relative; max-width: 720px; margin: 0 0 0 auto; text-align: left; }
+    .phil-frame {
+      max-width: 1320px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+      gap: clamp(48px, 7vw, 110px);
+      align-items: start;
+    }
+    .phil-col-left { position: relative; padding-top: clamp(20px, 6vh, 90px); }
+    .phil-col-right { position: relative; text-align: left; }
     .phil-small {
       font-size: clamp(1.15rem, 1.6vw, 1.4rem);
       color: var(--on-wine-faint);
@@ -578,11 +586,9 @@
       font-family: var(--serif);
       font-style: italic;
       font-weight: 400;
-      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      font-size: clamp(1.6rem, 2.6vw, 2.3rem);
       color: #E9C9A6;
       line-height: 1.5;
-      max-width: 24em;
-      margin: 0 0 clamp(84px, 11vh, 130px);
       text-wrap: balance;
     }
     .phil-big {
@@ -751,7 +757,7 @@
     .differ-eyebrow {
       display: block;
       font-family: var(--serif);
-      font-weight: 500;
+      font-weight: 600;
       font-style: italic;
       font-size: clamp(1.6rem, 2.6vw, 2.1rem);
       color: var(--wine-ink);
@@ -1017,6 +1023,20 @@
       position: relative;
       background: var(--wine);
       padding: clamp(140px, 18vh, 230px) var(--pad-x);
+      overflow: hidden;
+    }
+    .invest-bg { position: absolute; inset: 0; z-index: 0; }
+    .invest-bg img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: 50% 8%;
+      transform: scale(2.6);
+      transform-origin: 50% 8%;
+    }
+    .invest::before {
+      content: '';
+      position: absolute; inset: 0; z-index: 1;
+      background: radial-gradient(120% 90% at 50% 50%, rgba(55,13,20,0.2) 0%, rgba(28,7,11,0.72) 78%);
     }
     .invest-card {
       position: relative;
@@ -1113,7 +1133,7 @@
     }
     .qa-kicker {
       font-family: var(--serif);
-      font-weight: 500;
+      font-weight: 600;
       font-style: italic;
       font-size: clamp(1.5rem, 2.4vw, 1.9rem);
       color: var(--wine-ink);
@@ -1209,7 +1229,7 @@
     .apply-form label {
       font-family: var(--sans);
       font-size: 0.72rem;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--on-wine-soft);
@@ -1252,7 +1272,7 @@
     .apply-meta {
       font-family: var(--sans);
       font-size: 0.85rem;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--on-wine-soft);
@@ -1304,6 +1324,8 @@
        MOBILE
     ═════════════════════════════════════════ */
     @media (max-width: 900px) {
+      .phil-frame { grid-template-columns: 1fr; gap: 48px; }
+      .phil-col-left { padding-top: 0; }
       nav { padding: 22px 24px; }
       nav > a:first-child { display: none; }
       .nav-brand { position: static; transform: none; }
@@ -1469,14 +1491,16 @@
   <!-- ══════════════ VI · WHAT CLAIMING MYSELF IS ══════════════ -->
   <section class="phil">
     <div class="phil-frame">
-    <div class="phil-inner">
-      <p class="phil-mid rv s1">A four-month private 1:1 coaching journey for women who are ready to stop performing their lives and start including themselves in them again.</p>
-      <p class="phil-big rv s1">This work is for the woman who knows, deep down, that the relationship she has with herself determines the quality of everything.</p>
-      <div class="phil-tags rv s2">
-        <span>Love</span><span>Sex</span><span>Work</span><span>Money</span><span>Rest</span><span>Expression</span><span>Joy</span><span>Grief</span><span>Choice</span>
+      <div class="phil-col-left">
+        <p class="phil-mid rv s1">A four-month private 1:1 coaching journey for women who are ready to stop performing their lives and start including themselves in them again.</p>
       </div>
-      <p class="phil-coda rv s2">Because when you leave yourself, everything gets negotiated around that. And when you stop leaving, everything begins to change from there.</p>
-    </div>
+      <div class="phil-col-right">
+        <p class="phil-big rv s1">This work is for the woman who knows, deep down, that the relationship she has with herself determines the quality of everything.</p>
+        <div class="phil-tags rv s2">
+          <span>Love</span><span>Sex</span><span>Work</span><span>Money</span><span>Rest</span><span>Expression</span><span>Joy</span><span>Grief</span><span>Choice</span>
+        </div>
+        <p class="phil-coda rv s2">Because when you leave yourself, everything gets negotiated around that. And when you stop leaving, everything begins to change from there.</p>
+      </div>
     </div>
   </section>
 
@@ -1565,7 +1589,7 @@
       <h2 class="rv s1">We do not stop at understanding.</h2>
       <p class="rv">Most women I work with are not starting from zero. They have done a fair share of inner work. They have done the practices, had the insights, maybe even sat in therapy for years. <span class="hi">They can tell you exactly why they are the way they are.</span></p>
       <p class="rv">And still, in the moment that matters, <span class="hi">they go quiet, over-give, brace, disconnect, or leave themselves behind.</span></p>
-      <p class="rv">We work with what actually takes over in real time, so your patterns do not just make sense to you, <span class="hi">they begin to loosen their grip.</span></p>
+      <p class="rv">We work with what actually takes over in real time, so <span class="hi">you don't just understand yourself differently, you begin to experience yourself differently.</span></p>
       <p class="rv">You notice yourself responding differently. <span class="hi">Saying yes and no with more ease. Feeling what is true sooner.</span> And slowly stepping into the life you always meant to live.</p>
       <p class="differ-close rv">That is the difference between insight you appreciate and change you actually live.</p>
     </div>
@@ -1695,6 +1719,9 @@
 
   <!-- ══════════════ XIV · THE INVESTMENT ══════════════ -->
   <section class="invest">
+    <div class="invest-bg" aria-hidden="true">
+      <img src="./photos%20that%20can%20be%20used/money/PHOTO-2026-07-23-18-59-48.jpg" alt="">
+    </div>
     <div class="invest-card rv">
       <figure class="invest-medallion">
         <img src="./photos%20that%20can%20be%20used/money/PHOTO-2026-07-23-18-59-49.jpg" alt="Warm gold light on silk">
