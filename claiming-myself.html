@@ -35,7 +35,7 @@
       --wine:      #591620; /* deep wine red */
       --wine-deep: #4A121B; /* near-black wine */
       --claret:    #7C2A33; /* mid wine */
-      --forest:    #1E3529; /* deep bottle green, the one non-red dark ground */
+      --rose:      #7A2B49; /* deep rose-red, pinker than wine or claret */
       /* ink + accents */
       --text:   #1C1310;    /* rich charcoal */
       --mid:    #6A4A3C;    /* warm brown */
@@ -62,8 +62,8 @@
 
     body {
       font-family: var(--serif);
-      font-weight: 600;
-      font-size: clamp(1.15rem, 1.4vw, 1.3rem);
+      font-weight: 700;
+      font-size: clamp(1.25rem, 1.6vw, 1.45rem);
       background: var(--ivory);
       color: var(--text);
       line-height: 1.75;
@@ -554,7 +554,7 @@
     ═════════════════════════════════════════ */
     .phil {
       position: relative;
-      background: var(--forest);
+      background: var(--rose);
       padding: clamp(160px, 20vh, 260px) var(--pad-x) clamp(180px, 24vh, 300px);
       overflow: hidden;
     }
@@ -562,7 +562,7 @@
       content: '';
       position: absolute; inset: 0;
       background: radial-gradient(60% 50% at 82% 15%, rgba(233,201,166,0.12) 0%, rgba(233,201,166,0) 60%),
-                  radial-gradient(70% 60% at 10% 90%, rgba(8,16,12,0.4) 0%, rgba(8,16,12,0) 65%);
+                  radial-gradient(70% 60% at 10% 90%, rgba(28,7,11,0.35) 0%, rgba(28,7,11,0) 65%);
       pointer-events: none;
     }
     .phil-frame {
