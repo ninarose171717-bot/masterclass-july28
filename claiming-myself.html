@@ -555,66 +555,87 @@
     .phil {
       position: relative;
       background: var(--rose);
-      padding: clamp(160px, 20vh, 260px) var(--pad-x) clamp(180px, 24vh, 300px);
+      padding: clamp(130px, 16vh, 210px) var(--pad-x) clamp(120px, 15vh, 190px);
       overflow: hidden;
     }
     .phil::before {
       content: '';
       position: absolute; inset: 0;
-      background: radial-gradient(60% 50% at 82% 15%, rgba(233,201,166,0.12) 0%, rgba(233,201,166,0) 60%),
-                  radial-gradient(70% 60% at 10% 90%, rgba(28,7,11,0.35) 0%, rgba(28,7,11,0) 65%);
+      background: radial-gradient(60% 55% at 85% 8%, rgba(233,201,166,0.2) 0%, rgba(233,201,166,0) 62%),
+                  radial-gradient(75% 65% at 6% 96%, rgba(28,7,11,0.5) 0%, rgba(28,7,11,0) 68%),
+                  linear-gradient(165deg, rgba(28,7,11,0.1) 0%, rgba(28,7,11,0) 35%);
       pointer-events: none;
     }
-    .phil-inner { max-width: 880px; margin: 0 auto; text-align: center; }
+    .phil-inner { max-width: 1080px; margin: 0 auto; text-align: center; }
     .phil-small {
       font-family: var(--serif);
       font-style: italic;
       font-weight: 400;
-      font-size: clamp(1.15rem, 1.5vw, 1.35rem);
-      color: var(--on-wine-soft);
-      line-height: 1.75;
-      max-width: 26em;
-      margin: 0 auto clamp(56px, 7vh, 84px);
+      font-size: clamp(1.05rem, 1.35vw, 1.2rem);
+      color: var(--on-wine-faint);
+      line-height: 1.65;
+      max-width: 24em;
+      margin: 0 auto clamp(30px, 3.5vh, 42px);
       text-wrap: balance;
     }
     .phil-big {
       font-family: var(--serif);
       font-weight: 300;
       font-style: italic;
-      font-size: clamp(2.2rem, 4.4vw, 3.8rem);
-      line-height: 1.25;
+      font-size: clamp(2.7rem, 5.6vw, 4.8rem);
+      line-height: 1.14;
       color: var(--on-wine);
-      max-width: 18em;
-      margin: 0 auto clamp(72px, 9vh, 104px);
+      max-width: 13em;
+      margin: 0 auto clamp(60px, 7.5vh, 88px);
       text-wrap: balance;
     }
     .phil-tags {
+      margin: 0 auto clamp(60px, 7.5vh, 88px);
+      max-width: 38em;
+      padding: clamp(30px, 3.8vh, 42px) 0;
+      border-top: 1px solid rgba(233, 201, 166, 0.24);
+      border-bottom: 1px solid rgba(233, 201, 166, 0.24);
+    }
+    .phil-tags-row {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 14px clamp(18px, 2.6vw, 30px);
-      margin: 0 auto clamp(72px, 9vh, 104px);
-      max-width: 38em;
+      gap: 12px clamp(20px, 2.8vw, 36px);
     }
+    .phil-tags-row + .phil-tags-row { margin-top: 14px; }
     .phil-tags span {
       font-family: var(--sans);
-      font-size: 0.75rem;
-      letter-spacing: 0.14em;
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--on-wine-faint);
+    }
+    .phil-coda-group {
+      max-width: 620px;
+      margin: 0 auto 0 0;
+      text-align: left;
     }
     .phil-coda {
       font-family: var(--serif);
       font-style: italic;
       font-weight: 400;
-      font-size: clamp(1.15rem, 1.5vw, 1.35rem);
-      line-height: 1.8;
+      font-size: clamp(1.2rem, 1.6vw, 1.45rem);
+      line-height: 1.9;
       color: var(--on-wine-soft);
-      max-width: 30em;
-      margin: 0 auto clamp(36px, 4.5vh, 52px);
+      margin-bottom: clamp(28px, 3.5vh, 38px);
       text-wrap: balance;
     }
     .phil-coda:last-child { margin-bottom: 0; }
+    .phil-close {
+      width: 1px;
+      height: 58px;
+      background: linear-gradient(var(--gold), transparent);
+      margin: clamp(64px, 8vh, 92px) auto 0;
+      opacity: 0.55;
+    }
+    @media (max-width: 700px) {
+      .phil-coda-group { margin: 0 auto; text-align: center; }
+    }
 
     /* ═════════════════════════════════════════
        VII · HOW WE WORK TOGETHER
@@ -1461,10 +1482,14 @@
       <p class="phil-small rv s1">A four-month private 1:1 coaching journey for the woman who is ready to stop performing her life and start including herself in it again.</p>
       <p class="phil-big rv s2">This work is for the woman who knows, deep down, that the relationship she has with herself shapes the way she experiences everything.</p>
       <div class="phil-tags rv s3">
-        <span>Love</span><span>Sex</span><span>Work</span><span>Money</span><span>Rest</span><span>Expression</span><span>Joy</span><span>Grief</span><span>Choice</span>
+        <div class="phil-tags-row"><span>Love</span><span>Sex</span><span>Work</span><span>Money</span><span>Rest</span></div>
+        <div class="phil-tags-row"><span>Expression</span><span>Joy</span><span>Grief</span><span>Choice</span></div>
       </div>
-      <p class="phil-coda rv s3">Because when you leave yourself, your life begins to organize itself around avoiding rejection, maintaining approval, and meeting expectations.</p>
-      <p class="phil-coda rv s3">But when you stop abandoning yourself, you begin to make choices from what is actually true for you. You stop negotiating your needs away. You stop trying to become who you think you should be. And you begin building a life that feels like yours.</p>
+      <div class="phil-coda-group rv s3">
+        <p class="phil-coda">Because when you leave yourself, your life begins to organize itself around avoiding rejection, maintaining approval, and meeting expectations.</p>
+        <p class="phil-coda">But when you stop abandoning yourself, you begin to make choices from what is actually true for you. You stop negotiating your needs away. You stop trying to become who you think you should be. And you begin building a life that feels like yours.</p>
+      </div>
+      <div class="phil-close" aria-hidden="true"></div>
     </div>
   </section>
 
